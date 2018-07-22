@@ -163,8 +163,11 @@ class ViewController: UIViewController {
 //
 //        let deskVC:LockScreenViewController! = storyboard!.instantiateViewController(withIdentifier: "LockScreenViewController") as! LockScreenViewController
 //
-//        navigationController?.pushViewController(deskVC, animated: false)
+//        self.navigationController?.pushViewController(deskVC, animated: false)
         
+       //let navgationController = UINavigationController(rootViewController: self);
+        print("self.navigationController=\(self.navigationController)")
+        print(navigationController)
         let vc = LockScreenViewController(nibName: nil, bundle: nil)
         navigationController?.pushViewController(vc, animated: true )
     }
