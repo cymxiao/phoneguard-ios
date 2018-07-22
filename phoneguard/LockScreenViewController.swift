@@ -9,14 +9,15 @@
 import UIKit
 
 class LockScreenViewController: UIViewController {
-    @IBOutlet weak var textInput: UITextField!
-    @IBAction func pwsValueChanged(_ sender: UITextField) {
-        print (sender.text ?? "")
-        if(sender.text == "1234"){
-             navigationController?.popViewController(animated:true)
-        }
-        //navigationController?.popToRootViewController(animated:true)
+ 
+    @IBAction func pwdValueChanged(_ sender: UITextField) {
+                print (sender.text ?? "")
+                if(sender.text == "1234"){
+                     navigationController?.popViewController(animated:true)
+                }
+        //        //navigationController?.popToRootViewController(animated:true)
     }
+    @IBOutlet weak var pwdValueChanged: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
     }

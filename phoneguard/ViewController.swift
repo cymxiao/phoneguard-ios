@@ -118,7 +118,10 @@ class ViewController: UIViewController {
         btnAlarm.titleLabel?.lineBreakMode =  .byWordWrapping
         btnAlarm.setTitle("警戒已关闭\n\n 点击开启", for:.normal)
  
-        
+        //self.navigationItem.setim
+        //set sub page backbutton text.
+        let item = UIBarButtonItem(title: "返回", style: .plain, target: self, action: nil)
+        self.navigationItem.backBarButtonItem = item
     }
 
     override func didReceiveMemoryWarning() {
@@ -166,10 +169,12 @@ class ViewController: UIViewController {
 //        self.navigationController?.pushViewController(deskVC, animated: false)
         
        //let navgationController = UINavigationController(rootViewController: self);
-        print("self.navigationController=\(self.navigationController)")
-        print(navigationController)
-        let vc = LockScreenViewController(nibName: nil, bundle: nil)
-        navigationController?.pushViewController(vc, animated: true )
+    //print("self.navigationController=\(self.navigationController)")
+       // print(navigationController)
+        
+        //let vc = LockScreenViewController(nibName: nil, bundle: nil)
+        let vc = self.storyboard?.instantiateViewController(withIdentifier:  "LockScreen") //instantiateViewControllerWithIdentifier:@"lockScreen"
+        self.navigationController?.show(vc!, sender: nil )
     }
 
 
