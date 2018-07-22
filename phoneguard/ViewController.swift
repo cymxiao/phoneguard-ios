@@ -79,7 +79,7 @@ class ViewController: UIViewController {
             playSound(false);
             removeProximityObserve();
         }
-        
+               openLockScreen()
     }
     
   
@@ -117,6 +117,7 @@ class ViewController: UIViewController {
         btnAlarm.center = CGPoint(x: self.view.bounds.width / 2,  y: 150)
         btnAlarm.titleLabel?.lineBreakMode =  .byWordWrapping
         btnAlarm.setTitle("警戒已关闭\n\n 点击开启", for:.normal)
+ 
         
     }
 
@@ -146,6 +147,7 @@ class ViewController: UIViewController {
             
         } else {
             if(isSecurityMode!){
+                openLockScreen()
                 // Simple usage
                 _ = setTimeout(delay: 3, block: { () -> Void in
                     // do this stuff after 0.35 seconds
@@ -154,6 +156,17 @@ class ViewController: UIViewController {
              //playSound(true);
             }
         }
+    }
+    
+    func openLockScreen(){
+//        let storyboard:UIStoryboard! = UIStoryboard(name: "Main", bundle: nil)
+//
+//        let deskVC:LockScreenViewController! = storyboard!.instantiateViewController(withIdentifier: "LockScreenViewController") as! LockScreenViewController
+//
+//        navigationController?.pushViewController(deskVC, animated: false)
+        
+        let vc = LockScreenViewController(nibName: nil, bundle: nil)
+        navigationController?.pushViewController(vc, animated: true )
     }
 
 

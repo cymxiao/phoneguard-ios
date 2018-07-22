@@ -23,6 +23,7 @@
 		316A751920FE3215006FEA79 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 316A751720FE3215006FEA79 /* LaunchScreen.storyboard */; };
 		316A752420FE3215006FEA79 /* phoneguardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316A752320FE3215006FEA79 /* phoneguardTests.swift */; };
 		316A752F20FE3215006FEA79 /* phoneguardUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316A752E20FE3215006FEA79 /* phoneguardUITests.swift */; };
+		31B98DA22104961D00E19BBA /* LockScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B98DA12104961D00E19BBA /* LockScreenViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		316A752A20FE3215006FEA79 /* phoneguardUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = phoneguardUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		316A752E20FE3215006FEA79 /* phoneguardUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = phoneguardUITests.swift; sourceTree = "<group>"; };
 		316A753020FE3215006FEA79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		31B98DA12104961D00E19BBA /* LockScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockScreenViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +140,7 @@
 				316A751520FE3215006FEA79 /* Assets.xcassets */,
 				316A751720FE3215006FEA79 /* LaunchScreen.storyboard */,
 				316A751A20FE3215006FEA79 /* Info.plist */,
+				31B98DA12104961D00E19BBA /* LockScreenViewController.swift */,
 			);
 			path = phoneguard;
 			sourceTree = "<group>";
@@ -312,6 +315,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				316A751120FE3215006FEA79 /* ViewController.swift in Sources */,
+				31B98DA22104961D00E19BBA /* LockScreenViewController.swift in Sources */,
 				316A750F20FE3215006FEA79 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
