@@ -15,6 +15,7 @@
 		314521BE210311E200232CDC /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 314521BD210311E200232CDC /* bg.png */; };
 		314521C12103520200232CDC /* alarm-set-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 314521BF2103520200232CDC /* alarm-set-3.png */; };
 		314521C22103520200232CDC /* alarm-clear-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 314521C02103520200232CDC /* alarm-clear-3.png */; };
+		3165320421041929001E256C /* setting.png in Resources */ = {isa = PBXBuildFile; fileRef = 3165320321041929001E256C /* setting.png */; };
 		316A750F20FE3215006FEA79 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316A750E20FE3215006FEA79 /* AppDelegate.swift */; };
 		316A751120FE3215006FEA79 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316A751020FE3215006FEA79 /* ViewController.swift */; };
 		316A751420FE3215006FEA79 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 316A751220FE3215006FEA79 /* Main.storyboard */; };
@@ -50,6 +51,7 @@
 		314521BD210311E200232CDC /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
 		314521BF2103520200232CDC /* alarm-set-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "alarm-set-3.png"; sourceTree = "<group>"; };
 		314521C02103520200232CDC /* alarm-clear-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "alarm-clear-3.png"; sourceTree = "<group>"; };
+		3165320321041929001E256C /* setting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = setting.png; sourceTree = "<group>"; };
 		316A750B20FE3215006FEA79 /* phoneguard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = phoneguard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		316A750E20FE3215006FEA79 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		316A751020FE3215006FEA79 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 		312F52EF20FF88D600628B24 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3165320321041929001E256C /* setting.png */,
 				314521C02103520200232CDC /* alarm-clear-3.png */,
 				314521BF2103520200232CDC /* alarm-set-3.png */,
 				314521BD210311E200232CDC /* bg.png */,
@@ -280,6 +283,7 @@
 				314521BB2102FEBB00232CDC /* alarm-set-2.png in Resources */,
 				314521C22103520200232CDC /* alarm-clear-3.png in Resources */,
 				314521BC2102FEBB00232CDC /* alarm-clear-2.png in Resources */,
+				3165320421041929001E256C /* setting.png in Resources */,
 				314521B82102D35D00232CDC /* alarm-clear.png in Resources */,
 				316A751420FE3215006FEA79 /* Main.storyboard in Resources */,
 				314521B72102D35D00232CDC /* alarm-set.png in Resources */,
