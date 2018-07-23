@@ -8,22 +8,37 @@
 
 import UIKit
 
-class LockScreenViewController: UIViewController {
+class LockScreenViewController: UIViewController, UITextFieldDelegate {
  
-    @IBAction func pwdValueChanged(_ sender: UITextField) {
-                print (sender.text ?? "")
-                if(sender.text == "1234"){
-                     navigationController?.popViewController(animated:true)
-                }
-        //        //navigationController?.popToRootViewController(animated:true)
+    @IBOutlet weak var pwdInput: UITextField!
+    var rootViewCtrl:ViewController?
+ 
+    @IBAction func pwdInputFinished(_ sender: UITextField) {
+        print (sender.text ?? "")
+        if(sender.text == "1234"){
+            rootViewCtrl?.pwdReceived(data:  sender.text!)
+            navigationController?.popViewController(animated:true)
+        }
     }
-    @IBOutlet weak var pwdValueChanged: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.hidesBackButton = true
+        //self.navigationItem.res
+        pwdInput.isSecureTextEntry = true
+        pwdInput.becomeFirstResponder()
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        //收起键盘
+        textField.resignFirstResponder()
+        //打印出文本框中的值
+        print(textField.text ?? "")
+        return true
     }
     
 }

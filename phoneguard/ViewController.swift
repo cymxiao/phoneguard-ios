@@ -177,6 +177,14 @@ class ViewController: UIViewController {
         self.navigationController?.show(vc!, sender: nil )
     }
 
+    
+    func pwdReceived(data: String)
+    {
+        print("Data received: \(data)")
+        if(data == "1234"){
+            playSound(false);
+        }
+    }
 
 }
 
