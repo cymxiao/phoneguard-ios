@@ -65,22 +65,49 @@ class ViewController: UIViewController {
         }
     }
     
+    
+    
+    func playSoundwithName(_ mp3Name : String) {
+        guard let url = Bundle.main.url(forResource: mp3Name, withExtension: "mp3") else { return }
+        
+        do {
+            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+            try AVAudioSession.sharedInstance().setActive(true)
+            
+            /* The following line is required for the player to work on iOS 11. Change the file type accordingly*/
+            player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileType.mp3.rawValue)
+            
+            /* iOS 10 and earlier require the following line: */
+            //player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileTypeMPEGLayer3)
+            
+            guard let player = player else { return }
+           
+            player.play()
+           
+            
+        } catch let error {
+            print(error.localizedDescription)
+        }
+    }
  
     @IBAction func buttonClick(_ sender: Any) {
         if(isSecurityMode == false){
             isSecurityMode = true
+            playSoundwithName("lock")
             btnAlarm.setTitle("警戒已开启\n 点击关闭", for:.normal)
             btnAlarm.setBackgroundImage(UIImage(named: "alarm-set.png"), for: UIControlState.normal)
             addProximityObserve()
         } else {
             isSecurityMode = false
+        
             btnAlarm.setBackgroundImage(UIImage(named: "alarm-clear.png"), for: UIControlState.normal)
             btnAlarm.setTitle("警戒已关闭\n 点击开启", for:.normal)
-            playSound(false);
+            playSound(false)
+            //Amin: todo: I guess the playSound(false) would mute the player, that why if put playSoundwithName("unlock") before it, the unlock.mp3 would not be played.
+            playSoundwithName("unlock")
             removeProximityObserve();
         }
         //var pwd = UserDefaults.standard.value(forKey: "pwd") as? String
-        openLockScreen()
     }
     
   
