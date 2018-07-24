@@ -69,13 +69,13 @@ class ViewController: UIViewController {
     @IBAction func buttonClick(_ sender: Any) {
         if(isSecurityMode == false){
             isSecurityMode = true
-            btnAlarm.setTitle("警戒已开启\n\n 点击关闭", for:.normal)
+            btnAlarm.setTitle("警戒已开启\n 点击关闭", for:.normal)
             btnAlarm.setBackgroundImage(UIImage(named: "alarm-set.png"), for: UIControlState.normal)
             addProximityObserve()
         } else {
             isSecurityMode = false
             btnAlarm.setBackgroundImage(UIImage(named: "alarm-clear.png"), for: UIControlState.normal)
-            btnAlarm.setTitle("警戒已关闭\n\n 点击开启", for:.normal)
+            btnAlarm.setTitle("警戒已关闭\n 点击开启", for:.normal)
             playSound(false);
             removeProximityObserve();
         }
@@ -117,12 +117,17 @@ class ViewController: UIViewController {
         btnAlarm.setBackgroundImage(UIImage(named: "alarm-clear.png"), for: UIControlState.normal)
         btnAlarm.center = CGPoint(x: self.view.bounds.width / 2,  y: 150)
         btnAlarm.titleLabel?.lineBreakMode =  .byWordWrapping
-        btnAlarm.setTitle("警戒已关闭\n\n 点击开启", for:.normal)
+        btnAlarm.setTitle("警戒已关闭\n 点击开启", for:.normal)
  
         //self.navigationItem.setim
         //set sub page backbutton text.
         let item = UIBarButtonItem(title: "返回", style: .plain, target: self, action: nil)
         self.navigationItem.backBarButtonItem = item
+        
+       // self.navigationController?.navigationBar.tintColor = [UIColor, colorWithRed,:0.000 green:0.000 blue:0.000 alpha:1.000];
+        //self.navigationController?.navigationBar.alpha = 1;
+        //self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.setNavigationBarHidden(true,animated: true)
      
     }
 

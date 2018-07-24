@@ -27,6 +27,7 @@ class LockScreenViewController: UIViewController, UITextFieldDelegate {
         //self.navigationItem.res
         pwdInput.isSecureTextEntry = true
         pwdInput.becomeFirstResponder()
+        //self.navigationController?.setNavigationBarHidden(false,animated: true)
     }
     
     override func didReceiveMemoryWarning() {

@@ -20,6 +20,10 @@ class SettingsViewController: UIViewController , UITextFieldDelegate {
         UserDefaults.standard.set(pwdText.text, forKey: "pwd") 
         navigationController?.popViewController(animated:true)
     }
+    @IBAction func backToRoot(_ sender: Any) {
+         navigationController?.popViewController(animated:true)
+    }
+  
     override func viewDidLoad() {
         super.viewDidLoad()
         alertTimeoutText.delegate = self
@@ -27,6 +31,8 @@ class SettingsViewController: UIViewController , UITextFieldDelegate {
         //self.navigationItem.hidesBackButton = true
         //let leftBarBtn = UIBarButtonItem(title: "返回", style: .plain, target: self,  action: #selector(backToPrevious)) 
         //self.navigationItem.leftBarButtonItem = leftBarBtn
+        
+        //self.navigationController?.setNavigationBarHidden(false,animated: true)
     }
     
     override func didReceiveMemoryWarning() {
