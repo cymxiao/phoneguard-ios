@@ -164,13 +164,13 @@
                                 <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="8" bottom="8" trailing="8"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1234" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iZl-Dw-d5H">
                                 <rect key="frame" x="262" y="192" width="97" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="61k-SS-R4q">
                                 <rect key="frame" x="117" y="333" width="141" height="32"/>
@@ -205,6 +205,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="alertTimeoutText" destination="RbF-XE-U3G" id="eV7-sO-bvU"/>
+                        <outlet property="pwdText" destination="iZl-Dw-d5H" id="9dO-dl-V3H"/>
                         <outlet property="saveSettings" destination="61k-SS-R4q" id="9NB-IG-xFq"/>
                     </connections>
                 </viewController>

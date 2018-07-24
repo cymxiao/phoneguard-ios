@@ -15,7 +15,7 @@ class LockScreenViewController: UIViewController, UITextFieldDelegate {
  
     @IBAction func pwdInputFinished(_ sender: UITextField) {
         print (sender.text ?? "")
-        if(sender.text == "1234"){
+        if(sender.text == UserDefaults.standard.value(forKey: "pwd") as? String){
             rootViewCtrl?.pwdReceived(data:  sender.text!)
             navigationController?.popViewController(animated:true)
         }

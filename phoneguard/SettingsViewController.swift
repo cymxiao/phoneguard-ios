@@ -8,15 +8,22 @@
 
 import UIKit
 
-class SettingsViewController: UIViewController {
+class SettingsViewController: UIViewController , UITextFieldDelegate {
    
+    @IBOutlet weak var alertTimeoutText: UITextField!
+    @IBOutlet weak var pwdText: UITextField!
+    
     @IBOutlet weak var saveSettings: UIButton!
+    
     @IBAction func saveSettings(_ sender: Any) {
-         navigationController?.popViewController(animated:true)
+        UserDefaults.standard.set(alertTimeoutText.text, forKey: "timeout")
+        UserDefaults.standard.set(pwdText.text, forKey: "pwd") 
+        navigationController?.popViewController(animated:true)
     }
     override func viewDidLoad() {
         super.viewDidLoad()
- 
+        alertTimeoutText.delegate = self
+        pwdText.delegate = self
         //self.navigationItem.hidesBackButton = true
         //let leftBarBtn = UIBarButtonItem(title: "返回", style: .plain, target: self,  action: #selector(backToPrevious)) 
         //self.navigationItem.leftBarButtonItem = leftBarBtn
@@ -26,5 +33,18 @@ class SettingsViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange,
+                   replacementString string: String) -> Bool
+    {
+        let maxLength = 4
+        let currentString: NSString = textField.text! as NSString
+        let newString: NSString =
+            currentString.replacingCharacters(in: range, with: string) as NSString
+        return newString.length <= maxLength
+    }
+    
+    
 }
+
+
 

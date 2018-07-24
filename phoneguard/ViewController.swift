@@ -79,7 +79,8 @@ class ViewController: UIViewController {
             playSound(false);
             removeProximityObserve();
         }
-               openLockScreen()
+        //var pwd = UserDefaults.standard.value(forKey: "pwd") as? String
+        openLockScreen()
     }
     
   
@@ -122,6 +123,7 @@ class ViewController: UIViewController {
         //set sub page backbutton text.
         let item = UIBarButtonItem(title: "返回", style: .plain, target: self, action: nil)
         self.navigationItem.backBarButtonItem = item
+     
     }
 
     override func didReceiveMemoryWarning() {
@@ -181,7 +183,7 @@ class ViewController: UIViewController {
     func pwdReceived(data: String)
     {
         print("Data received: \(data)")
-        if(data == "1234"){
+        if(data == UserDefaults.standard.value(forKey: "pwd") as? String){
             playSound(false);
         }
     }
