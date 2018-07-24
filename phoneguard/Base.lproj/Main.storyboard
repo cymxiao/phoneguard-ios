@@ -82,7 +82,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="设置报警后，请不要锁屏，将手机放置于包或口袋内，系统会自动关闭屏幕。   将口袋或者包中取出手机时，若设定延时时间（默认3秒）内未解锁，则会发出警报。如成功解锁，则不会发出警报。                             " translatesAutoresizingMaskIntoConstraints="NO" id="OOG-KH-xqF">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="设置警戒模式后，请不要锁屏，将手机放置于包或口袋内，系统会自动关闭屏幕。   当从口袋或者包中取出手机时，若设定延时时间（默认3秒）内未解锁，则会发出警报。如成功解锁，则不会发出警报。                             " translatesAutoresizingMaskIntoConstraints="NO" id="OOG-KH-xqF">
                                 <rect key="frame" x="16" y="373" width="343" height="215"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="PingFangSC-Thin" family="PingFang SC" pointSize="15"/>
