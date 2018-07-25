@@ -13,8 +13,15 @@ class LockScreenViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var pwdInput: UITextField!
     var rootViewCtrl:ViewController?
  
-    @IBAction func pwdInputFinished(_ sender: UITextField) {
-        print (sender.text ?? "")
+ 
+//    @IBAction func pwdInputFinished(_ sender: UITextField) {
+//                print (sender.text ?? "")
+//                if(sender.text == UserDefaults.standard.value(forKey: "pwd") as? String){
+//                    rootViewCtrl?.pwdReceived(data:  sender.text!)
+//                    navigationController?.popViewController(animated:true)
+//                }
+//    }
+    @IBAction func pwdUpdated(_ sender: UITextField) {
         if(sender.text == UserDefaults.standard.value(forKey: "pwd") as? String){
             rootViewCtrl?.pwdReceived(data:  sender.text!)
             navigationController?.popViewController(animated:true)
@@ -27,6 +34,7 @@ class LockScreenViewController: UIViewController, UITextFieldDelegate {
         //self.navigationItem.res
         pwdInput.isSecureTextEntry = true
         pwdInput.becomeFirstResponder()
+        pwdInput.delegate = self
         //self.navigationController?.setNavigationBarHidden(false,animated: true)
     }
     
@@ -34,11 +42,16 @@ class LockScreenViewController: UIViewController, UITextFieldDelegate {
         super.didReceiveMemoryWarning()
     }
     
+    //Number pad don't have return
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        //收起键盘
-        textField.resignFirstResponder()
-        //打印出文本框中的值
-        print(textField.text ?? "")
+        if(textField.text == UserDefaults.standard.value(forKey: "pwd") as? String){
+            rootViewCtrl?.pwdReceived(data:  textField.text!)
+            //收起键盘
+            //textField.resignFirstResponder()
+            navigationController?.popViewController(animated:true)
+        } else {
+            textField.text = "";
+        }
         return true
     }
     

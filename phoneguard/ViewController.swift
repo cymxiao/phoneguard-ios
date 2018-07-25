@@ -8,6 +8,7 @@
 
 import UIKit
 import AVFoundation
+import MediaPlayer
 
 
 class ViewController: UIViewController {
@@ -44,7 +45,6 @@ class ViewController: UIViewController {
             try AVAudioSession.sharedInstance().setActive(true)
             
             
-            
             /* The following line is required for the player to work on iOS 11. Change the file type accordingly*/
             player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileType.mp3.rawValue)
             
@@ -52,8 +52,9 @@ class ViewController: UIViewController {
             //player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileTypeMPEGLayer3)
             
             guard let player = player else { return }
-            player.volume = 0.9
-            player.numberOfLoops = 5
+            
+            //player.volume = 1
+            player.numberOfLoops = 10
             if(bPlay){
             player.play()
             } else {
@@ -98,19 +99,22 @@ class ViewController: UIViewController {
             btnAlarm.setBackgroundImage(UIImage(named: "alarm-set.png"), for: UIControlState.normal)
             addProximityObserve()
         } else {
-            isSecurityMode = false
-        
-            btnAlarm.setBackgroundImage(UIImage(named: "alarm-clear.png"), for: UIControlState.normal)
-            btnAlarm.setTitle("警戒已关闭\n 点击开启", for:.normal)
-            playSound(false)
-            //Amin: todo: I guess the playSound(false) would mute the player, that why if put playSoundwithName("unlock") before it, the unlock.mp3 would not be played.
-            playSoundwithName("unlock")
-            removeProximityObserve();
+            alarmClear()
         }
-        //var pwd = UserDefaults.standard.value(forKey: "pwd") as? String
+        
     }
     
   
+    func alarmClear(){
+        isSecurityMode = false
+        
+        btnAlarm.setBackgroundImage(UIImage(named: "alarm-clear.png"), for: UIControlState.normal)
+        btnAlarm.setTitle("警戒已关闭\n 点击开启", for:.normal)
+        playSound(false)
+        //Amin: todo: I guess the playSound(false) would mute the player, that why if put playSoundwithName("unlock") before it, the unlock.mp3 would not be played.
+        playSoundwithName("unlock")
+        removeProximityObserve();
+    }
     
     func addProximityObserve(){
         UIDevice.current.isProximityMonitoringEnabled = true
@@ -155,7 +159,10 @@ class ViewController: UIViewController {
         //self.navigationController?.navigationBar.alpha = 1;
         //self.navigationController?.navigationBar.isTranslucent = true
         self.navigationController?.setNavigationBarHidden(true,animated: true)
-     
+        
+        if(UserDefaults.standard.value(forKey: "pwd") == nil ){
+             UserDefaults.standard.set("1367", forKey: "pwd")
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -168,6 +175,26 @@ class ViewController: UIViewController {
      
     }
     
+    func setVolume(volumne : Float ){
+        //Set max volume
+        let wrapperView = UIView(frame: CGRect(x: 0, y: 0, width: 100, height: 10))
+        //self.view.backgroundColor = UIColor.clearColor()
+        self.view.addSubview(wrapperView)
+        
+        let volumeView = MPVolumeView(frame: wrapperView.bounds)
+        wrapperView.addSubview(volumeView)
+        volumeView.showsVolumeSlider = true
+        volumeView.isHidden = true
+        
+        for view in volumeView.subviews {
+            //if (NSStringFromClass(view.classForCoder) == "MPVolumeSlider") {
+              if (view.classForCoder.description() == "MPVolumeSlider") {
+                let slider = view as! UISlider
+                //print(" starting set volumn")
+                slider.setValue(volumne, animated: false)
+            }
+        }
+    }
     
     // Basic.swift
     func setTimeout(delay:TimeInterval, block:@escaping ()->Void) -> Timer {
@@ -184,6 +211,7 @@ class ViewController: UIViewController {
             
         } else {
             if(isSecurityMode!){
+                setVolume(volumne: 0.9)
                 openLockScreen()
                 // Simple usage
                 _ = setTimeout(delay: 3, block: { () -> Void in
@@ -207,8 +235,9 @@ class ViewController: UIViewController {
        // print(navigationController)
         
         //let vc = LockScreenViewController(nibName: nil, bundle: nil)
-        let vc = self.storyboard?.instantiateViewController(withIdentifier:  "LockScreen") //instantiateViewControllerWithIdentifier:@"lockScreen"
-        self.navigationController?.show(vc!, sender: nil )
+        let vc = self.storyboard?.instantiateViewController(withIdentifier:  "LockScreen")  as! LockScreenViewController
+        vc.rootViewCtrl = self
+        self.navigationController?.show(vc, sender: nil )
     }
 
     
@@ -216,7 +245,8 @@ class ViewController: UIViewController {
     {
         print("Data received: \(data)")
         if(data == UserDefaults.standard.value(forKey: "pwd") as? String){
-            playSound(false);
+            //playSound(false);
+            alarmClear();
         }
     }
 
