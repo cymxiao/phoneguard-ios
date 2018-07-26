@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     var isSecurityMode : Bool? = false
     @IBOutlet weak var btnAlarm: UIButton!
     @IBOutlet weak var mainUIView: UIView!
+    @IBOutlet weak var volumSlider: UISlider!
     
 //    @IBAction func switchButton(_ sender: UISwitch) {
 //
@@ -114,6 +115,7 @@ class ViewController: UIViewController {
         //Amin: todo: I guess the playSound(false) would mute the player, that why if put playSoundwithName("unlock") before it, the unlock.mp3 would not be played.
         playSoundwithName("unlock")
         removeProximityObserve();
+        removeSystemVolumeObserver()
     }
     
     func addProximityObserve(){
@@ -163,6 +165,9 @@ class ViewController: UIViewController {
         if(UserDefaults.standard.value(forKey: "pwd") == nil ){
              UserDefaults.standard.set("1367", forKey: "pwd")
         }
+        if(UserDefaults.standard.value(forKey: "timeout") == nil ){
+            UserDefaults.standard.set("3", forKey: "timeout")
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -190,6 +195,7 @@ class ViewController: UIViewController {
             //if (NSStringFromClass(view.classForCoder) == "MPVolumeSlider") {
               if (view.classForCoder.description() == "MPVolumeSlider") {
                 let slider = view as! UISlider
+                volumSlider = slider
                 //print(" starting set volumn")
                 slider.setValue(volumne, animated: false)
             }
@@ -212,9 +218,14 @@ class ViewController: UIViewController {
         } else {
             if(isSecurityMode!){
                 setVolume(volumne: 0.9)
+                addSystemVolumeObserver()
                 openLockScreen()
+                //Avoid dulicate lock screen displayed.
+                removeProximityObserve()
+                let timeout = UserDefaults.standard.value(forKey: "timeout") as! String
+                let tv = Double(timeout)
                 // Simple usage
-                _ = setTimeout(delay: 3, block: { () -> Void in
+                _ = setTimeout(delay: tv!, block: { () -> Void in
                     // do this stuff after 0.35 seconds
                     self.playSound(true);
                 })
@@ -246,9 +257,29 @@ class ViewController: UIViewController {
         print("Data received: \(data)")
         if(data == UserDefaults.standard.value(forKey: "pwd") as? String){
             //playSound(false);
-            alarmClear();
+            alarmClear()
         }
     }
+    
+    func addSystemVolumeObserver(){
+        //添加监听
+        NotificationCenter.default.addObserver(self, selector: #selector(self.changeVolumSlider), name: NSNotification.Name(rawValue: "AVSystemController_SystemVolumeDidChangeNotification"), object: nil)
+        UIApplication.shared.beginReceivingRemoteControlEvents()
+    }
+    
+    @objc func changeVolumSlider(notifi:NSNotification) {
+        if let volum:Float = notifi.userInfo?["AVSystemController_AudioVolumeNotificationParameter"] as! Float?{
+            //volumSlider.value = volum
+            //Do nothing.
+            volumSlider.value = 0.9
+        }
+    }
+    
+    func removeSystemVolumeObserver(){
+        NotificationCenter.default.removeObserver(self)
+        UIApplication.shared.endReceivingRemoteControlEvents()
+    }
+    
 
 }
 
