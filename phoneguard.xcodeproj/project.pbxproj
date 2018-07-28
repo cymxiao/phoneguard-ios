@@ -27,6 +27,7 @@
 		317EDA2621075130000C739E /* unlock.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 317EDA2521075130000C739E /* unlock.mp3 */; };
 		31B98DA22104961D00E19BBA /* LockScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B98DA12104961D00E19BBA /* LockScreenViewController.swift */; };
 		31B98DA42104CF9E00E19BBA /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B98DA32104CF9E00E19BBA /* SettingsViewController.swift */; };
+		31E2F92B210A13F000962EC5 /* LicenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E2F92A210A13F000962EC5 /* LicenseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		317EDA2521075130000C739E /* unlock.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = unlock.mp3; sourceTree = "<group>"; };
 		31B98DA12104961D00E19BBA /* LockScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockScreenViewController.swift; sourceTree = "<group>"; };
 		31B98DA32104CF9E00E19BBA /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		31E2F92A210A13F000962EC5 /* LicenseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LicenseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +152,7 @@
 				316A751A20FE3215006FEA79 /* Info.plist */,
 				31B98DA12104961D00E19BBA /* LockScreenViewController.swift */,
 				31B98DA32104CF9E00E19BBA /* SettingsViewController.swift */,
+				31E2F92A210A13F000962EC5 /* LicenseViewController.swift */,
 			);
 			path = phoneguard;
 			sourceTree = "<group>";
@@ -326,6 +329,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				316A751120FE3215006FEA79 /* ViewController.swift in Sources */,
+				31E2F92B210A13F000962EC5 /* LicenseViewController.swift in Sources */,
 				31B98DA22104961D00E19BBA /* LockScreenViewController.swift in Sources */,
 				316A750F20FE3215006FEA79 /* AppDelegate.swift in Sources */,
 				31B98DA42104CF9E00E19BBA /* SettingsViewController.swift in Sources */,

@@ -217,7 +217,8 @@ class ViewController: UIViewController {
             
         } else {
             if(isSecurityMode!){
-                setVolume(volumne: 0.9)
+                setVolume(volumne: 0)
+                self.playSound(true);
                 addSystemVolumeObserver()
                 openLockScreen()
                 //Avoid dulicate lock screen displayed.
@@ -227,7 +228,7 @@ class ViewController: UIViewController {
                 // Simple usage
                 _ = setTimeout(delay: tv!, block: { () -> Void in
                     // do this stuff after 0.35 seconds
-                    self.playSound(true);
+                      self.setVolume(volumne: 0.9)
                 })
              //playSound(true);
             }
@@ -279,7 +280,6 @@ class ViewController: UIViewController {
         NotificationCenter.default.removeObserver(self)
         UIApplication.shared.endReceivingRemoteControlEvents()
     }
-    
 
 }
 

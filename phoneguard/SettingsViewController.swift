@@ -23,6 +23,12 @@ class SettingsViewController: UIViewController , UITextFieldDelegate {
     @IBAction func backToRoot(_ sender: Any) {
          navigationController?.popViewController(animated:true)
     }
+    
+    @IBAction func navToLicense(_ sender: Any) {
+         let vc = self.storyboard?.instantiateViewController(withIdentifier:  "License")  as! LicenseViewController
+        self.navigationController?.show(vc, sender: nil )
+    }
+    
   
     override func viewDidLoad() {
         super.viewDidLoad()
