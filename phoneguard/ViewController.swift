@@ -91,7 +91,11 @@ class ViewController: UIViewController {
             print(error.localizedDescription)
         }
     }
- 
+    @IBAction func navGuide(_ sender: Any) {
+        let vc = self.storyboard?.instantiateViewController(withIdentifier:  "guide")  as! GuideViewController
+        self.navigationController?.show(vc, sender: nil )
+    }
+    
     @IBAction func buttonClick(_ sender: Any) {
         if(isSecurityMode == false){
             isSecurityMode = true
@@ -139,6 +143,7 @@ class ViewController: UIViewController {
         
     }
     
+  
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -168,6 +173,11 @@ class ViewController: UIViewController {
         if(UserDefaults.standard.value(forKey: "timeout") == nil ){
             UserDefaults.standard.set("3", forKey: "timeout")
         }
+        
+        if(UserDefaults.standard.value(forKey: "agreeLicense") == nil ){
+            let vc = self.storyboard?.instantiateViewController(withIdentifier:  "License")  as! LicenseViewController
+            self.navigationController?.show(vc, sender: nil )
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -182,14 +192,16 @@ class ViewController: UIViewController {
     
     func setVolume(volumne : Float ){
         //Set max volume
-        let wrapperView = UIView(frame: CGRect(x: 0, y: 0, width: 100, height: 10))
+        let wrapperView = UIView(frame: CGRect(x: -130, y: -130, width: 100, height: 10))
+        //let wrapperView = UIView(frame: CGRect(x: 0, y: 0 , width: 100, height: 10))
         //self.view.backgroundColor = UIColor.clearColor()
         self.view.addSubview(wrapperView)
         
         let volumeView = MPVolumeView(frame: wrapperView.bounds)
         wrapperView.addSubview(volumeView)
+        //volumeView.showsRouteButton = true
         volumeView.showsVolumeSlider = true
-        volumeView.isHidden = true
+        volumeView.isHidden = false
         
         for view in volumeView.subviews {
             //if (NSStringFromClass(view.classForCoder) == "MPVolumeSlider") {
@@ -217,18 +229,18 @@ class ViewController: UIViewController {
             
         } else {
             if(isSecurityMode!){
-                setVolume(volumne: 0)
                 self.playSound(true);
-                addSystemVolumeObserver()
+                setVolume(volumne: 0)
                 openLockScreen()
                 //Avoid dulicate lock screen displayed.
                 removeProximityObserve()
-                let timeout = UserDefaults.standard.value(forKey: "timeout") as! String
-                let tv = Double(timeout)
+                let timeout = UserDefaults.standard.double(forKey: "timeout")
+                //let tv = Double(timeout)
                 // Simple usage
-                _ = setTimeout(delay: tv!, block: { () -> Void in
+                _ = setTimeout(delay: timeout , block: { () -> Void in
                     // do this stuff after 0.35 seconds
                       self.setVolume(volumne: 0.9)
+                    self.addSystemVolumeObserver()
                 })
              //playSound(true);
             }

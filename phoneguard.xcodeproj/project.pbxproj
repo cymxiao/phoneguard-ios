@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		311CAF59210C92B900DD8212 /* guideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311CAF58210C92B900DD8212 /* guideViewController.swift */; };
 		312F52F120FF894800628B24 /* alarm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 312F52F020FF894800628B24 /* alarm.mp3 */; };
 		314521B72102D35D00232CDC /* alarm-set.png in Resources */ = {isa = PBXBuildFile; fileRef = 314521B52102D35D00232CDC /* alarm-set.png */; };
 		314521B82102D35D00232CDC /* alarm-clear.png in Resources */ = {isa = PBXBuildFile; fileRef = 314521B62102D35D00232CDC /* alarm-clear.png */; };
@@ -48,6 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		311CAF58210C92B900DD8212 /* guideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = guideViewController.swift; sourceTree = "<group>"; };
 		312F52F020FF894800628B24 /* alarm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = alarm.mp3; sourceTree = "<group>"; };
 		314521B52102D35D00232CDC /* alarm-set.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "alarm-set.png"; sourceTree = "<group>"; };
 		314521B62102D35D00232CDC /* alarm-clear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "alarm-clear.png"; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 				31B98DA12104961D00E19BBA /* LockScreenViewController.swift */,
 				31B98DA32104CF9E00E19BBA /* SettingsViewController.swift */,
 				31E2F92A210A13F000962EC5 /* LicenseViewController.swift */,
+				311CAF58210C92B900DD8212 /* guideViewController.swift */,
 			);
 			path = phoneguard;
 			sourceTree = "<group>";
@@ -329,6 +332,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				316A751120FE3215006FEA79 /* ViewController.swift in Sources */,
+				311CAF59210C92B900DD8212 /* guideViewController.swift in Sources */,
 				31E2F92B210A13F000962EC5 /* LicenseViewController.swift in Sources */,
 				31B98DA22104961D00E19BBA /* LockScreenViewController.swift in Sources */,
 				316A750F20FE3215006FEA79 /* AppDelegate.swift in Sources */,

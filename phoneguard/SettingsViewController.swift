@@ -17,17 +17,18 @@ class SettingsViewController: UIViewController , UITextFieldDelegate {
     
     @IBAction func saveSettings(_ sender: Any) {
         UserDefaults.standard.set(alertTimeoutText.text, forKey: "timeout")
-        UserDefaults.standard.set(pwdText.text, forKey: "pwd") 
+        UserDefaults.standard.set(pwdText.text, forKey: "pwd")
+        UserDefaults.standard.synchronize()
         navigationController?.popViewController(animated:true)
     }
     @IBAction func backToRoot(_ sender: Any) {
          navigationController?.popViewController(animated:true)
     }
     
-    @IBAction func navToLicense(_ sender: Any) {
-         let vc = self.storyboard?.instantiateViewController(withIdentifier:  "License")  as! LicenseViewController
-        self.navigationController?.show(vc, sender: nil )
-    }
+//    @IBAction func navToLicense(_ sender: Any) {
+//         let vc = self.storyboard?.instantiateViewController(withIdentifier:  "License")  as! LicenseViewController
+//        self.navigationController?.show(vc, sender: nil )
+//    }
     
   
     override func viewDidLoad() {
@@ -39,6 +40,13 @@ class SettingsViewController: UIViewController , UITextFieldDelegate {
         //self.navigationItem.leftBarButtonItem = leftBarBtn
         
         //self.navigationController?.setNavigationBarHidden(false,animated: true)
+        
+        let initTimeOut = UserDefaults.standard.value(forKey: "timeout") as? String
+        let initPwd  = UserDefaults.standard.value(forKey: "pwd") as? String
+     
+        alertTimeoutText.text = initTimeOut
+        pwdText.text = initPwd 
+        
     }
     
     override func didReceiveMemoryWarning() {
