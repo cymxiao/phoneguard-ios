@@ -94,7 +94,7 @@
                                     <constraint firstAttribute="height" constant="32" id="qEE-nN-X4s"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="PingFangSC-Medium" family="PingFang SC" pointSize="17"/>
-                                <state key="normal" title="  参数设置" image="setting.png"/>
+                                <state key="normal" title="  参数设置"/>
                                 <connections>
                                     <segue destination="Vnn-xC-YUk" kind="show" id="ZqP-HG-Kn5"/>
                                 </connections>
@@ -503,13 +503,13 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">
+                                        <string key="content">
 （1）在进行特殊促销或抽奖时，本APP可能会与赞助商、供应商共享用户的个人隐私信息，此情况使用以用户同意参加特殊促销或抽奖活动为前提；
 （2）本APP可能会与合作伙伴共同向用户提供所要求的服务或者共同向用户展示可能感兴趣的内容，在隐私权信息为使用该项产品/服务所必须的情况下，同意本APP可与其分享必要的隐私权信息；
 （3）在不透露单用户个人隐私资料的前提下，对非个人隐私数据库进行分析、整理和商业利用；
 （4）在不透露单用户个人隐私资料的前提下，为实现检测、防止或解决欺诈、安全或技术问题的目的而使用；
 （5）法律要求或允许为保护本APP合法的权利、财产或安全及使用户或公众免受即将发生的损害。
-</mutableString>
+</string>
                                         <attributes>
                                             <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <font key="NSFont" size="12" name="PingFangSC-Regular"/>
@@ -1808,7 +1808,4 @@ Cg
             <point key="canvasLocation" x="1049" y="-331"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="setting.png" width="24" height="24"/>
-    </resources>
 </document>

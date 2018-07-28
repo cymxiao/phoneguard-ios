@@ -11,12 +11,6 @@
 		312F52F120FF894800628B24 /* alarm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 312F52F020FF894800628B24 /* alarm.mp3 */; };
 		314521B72102D35D00232CDC /* alarm-set.png in Resources */ = {isa = PBXBuildFile; fileRef = 314521B52102D35D00232CDC /* alarm-set.png */; };
 		314521B82102D35D00232CDC /* alarm-clear.png in Resources */ = {isa = PBXBuildFile; fileRef = 314521B62102D35D00232CDC /* alarm-clear.png */; };
-		314521BB2102FEBB00232CDC /* alarm-set-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 314521B92102FEBA00232CDC /* alarm-set-2.png */; };
-		314521BC2102FEBB00232CDC /* alarm-clear-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 314521BA2102FEBA00232CDC /* alarm-clear-2.png */; };
-		314521BE210311E200232CDC /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 314521BD210311E200232CDC /* bg.png */; };
-		314521C12103520200232CDC /* alarm-set-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 314521BF2103520200232CDC /* alarm-set-3.png */; };
-		314521C22103520200232CDC /* alarm-clear-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 314521C02103520200232CDC /* alarm-clear-3.png */; };
-		3165320421041929001E256C /* setting.png in Resources */ = {isa = PBXBuildFile; fileRef = 3165320321041929001E256C /* setting.png */; };
 		316A750F20FE3215006FEA79 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316A750E20FE3215006FEA79 /* AppDelegate.swift */; };
 		316A751120FE3215006FEA79 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316A751020FE3215006FEA79 /* ViewController.swift */; };
 		316A751420FE3215006FEA79 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 316A751220FE3215006FEA79 /* Main.storyboard */; };
@@ -26,6 +20,7 @@
 		316A752F20FE3215006FEA79 /* phoneguardUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316A752E20FE3215006FEA79 /* phoneguardUITests.swift */; };
 		317EDA2421074B8D000C739E /* lock.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 317EDA2321074B8D000C739E /* lock.mp3 */; };
 		317EDA2621075130000C739E /* unlock.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 317EDA2521075130000C739E /* unlock.mp3 */; };
+		31941EBA210CAB3600DC0CE9 /* icon-60.png in Resources */ = {isa = PBXBuildFile; fileRef = 31941EB9210CAB3500DC0CE9 /* icon-60.png */; };
 		31B98DA22104961D00E19BBA /* LockScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B98DA12104961D00E19BBA /* LockScreenViewController.swift */; };
 		31B98DA42104CF9E00E19BBA /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B98DA32104CF9E00E19BBA /* SettingsViewController.swift */; };
 		31E2F92B210A13F000962EC5 /* LicenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E2F92A210A13F000962EC5 /* LicenseViewController.swift */; };
@@ -53,12 +48,6 @@
 		312F52F020FF894800628B24 /* alarm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = alarm.mp3; sourceTree = "<group>"; };
 		314521B52102D35D00232CDC /* alarm-set.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "alarm-set.png"; sourceTree = "<group>"; };
 		314521B62102D35D00232CDC /* alarm-clear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "alarm-clear.png"; sourceTree = "<group>"; };
-		314521B92102FEBA00232CDC /* alarm-set-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "alarm-set-2.png"; sourceTree = "<group>"; };
-		314521BA2102FEBA00232CDC /* alarm-clear-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "alarm-clear-2.png"; sourceTree = "<group>"; };
-		314521BD210311E200232CDC /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
-		314521BF2103520200232CDC /* alarm-set-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "alarm-set-3.png"; sourceTree = "<group>"; };
-		314521C02103520200232CDC /* alarm-clear-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "alarm-clear-3.png"; sourceTree = "<group>"; };
-		3165320321041929001E256C /* setting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = setting.png; sourceTree = "<group>"; };
 		316A750B20FE3215006FEA79 /* phoneguard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = phoneguard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		316A750E20FE3215006FEA79 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		316A751020FE3215006FEA79 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -74,6 +63,7 @@
 		316A753020FE3215006FEA79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		317EDA2321074B8D000C739E /* lock.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = lock.mp3; sourceTree = "<group>"; };
 		317EDA2521075130000C739E /* unlock.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = unlock.mp3; sourceTree = "<group>"; };
+		31941EB9210CAB3500DC0CE9 /* icon-60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-60.png"; sourceTree = "<group>"; };
 		31B98DA12104961D00E19BBA /* LockScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockScreenViewController.swift; sourceTree = "<group>"; };
 		31B98DA32104CF9E00E19BBA /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		31E2F92A210A13F000962EC5 /* LicenseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LicenseViewController.swift; sourceTree = "<group>"; };
@@ -107,14 +97,9 @@
 		312F52EF20FF88D600628B24 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				31941EB9210CAB3500DC0CE9 /* icon-60.png */,
 				317EDA2521075130000C739E /* unlock.mp3 */,
 				317EDA2321074B8D000C739E /* lock.mp3 */,
-				3165320321041929001E256C /* setting.png */,
-				314521C02103520200232CDC /* alarm-clear-3.png */,
-				314521BF2103520200232CDC /* alarm-set-3.png */,
-				314521BD210311E200232CDC /* bg.png */,
-				314521BA2102FEBA00232CDC /* alarm-clear-2.png */,
-				314521B92102FEBA00232CDC /* alarm-set-2.png */,
 				314521B62102D35D00232CDC /* alarm-clear.png */,
 				314521B52102D35D00232CDC /* alarm-set.png */,
 				312F52F020FF894800628B24 /* alarm.mp3 */,
@@ -295,18 +280,13 @@
 			files = (
 				312F52F120FF894800628B24 /* alarm.mp3 in Resources */,
 				316A751920FE3215006FEA79 /* LaunchScreen.storyboard in Resources */,
-				314521C12103520200232CDC /* alarm-set-3.png in Resources */,
-				314521BE210311E200232CDC /* bg.png in Resources */,
 				317EDA2621075130000C739E /* unlock.mp3 in Resources */,
 				316A751620FE3215006FEA79 /* Assets.xcassets in Resources */,
-				314521BB2102FEBB00232CDC /* alarm-set-2.png in Resources */,
-				314521C22103520200232CDC /* alarm-clear-3.png in Resources */,
-				314521BC2102FEBB00232CDC /* alarm-clear-2.png in Resources */,
-				3165320421041929001E256C /* setting.png in Resources */,
 				317EDA2421074B8D000C739E /* lock.mp3 in Resources */,
 				314521B82102D35D00232CDC /* alarm-clear.png in Resources */,
 				316A751420FE3215006FEA79 /* Main.storyboard in Resources */,
 				314521B72102D35D00232CDC /* alarm-set.png in Resources */,
+				31941EBA210CAB3600DC0CE9 /* icon-60.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
