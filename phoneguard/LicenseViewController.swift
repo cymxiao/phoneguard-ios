@@ -13,7 +13,8 @@ class LicenseViewController: UIViewController {//}, WKUIDelegate {
     
     //var webView: WKWebView!
    
- 
+    //@IBOutlet weak var scrollView: UITextView!
+    
     
     //@IBOutlet weak var scrollview: UIScrollView!
  
@@ -40,7 +41,6 @@ class LicenseViewController: UIViewController {//}, WKUIDelegate {
 //    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        
 //        let myURL = URL(string: "http://203.195.174.95/phone-guard-privacy.htm")
 //        let myRequest = URLRequest(url: myURL!)
 //        webView.load(myRequest)

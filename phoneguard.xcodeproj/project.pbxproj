@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		311CAF59210C92B900DD8212 /* guideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311CAF58210C92B900DD8212 /* guideViewController.swift */; };
+		312534DB21285E280017CEC7 /* SpeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312534DA21285E280017CEC7 /* SpeedViewController.swift */; };
 		312F52F120FF894800628B24 /* alarm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 312F52F020FF894800628B24 /* alarm.mp3 */; };
 		314521B72102D35D00232CDC /* alarm-set.png in Resources */ = {isa = PBXBuildFile; fileRef = 314521B52102D35D00232CDC /* alarm-set.png */; };
 		314521B82102D35D00232CDC /* alarm-clear.png in Resources */ = {isa = PBXBuildFile; fileRef = 314521B62102D35D00232CDC /* alarm-clear.png */; };
@@ -20,10 +21,10 @@
 		316A752F20FE3215006FEA79 /* phoneguardUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316A752E20FE3215006FEA79 /* phoneguardUITests.swift */; };
 		317EDA2421074B8D000C739E /* lock.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 317EDA2321074B8D000C739E /* lock.mp3 */; };
 		317EDA2621075130000C739E /* unlock.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 317EDA2521075130000C739E /* unlock.mp3 */; };
-		31941EBA210CAB3600DC0CE9 /* icon-60.png in Resources */ = {isa = PBXBuildFile; fileRef = 31941EB9210CAB3500DC0CE9 /* icon-60.png */; };
 		31B98DA22104961D00E19BBA /* LockScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B98DA12104961D00E19BBA /* LockScreenViewController.swift */; };
 		31B98DA42104CF9E00E19BBA /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B98DA32104CF9E00E19BBA /* SettingsViewController.swift */; };
 		31E2F92B210A13F000962EC5 /* LicenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E2F92A210A13F000962EC5 /* LicenseViewController.swift */; };
+		31EA398B210D4ADC00529065 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 31EA398A210D4ADC00529065 /* icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 
 /* Begin PBXFileReference section */
 		311CAF58210C92B900DD8212 /* guideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = guideViewController.swift; sourceTree = "<group>"; };
+		312534DA21285E280017CEC7 /* SpeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedViewController.swift; sourceTree = "<group>"; };
 		312F52F020FF894800628B24 /* alarm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = alarm.mp3; sourceTree = "<group>"; };
 		314521B52102D35D00232CDC /* alarm-set.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "alarm-set.png"; sourceTree = "<group>"; };
 		314521B62102D35D00232CDC /* alarm-clear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "alarm-clear.png"; sourceTree = "<group>"; };
@@ -63,10 +65,10 @@
 		316A753020FE3215006FEA79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		317EDA2321074B8D000C739E /* lock.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = lock.mp3; sourceTree = "<group>"; };
 		317EDA2521075130000C739E /* unlock.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = unlock.mp3; sourceTree = "<group>"; };
-		31941EB9210CAB3500DC0CE9 /* icon-60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-60.png"; sourceTree = "<group>"; };
 		31B98DA12104961D00E19BBA /* LockScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockScreenViewController.swift; sourceTree = "<group>"; };
 		31B98DA32104CF9E00E19BBA /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		31E2F92A210A13F000962EC5 /* LicenseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LicenseViewController.swift; sourceTree = "<group>"; };
+		31EA398A210D4ADC00529065 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,7 +99,7 @@
 		312F52EF20FF88D600628B24 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				31941EB9210CAB3500DC0CE9 /* icon-60.png */,
+				31EA398A210D4ADC00529065 /* icon.png */,
 				317EDA2521075130000C739E /* unlock.mp3 */,
 				317EDA2321074B8D000C739E /* lock.mp3 */,
 				314521B62102D35D00232CDC /* alarm-clear.png */,
@@ -141,6 +143,7 @@
 				31B98DA32104CF9E00E19BBA /* SettingsViewController.swift */,
 				31E2F92A210A13F000962EC5 /* LicenseViewController.swift */,
 				311CAF58210C92B900DD8212 /* guideViewController.swift */,
+				312534DA21285E280017CEC7 /* SpeedViewController.swift */,
 			);
 			path = phoneguard;
 			sourceTree = "<group>";
@@ -280,13 +283,13 @@
 			files = (
 				312F52F120FF894800628B24 /* alarm.mp3 in Resources */,
 				316A751920FE3215006FEA79 /* LaunchScreen.storyboard in Resources */,
+				31EA398B210D4ADC00529065 /* icon.png in Resources */,
 				317EDA2621075130000C739E /* unlock.mp3 in Resources */,
 				316A751620FE3215006FEA79 /* Assets.xcassets in Resources */,
 				317EDA2421074B8D000C739E /* lock.mp3 in Resources */,
 				314521B82102D35D00232CDC /* alarm-clear.png in Resources */,
 				316A751420FE3215006FEA79 /* Main.storyboard in Resources */,
 				314521B72102D35D00232CDC /* alarm-set.png in Resources */,
-				31941EBA210CAB3600DC0CE9 /* icon-60.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,6 +315,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				316A751120FE3215006FEA79 /* ViewController.swift in Sources */,
+				312534DB21285E280017CEC7 /* SpeedViewController.swift in Sources */,
 				311CAF59210C92B900DD8212 /* guideViewController.swift in Sources */,
 				31E2F92B210A13F000962EC5 /* LicenseViewController.swift in Sources */,
 				31B98DA22104961D00E19BBA /* LockScreenViewController.swift in Sources */,
@@ -487,10 +491,11 @@
 				INFOPLIST_FILE = phoneguard/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.cdtech.phoneguard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -503,10 +508,11 @@
 				INFOPLIST_FILE = phoneguard/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.cdtech.phoneguard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

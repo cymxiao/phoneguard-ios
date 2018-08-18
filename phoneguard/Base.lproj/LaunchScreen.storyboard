@@ -25,7 +25,7 @@
                                     <constraint firstAttribute="height" constant="30" id="lof-ik-mt9"/>
                                     <constraint firstAttribute="width" secondItem="WoD-fA-B5j" secondAttribute="height" multiplier="1:1" id="q3Y-83-hw1"/>
                                 </constraints>
-                                <state key="normal" backgroundImage="icon-60.png"/>
+                                <state key="normal" backgroundImage="icon.png"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kq5-Zk-HTc">
                                 <rect key="frame" x="117" y="558" width="211" height="30"/>
@@ -60,6 +60,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="icon-60.png" width="180" height="180"/>
+        <image name="icon.png" width="180" height="180"/>
     </resources>
 </document>

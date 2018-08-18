@@ -14,29 +14,12 @@ import MediaPlayer
 class ViewController: UIViewController {
     var player: AVAudioPlayer?
     var isSecurityMode : Bool? = false
+    var volumeValue : Float = 0.9
     @IBOutlet weak var btnAlarm: UIButton!
     @IBOutlet weak var mainUIView: UIView!
     @IBOutlet weak var volumSlider: UISlider!
     
-//    @IBAction func switchButton(_ sender: UISwitch) {
-//
-//        if(sender.isOn){
-//           isSecurityMode = true
-//            addProximityObserve()
-//            print( "isSecurityMode : \(String(describing:  isSecurityMode ))");
-//        } else {
-//            playSound(false);
-//            removeProximityObserve();
-//        }
-//
-//    }
-    
-//    func addUIImageView(){
-//        let imageView = UIImageView(image:UIImage(named:"alarm-set.png"))
-//        imageView.frame = CGRect(x:0, y:0, width:375, height:375)
-//        //imageView.layour
-//        self.view.addSubview(imageView)
-//    }
+
     
     func playSound(_ bPlay : Bool) {
         guard let url = Bundle.main.url(forResource: "alarm", withExtension: "mp3") else { return }
@@ -91,10 +74,11 @@ class ViewController: UIViewController {
             print(error.localizedDescription)
         }
     }
+    
     @IBAction func navGuide(_ sender: Any) {
         let vc = self.storyboard?.instantiateViewController(withIdentifier:  "guide")  as! GuideViewController
         self.navigationController?.show(vc, sender: nil )
-    }
+    } 
     
     @IBAction func buttonClick(_ sender: Any) {
         if(isSecurityMode == false){
@@ -178,6 +162,7 @@ class ViewController: UIViewController {
             let vc = self.storyboard?.instantiateViewController(withIdentifier:  "License")  as! LicenseViewController
             self.navigationController?.show(vc, sender: nil )
         }
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -235,11 +220,16 @@ class ViewController: UIViewController {
                 //Avoid dulicate lock screen displayed.
                 removeProximityObserve()
                 let timeout = UserDefaults.standard.double(forKey: "timeout")
+                if(hasHeadSet()){
+                    volumeValue = 0.3
+                } else {
+                     volumeValue = 0.9
+                }
                 //let tv = Double(timeout)
                 // Simple usage
                 _ = setTimeout(delay: timeout , block: { () -> Void in
                     // do this stuff after 0.35 seconds
-                      self.setVolume(volumne: 0.9)
+                      self.setVolume(volumne: self.volumeValue)
                     self.addSystemVolumeObserver()
                 })
              //playSound(true);
@@ -248,17 +238,7 @@ class ViewController: UIViewController {
     }
     
     func openLockScreen(){
-//        let storyboard:UIStoryboard! = UIStoryboard(name: "Main", bundle: nil)
-//
-//        let deskVC:LockScreenViewController! = storyboard!.instantiateViewController(withIdentifier: "LockScreenViewController") as! LockScreenViewController
-//
-//        self.navigationController?.pushViewController(deskVC, animated: false)
-        
-       //let navgationController = UINavigationController(rootViewController: self);
-    //print("self.navigationController=\(self.navigationController)")
-       // print(navigationController)
-        
-        //let vc = LockScreenViewController(nibName: nil, bundle: nil)
+
         let vc = self.storyboard?.instantiateViewController(withIdentifier:  "LockScreen")  as! LockScreenViewController
         vc.rootViewCtrl = self
         self.navigationController?.show(vc, sender: nil )
@@ -267,7 +247,7 @@ class ViewController: UIViewController {
     
     func pwdReceived(data: String)
     {
-        print("Data received: \(data)")
+        //print("Data received: \(data)")
         if(data == UserDefaults.standard.value(forKey: "pwd") as? String){
             //playSound(false);
             alarmClear()
@@ -284,13 +264,25 @@ class ViewController: UIViewController {
         if let volum:Float = notifi.userInfo?["AVSystemController_AudioVolumeNotificationParameter"] as! Float?{
             //volumSlider.value = volum
             //Do nothing.
-            volumSlider.value = 0.9
+            volumSlider.value = volumeValue
         }
     }
     
     func removeSystemVolumeObserver(){
         NotificationCenter.default.removeObserver(self)
         UIApplication.shared.endReceivingRemoteControlEvents()
+    }
+    
+    func hasHeadSet () -> Bool {
+        let audioSession: AVAudioSession = AVAudioSession.sharedInstance()
+        let currentRoute : AVAudioSessionRouteDescription = audioSession.currentRoute
+        for output in  currentRoute.outputs {
+            if(output.portType == AVAudioSessionPortHeadphones) {
+                return true
+            }
+        }
+        return false;
+        
     }
 
 }
