@@ -19,19 +19,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WoD-fA-B5j">
-                                <rect key="frame" x="64" y="558" width="30" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="lof-ik-mt9"/>
-                                    <constraint firstAttribute="width" secondItem="WoD-fA-B5j" secondAttribute="height" multiplier="1:1" id="q3Y-83-hw1"/>
-                                </constraints>
-                                <state key="normal" backgroundImage="icon.png"/>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kq5-Zk-HTc">
-                                <rect key="frame" x="117" y="558" width="211" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="mAs-c1-1Nb"/>
-                                </constraints>
+                                <rect key="frame" x="108" y="558" width="211" height="30"/>
                                 <attributedString key="attributedText">
                                     <fragment content="您身边的手机防盗窃专家">
                                         <attributes>
@@ -42,14 +31,23 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WoD-fA-B5j">
+                                <rect key="frame" x="70" y="558" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="WoD-fA-B5j" secondAttribute="height" multiplier="1:1" id="J0r-ch-WcH"/>
+                                    <constraint firstAttribute="height" constant="30" id="djM-lD-PIL"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="icon.png"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Kq5-Zk-HTc" secondAttribute="trailing" constant="47" id="2Y3-ZQ-0P6"/>
-                            <constraint firstItem="WoD-fA-B5j" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="538" id="5Fm-Uh-hON"/>
-                            <constraint firstItem="WoD-fA-B5j" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="64" id="Txz-GD-EkP"/>
-                            <constraint firstItem="WoD-fA-B5j" firstAttribute="top" secondItem="Kq5-Zk-HTc" secondAttribute="top" id="dSa-JZ-agc"/>
-                            <constraint firstItem="Kq5-Zk-HTc" firstAttribute="leading" secondItem="WoD-fA-B5j" secondAttribute="trailing" constant="23" id="gzk-5F-zVd"/>
+                            <constraint firstItem="WoD-fA-B5j" firstAttribute="top" secondItem="Kq5-Zk-HTc" secondAttribute="top" id="JHe-KW-krU"/>
+                            <constraint firstItem="Kq5-Zk-HTc" firstAttribute="leading" secondItem="WoD-fA-B5j" secondAttribute="trailing" constant="8" symbolic="YES" id="KoE-Mm-bZF"/>
+                            <constraint firstItem="WoD-fA-B5j" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="70" id="MgM-Ep-8l5"/>
+                            <constraint firstItem="WoD-fA-B5j" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="538" id="Ps7-up-Ggl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Kq5-Zk-HTc" secondAttribute="trailing" constant="56" id="dTz-mS-EET"/>
+                            <constraint firstItem="WoD-fA-B5j" firstAttribute="bottom" secondItem="Kq5-Zk-HTc" secondAttribute="bottom" id="syE-ba-BSA"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

@@ -98,7 +98,7 @@ class ViewController: UIViewController {
         isSecurityMode = false
         
         btnAlarm.setBackgroundImage(UIImage(named: "alarm-clear.png"), for: UIControlState.normal)
-        btnAlarm.setTitle("警戒已关闭\n 点击开启", for:.normal)
+        btnAlarm.setTitle("    警戒已关闭\n点击或摇一摇开启", for:.normal)
         playSound(false)
         //Amin: todo: I guess the playSound(false) would mute the player, that why if put playSoundwithName("unlock") before it, the unlock.mp3 would not be played.
         playSoundwithName("unlock")
@@ -139,17 +139,19 @@ class ViewController: UIViewController {
         btnAlarm.setBackgroundImage(UIImage(named: "alarm-clear.png"), for: UIControlState.normal)
         btnAlarm.center = CGPoint(x: self.view.bounds.width / 2,  y: 150)
         btnAlarm.titleLabel?.lineBreakMode =  .byWordWrapping
-        btnAlarm.setTitle("警戒已关闭\n 点击开启", for:.normal)
+        btnAlarm.setTitle("    警戒已关闭\n点击或摇一摇开启", for:.normal)
  
         //self.navigationItem.setim
         //set sub page backbutton text.
         let item = UIBarButtonItem(title: "返回", style: .plain, target: self, action: nil)
         self.navigationItem.backBarButtonItem = item
         
-       // self.navigationController?.navigationBar.tintColor = [UIColor, colorWithRed,:0.000 green:0.000 blue:0.000 alpha:1.000];
-        //self.navigationController?.navigationBar.alpha = 1;
-        //self.navigationController?.navigationBar.isTranslucent = true
-        self.navigationController?.setNavigationBarHidden(true,animated: true)
+       
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.view.backgroundColor = UIColor.clear
+        //self.navigationController?.setNavigationBarHidden(true,animated: true)
         
         if(UserDefaults.standard.value(forKey: "pwd") == nil ){
              UserDefaults.standard.set("1367", forKey: "pwd")
@@ -283,6 +285,20 @@ class ViewController: UIViewController {
         }
         return false;
         
+    }
+    
+    override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
+        if event?.type == UIEventType.motion && event?.subtype == UIEventSubtype.motionShake {
+            //let text = self.textView.text
+            //self.textView.text = text! + "\nMotion ended"
+            if(isSecurityMode == false){
+                isSecurityMode = true
+                playSoundwithName("lock")
+                btnAlarm.setTitle("警戒已开启\n 点击关闭", for:.normal)
+                btnAlarm.setBackgroundImage(UIImage(named: "alarm-set.png"), for: UIControlState.normal)
+                addProximityObserve()
+            }
+        }
     }
 
 }

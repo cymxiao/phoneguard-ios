@@ -11,40 +11,56 @@ import UIKit
 
 class LicenseViewController: UIViewController {//}, WKUIDelegate {
     
-    //var webView: WKWebView!
-   
-    //@IBOutlet weak var scrollView: UITextView!
-    
-    
-    //@IBOutlet weak var scrollview: UIScrollView!
- 
-    //@IBOutlet weak var webView: WKWebView!
+    @IBOutlet weak var licenseView: UITextView!
     
     @IBAction func agreeButtonClick(_ sender: Any) {
         UserDefaults.standard.set("true", forKey: "agreeLicense")
          UserDefaults.standard.synchronize()
         self.navigationController?.popViewController(animated:true)
     }
-    //    override func loadView() {
-//        let webConfiguration = WKWebViewConfiguration()
-//        webView = WKWebView(frame: .zero, configuration: webConfiguration)
-//        //webView = WKWebView(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.height - 50), configuration: webConfiguration)
-//        //let customFrame = CGRect.init(origin: CGPoint.zero, size: CGSize.init(width: self.webViewContainer.frame.size.width, height: self.webViewContainer.frame.size.height-50))
-//        //webView = WKWebView (frame: customFrame , configuration: webConfiguration)
-//        //let myURL = URL(string: "http://203.195.174.95/phone-guard-privacy.htm")
-//        //webView.load(<#T##data: Data##Data#>, mimeType: "text/html", characterEncodingName: "UTF-8", baseURL: myURL)
-//
-//        webView.uiDelegate = self
-//
-//        view = webView
-//        //scrollview.addSubview(webView)
-//    }
+ 
     override func viewDidLoad() {
         super.viewDidLoad()
-//        let myURL = URL(string: "http://203.195.174.95/phone-guard-privacy.htm")
-//        let myRequest = URLRequest(url: myURL!)
-//        webView.load(myRequest)
+ 
+//        let leftBarBtn = UIBarButtonItem(title: "同意条款并返回", style: .plain, target: self,
+//                                         action: #selector(backToPrevious))
+//        self.navigationItem.leftBarButtonItem = leftBarBtn
+        
+        let button =   UIButton(type: .system)
+        button.frame = CGRect(x:0, y:0, width:135, height:30)
+        button.setImage(UIImage(named:"back"), for: .normal)
+        button.setTitle("同意条款并返回", for: .normal)
+        button.addTarget(self, action: #selector(backToPrevious), for: .touchUpInside)
+        
+        let leftBarBtn = UIBarButtonItem(customView: button)
+        
+        //用于消除左边空隙，要不然按钮顶不到最前面
+        let spacer = UIBarButtonItem(barButtonSystemItem: .fixedSpace, target: nil,
+                                     action: nil)
+        spacer.width = -10;
+        
+        self.navigationItem.leftBarButtonItems = [spacer,leftBarBtn]
+        
     }
+    
+    //返回按钮点击响应
+    @objc func backToPrevious(){
+        UserDefaults.standard.set("true", forKey: "agreeLicense")
+        UserDefaults.standard.synchronize()
+        self.navigationController!.popViewController(animated: true)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.licenseView.scrollRangeToVisible(NSMakeRange(0, 0))
+//        let item = UIBarButtonItem(title: "同意条款并返回", style: .plain, target: self, action: nil)
+//        self.navigationItem.backBarButtonItem = item
+//        self.navigationItem.title = ""
+    }
+//
+//    override func viewWillDisappear(_ animated: Bool) {
+//        let item = UIBarButtonItem(title: "返回", style: .plain, target: self, action: nil)
+//        self.navigationItem.backBarButtonItem = item
+//    }
     
 }
 
