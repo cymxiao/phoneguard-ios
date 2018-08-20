@@ -11,6 +11,7 @@
 		312534DB21285E280017CEC7 /* SpeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312534DA21285E280017CEC7 /* SpeedViewController.swift */; };
 		312534DD2128684A0017CEC7 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312534DC2128684A0017CEC7 /* LocationViewController.swift */; };
 		312F52F120FF894800628B24 /* alarm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 312F52F020FF894800628B24 /* alarm.mp3 */; };
+		31429D30212AEC4200ABD352 /* AudioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31429D2F212AEC4200ABD352 /* AudioViewController.swift */; };
 		314521B72102D35D00232CDC /* alarm-set.png in Resources */ = {isa = PBXBuildFile; fileRef = 314521B52102D35D00232CDC /* alarm-set.png */; };
 		314521B82102D35D00232CDC /* alarm-clear.png in Resources */ = {isa = PBXBuildFile; fileRef = 314521B62102D35D00232CDC /* alarm-clear.png */; };
 		315D9ECC212914AD00F68E54 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 315D9ECB212914AD00F68E54 /* back.png */; };
@@ -51,6 +52,7 @@
 		312534DA21285E280017CEC7 /* SpeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedViewController.swift; sourceTree = "<group>"; };
 		312534DC2128684A0017CEC7 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		312F52F020FF894800628B24 /* alarm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = alarm.mp3; sourceTree = "<group>"; };
+		31429D2F212AEC4200ABD352 /* AudioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioViewController.swift; sourceTree = "<group>"; };
 		314521B52102D35D00232CDC /* alarm-set.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "alarm-set.png"; sourceTree = "<group>"; };
 		314521B62102D35D00232CDC /* alarm-clear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "alarm-clear.png"; sourceTree = "<group>"; };
 		315D9ECB212914AD00F68E54 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 				311CAF58210C92B900DD8212 /* guideViewController.swift */,
 				312534DA21285E280017CEC7 /* SpeedViewController.swift */,
 				312534DC2128684A0017CEC7 /* LocationViewController.swift */,
+				31429D2F212AEC4200ABD352 /* AudioViewController.swift */,
 			);
 			path = phoneguard;
 			sourceTree = "<group>";
@@ -326,6 +329,7 @@
 				312534DB21285E280017CEC7 /* SpeedViewController.swift in Sources */,
 				311CAF59210C92B900DD8212 /* guideViewController.swift in Sources */,
 				31E2F92B210A13F000962EC5 /* LicenseViewController.swift in Sources */,
+				31429D30212AEC4200ABD352 /* AudioViewController.swift in Sources */,
 				31B98DA22104961D00E19BBA /* LockScreenViewController.swift in Sources */,
 				316A750F20FE3215006FEA79 /* AppDelegate.swift in Sources */,
 				31B98DA42104CF9E00E19BBA /* SettingsViewController.swift in Sources */,

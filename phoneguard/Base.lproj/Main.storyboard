@@ -1723,6 +1723,26 @@ Cg
                                             <segue destination="nhz-pN-NVr" kind="show" id="Gkq-nR-bfB"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="7hn-AX-P7s" style="IBUITableViewCellStyleDefault" id="Qhs-tS-aBN">
+                                        <rect key="frame" x="0.0" y="88" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Qhs-tS-aBN" id="fgO-VA-ORQ">
+                                            <rect key="frame" x="0.0" y="0.0" width="341" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="分贝仪 噪音测量" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7hn-AX-P7s">
+                                                    <rect key="frame" x="16" y="0.0" width="324" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="PingFangSC-Thin" family="PingFang SC" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="zfF-b6-MA6" kind="show" id="NPP-Wl-bJH"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -1932,13 +1952,13 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">
+                                        <string key="content">
 （1）在进行特殊促销或抽奖时，本APP可能会与赞助商、供应商共享用户的个人隐私信息，此情况使用以用户同意参加特殊促销或抽奖活动为前提；
 （2）本APP可能会与合作伙伴共同向用户提供所要求的服务或者共同向用户展示可能感兴趣的内容，在隐私权信息为使用该项产品/服务所必须的情况下，同意本APP可与其分享必要的隐私权信息；
 （3）在不透露单用户个人隐私资料的前提下，对非个人隐私数据库进行分析、整理和商业利用；
 （4）在不透露单用户个人隐私资料的前提下，为实现检测、防止或解决欺诈、安全或技术问题的目的而使用；
 （5）法律要求或允许为保护本APP合法的权利、财产或安全及使用户或公众免受即将发生的损害。
-</mutableString>
+</string>
                                         <attributes>
                                             <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <font key="NSFont" size="12" name="PingFangSC-Regular"/>
@@ -2082,6 +2102,86 @@ Cg
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1jt-8f-cnO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="384.80000000000001" y="-331.48425787106447"/>
+        </scene>
+        <!--分贝仪 噪音测量-->
+        <scene sceneID="C29-kI-4Dj">
+            <objects>
+                <viewController title="分贝仪 噪音测量" id="zfF-b6-MA6" customClass="AudioViewController" customModule="phoneguard" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="m24-8P-7ep"/>
+                        <viewControllerLayoutGuide type="bottom" id="wZY-KO-B2j"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Bg1-Hf-seZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nSC-s3-cK2">
+                                <rect key="frame" x="201" y="99" width="150" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="峰值" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AgA-Kq-7M9">
+                                <rect key="frame" x="16" y="104" width="130" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130" id="GNU-hF-1WD"/>
+                                    <constraint firstAttribute="height" constant="21" id="T5q-qP-8wP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="PingFangSC-Thin" family="PingFang SC" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mJM-Ix-Wpn">
+                                <rect key="frame" x="201" y="196" width="150" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="平均值" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5gO-PN-M2k">
+                                <rect key="frame" x="16" y="200" width="130" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="qAu-s2-KW1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="PingFangSC-Thin" family="PingFang SC" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TOO LOUD!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m61-u5-45X">
+                                <rect key="frame" x="103" y="299" width="168" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="AgA-Kq-7M9" firstAttribute="leading" secondItem="5gO-PN-M2k" secondAttribute="leading" id="3Zi-cc-F2u"/>
+                            <constraint firstItem="AgA-Kq-7M9" firstAttribute="leading" secondItem="Bg1-Hf-seZ" secondAttribute="leadingMargin" id="3v8-BT-JlS"/>
+                            <constraint firstItem="AgA-Kq-7M9" firstAttribute="trailing" secondItem="5gO-PN-M2k" secondAttribute="trailing" id="EL5-fu-zUH"/>
+                            <constraint firstItem="m61-u5-45X" firstAttribute="leading" secondItem="Bg1-Hf-seZ" secondAttribute="leadingMargin" constant="87" id="EYw-42-RSJ"/>
+                            <constraint firstItem="AgA-Kq-7M9" firstAttribute="centerY" secondItem="nSC-s3-cK2" secondAttribute="centerY" id="JbS-3d-yVg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="nSC-s3-cK2" secondAttribute="trailing" constant="8" id="PyQ-qt-mYP"/>
+                            <constraint firstItem="m61-u5-45X" firstAttribute="centerX" secondItem="Bg1-Hf-seZ" secondAttribute="centerX" id="Wkb-dy-cFv"/>
+                            <constraint firstItem="nSC-s3-cK2" firstAttribute="leading" secondItem="mJM-Ix-Wpn" secondAttribute="leading" id="aHq-c2-kjI"/>
+                            <constraint firstItem="wZY-KO-B2j" firstAttribute="top" secondItem="m61-u5-45X" secondAttribute="bottom" constant="338" id="b99-vk-bPs"/>
+                            <constraint firstItem="nSC-s3-cK2" firstAttribute="top" secondItem="m24-8P-7ep" secondAttribute="bottom" constant="35" id="bMM-sV-UfK"/>
+                            <constraint firstItem="nSC-s3-cK2" firstAttribute="trailing" secondItem="mJM-Ix-Wpn" secondAttribute="trailing" id="dtE-QK-1EP"/>
+                            <constraint firstItem="mJM-Ix-Wpn" firstAttribute="top" secondItem="nSC-s3-cK2" secondAttribute="bottom" constant="67" id="gI0-c5-stv"/>
+                            <constraint firstItem="m61-u5-45X" firstAttribute="top" secondItem="mJM-Ix-Wpn" secondAttribute="bottom" constant="73" id="gse-xv-eQg"/>
+                            <constraint firstItem="5gO-PN-M2k" firstAttribute="top" secondItem="AgA-Kq-7M9" secondAttribute="bottom" constant="75" id="h9H-gj-0Wt"/>
+                            <constraint firstItem="5gO-PN-M2k" firstAttribute="centerY" secondItem="mJM-Ix-Wpn" secondAttribute="centerY" id="o1R-sf-4Vr"/>
+                            <constraint firstItem="nSC-s3-cK2" firstAttribute="leading" secondItem="AgA-Kq-7M9" secondAttribute="trailing" constant="55" id="uWg-hc-5sD"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="averageTextField" destination="mJM-Ix-Wpn" id="hXc-pP-oet"/>
+                        <outlet property="loudLabel" destination="m61-u5-45X" id="DfR-XW-02H"/>
+                        <outlet property="peakTextField" destination="nSC-s3-cK2" id="hcH-6q-aBF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nbl-gY-qtt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="416.80000000000001" y="409.7451274362819"/>
         </scene>
     </scenes>
 </document>
