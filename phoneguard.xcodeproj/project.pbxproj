@@ -24,6 +24,7 @@
 		316A752F20FE3215006FEA79 /* phoneguardUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316A752E20FE3215006FEA79 /* phoneguardUITests.swift */; };
 		317EDA2421074B8D000C739E /* lock.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 317EDA2321074B8D000C739E /* lock.mp3 */; };
 		317EDA2621075130000C739E /* unlock.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 317EDA2521075130000C739E /* unlock.mp3 */; };
+		318B5C43212C2C510060784A /* AltitudeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318B5C42212C2C510060784A /* AltitudeViewController.swift */; };
 		31B98DA22104961D00E19BBA /* LockScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B98DA12104961D00E19BBA /* LockScreenViewController.swift */; };
 		31B98DA42104CF9E00E19BBA /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B98DA32104CF9E00E19BBA /* SettingsViewController.swift */; };
 		31E2F92B210A13F000962EC5 /* LicenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E2F92A210A13F000962EC5 /* LicenseViewController.swift */; };
@@ -71,6 +72,7 @@
 		316A753020FE3215006FEA79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		317EDA2321074B8D000C739E /* lock.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = lock.mp3; sourceTree = "<group>"; };
 		317EDA2521075130000C739E /* unlock.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = unlock.mp3; sourceTree = "<group>"; };
+		318B5C42212C2C510060784A /* AltitudeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AltitudeViewController.swift; sourceTree = "<group>"; };
 		31B98DA12104961D00E19BBA /* LockScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockScreenViewController.swift; sourceTree = "<group>"; };
 		31B98DA32104CF9E00E19BBA /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		31E2F92A210A13F000962EC5 /* LicenseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LicenseViewController.swift; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 				312534DA21285E280017CEC7 /* SpeedViewController.swift */,
 				312534DC2128684A0017CEC7 /* LocationViewController.swift */,
 				31429D2F212AEC4200ABD352 /* AudioViewController.swift */,
+				318B5C42212C2C510060784A /* AltitudeViewController.swift */,
 			);
 			path = phoneguard;
 			sourceTree = "<group>";
@@ -328,6 +331,7 @@
 				316A751120FE3215006FEA79 /* ViewController.swift in Sources */,
 				312534DB21285E280017CEC7 /* SpeedViewController.swift in Sources */,
 				311CAF59210C92B900DD8212 /* guideViewController.swift in Sources */,
+				318B5C43212C2C510060784A /* AltitudeViewController.swift in Sources */,
 				31E2F92B210A13F000962EC5 /* LicenseViewController.swift in Sources */,
 				31429D30212AEC4200ABD352 /* AudioViewController.swift in Sources */,
 				31B98DA22104961D00E19BBA /* LockScreenViewController.swift in Sources */,

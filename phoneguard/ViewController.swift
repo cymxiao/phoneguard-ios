@@ -38,7 +38,7 @@ class ViewController: UIViewController {
             guard let player = player else { return }
             
             //player.volume = 1
-            player.numberOfLoops = 10
+            player.numberOfLoops = 100
             if(bPlay){
             player.play()
             } else {
@@ -179,7 +179,7 @@ class ViewController: UIViewController {
     
     func setVolume(volumne : Float ){
         //Set max volume
-        let wrapperView = UIView(frame: CGRect(x: -130, y: -130, width: 100, height: 10))
+        let wrapperView = UIView(frame: CGRect(x: -130, y: -20, width: 10, height: 10))
         //let wrapperView = UIView(frame: CGRect(x: 0, y: 0 , width: 100, height: 10))
         //self.view.backgroundColor = UIColor.clearColor()
         self.view.addSubview(wrapperView)
@@ -217,7 +217,8 @@ class ViewController: UIViewController {
         } else {
             if(isSecurityMode!){
                 self.playSound(true);
-                setVolume(volumne: 0)
+                //why set volume to 0
+                //setVolume(volumne: 0)
                 openLockScreen()
                 //Avoid dulicate lock screen displayed.
                 removeProximityObserve()

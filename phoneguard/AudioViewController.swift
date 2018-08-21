@@ -111,7 +111,7 @@ class AudioViewController: UIViewController {
             &levelMeter,
             &propertySize)
         
-        // Show the audio channel's peak and average RMS power.
+        // Show the audio channel's peak and average RMS power. start from -120
         self.peakTextField.text = "".appendingFormat("%.0f", levelMeter.mPeakPower + 100 )
         self.averageTextField.text = "".appendingFormat("%.0f", levelMeter.mAveragePower + 100 )
         
