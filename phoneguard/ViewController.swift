@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     var player: AVAudioPlayer?
     var isSecurityMode : Bool? = false
     var volumeValue : Float = 0.9
+    //var playSound : Bool = true
     @IBOutlet weak var btnAlarm: UIButton!
     @IBOutlet weak var mainUIView: UIView!
     @IBOutlet weak var volumSlider: UISlider!
@@ -216,7 +217,6 @@ class ViewController: UIViewController {
             
         } else {
             if(isSecurityMode!){
-                self.playSound(true);
                 //why set volume to 0
                 //setVolume(volumne: 0)
                 openLockScreen()
@@ -231,9 +231,12 @@ class ViewController: UIViewController {
                 //let tv = Double(timeout)
                 // Simple usage
                 _ = setTimeout(delay: timeout , block: { () -> Void in
-                    // do this stuff after 0.35 seconds
-                      self.setVolume(volumne: self.volumeValue)
-                    self.addSystemVolumeObserver()
+                    // do this stuff after timeout seconds
+                    if(self.isSecurityMode!){
+                        self.playSound(true);
+                        self.setVolume(volumne: self.volumeValue)
+                        self.addSystemVolumeObserver()
+                    } 
                 })
              //playSound(true);
             }
@@ -252,7 +255,7 @@ class ViewController: UIViewController {
     {
         //print("Data received: \(data)")
         if(data == UserDefaults.standard.value(forKey: "pwd") as? String){
-            //playSound(false);
+            //self.playSound = false
             alarmClear()
         }
     }

@@ -83,7 +83,7 @@ class AudioViewController: UIViewController {
         
         self.timer = Timer.scheduledTimer(timeInterval: 0.5,
                                           target: self,
-                                          selector: #selector(AudioViewController.detectVolume(_:)),
+                                          selector: #selector(self.detectVolume(_:)),
                                           userInfo: nil,
                                           repeats: true)
         self.timer?.fire()
@@ -102,7 +102,9 @@ class AudioViewController: UIViewController {
     @objc func detectVolume(_ timer: Timer)
     {
         // Get level
-        var levelMeter = AudioQueueLevelMeterState()
+        do {
+            var levelMeter =  try AudioQueueLevelMeterState()
+        
         var propertySize = UInt32(MemoryLayout<AudioQueueLevelMeterState>.size)
         
         AudioQueueGetProperty(
@@ -111,12 +113,16 @@ class AudioViewController: UIViewController {
             &levelMeter,
             &propertySize)
         
-        // Show the audio channel's peak and average RMS power. start from -120
-        self.peakTextField.text = "".appendingFormat("%.0f", levelMeter.mPeakPower + 100 )
-        self.averageTextField.text = "".appendingFormat("%.0f", levelMeter.mAveragePower + 100 )
-        
-        // Show "LOUD!!" if mPeakPower is larger than -1.0
-        self.loudLabel.isHidden = (levelMeter.mPeakPower >= -1.0) ? false : true
+     
+            // Show the audio channel's peak and average RMS power. start from -120
+            self.peakTextField.text = "".appendingFormat("%.0f", levelMeter.mPeakPower + 100 )
+            self.averageTextField.text = "".appendingFormat("%.0f", levelMeter.mAveragePower + 100 )
+            
+            // Show "LOUD!!" if mPeakPower is larger than -1.0
+            self.loudLabel.isHidden = (levelMeter.mPeakPower >= -1.0) ? false : true
+        } catch {
+            
+        }
     }
 }
 
