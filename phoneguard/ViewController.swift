@@ -250,6 +250,12 @@ class ViewController: UIViewController {
         self.navigationController?.show(vc, sender: nil )
     }
 
+//    func openSecuredScreen(){
+//        
+//        let sc = self.storyboard?.instantiateViewController(withIdentifier:  "Secured")  as! SecuredViewController
+//        //sc.rootViewCtrl = self
+//        self.navigationController?.show(sc, sender: nil )
+//    }
     
     func pwdReceived(data: String)
     {

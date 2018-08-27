@@ -10,6 +10,10 @@
 		311CAF59210C92B900DD8212 /* guideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311CAF58210C92B900DD8212 /* guideViewController.swift */; };
 		312534DB21285E280017CEC7 /* SpeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312534DA21285E280017CEC7 /* SpeedViewController.swift */; };
 		312534DD2128684A0017CEC7 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312534DC2128684A0017CEC7 /* LocationViewController.swift */; };
+		3129C80B21342FA400D44625 /* SecuredViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3129C80A21342FA400D44625 /* SecuredViewController.swift */; };
+		3129C80D213438AE00D44625 /* pocket.png in Resources */ = {isa = PBXBuildFile; fileRef = 3129C80C213438AE00D44625 /* pocket.png */; };
+		3129C80F21343BF900D44625 /* charging.png in Resources */ = {isa = PBXBuildFile; fileRef = 3129C80E21343BF900D44625 /* charging.png */; };
+		3129C81121343CB800D44625 /* stillness.png in Resources */ = {isa = PBXBuildFile; fileRef = 3129C81021343CB800D44625 /* stillness.png */; };
 		312F52F120FF894800628B24 /* alarm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 312F52F020FF894800628B24 /* alarm.mp3 */; };
 		31429D30212AEC4200ABD352 /* AudioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31429D2F212AEC4200ABD352 /* AudioViewController.swift */; };
 		314521B72102D35D00232CDC /* alarm-set.png in Resources */ = {isa = PBXBuildFile; fileRef = 314521B52102D35D00232CDC /* alarm-set.png */; };
@@ -29,6 +33,10 @@
 		31B98DA42104CF9E00E19BBA /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B98DA32104CF9E00E19BBA /* SettingsViewController.swift */; };
 		31E2F92B210A13F000962EC5 /* LicenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E2F92A210A13F000962EC5 /* LicenseViewController.swift */; };
 		31EA398B210D4ADC00529065 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 31EA398A210D4ADC00529065 /* icon.png */; };
+		31FE937221340B9500C4AFB6 /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 31FE937121340B9500C4AFB6 /* settings.png */; };
+		31FE937421340E1700C4AFB6 /* sel-settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 31FE937321340E1700C4AFB6 /* sel-settings.png */; };
+		31FE937721340EFD00C4AFB6 /* model-lib.png in Resources */ = {isa = PBXBuildFile; fileRef = 31FE937521340EFC00C4AFB6 /* model-lib.png */; };
+		31FE937821340EFD00C4AFB6 /* toolbox.png in Resources */ = {isa = PBXBuildFile; fileRef = 31FE937621340EFC00C4AFB6 /* toolbox.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +60,10 @@
 		311CAF58210C92B900DD8212 /* guideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = guideViewController.swift; sourceTree = "<group>"; };
 		312534DA21285E280017CEC7 /* SpeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedViewController.swift; sourceTree = "<group>"; };
 		312534DC2128684A0017CEC7 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
+		3129C80A21342FA400D44625 /* SecuredViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecuredViewController.swift; sourceTree = "<group>"; };
+		3129C80C213438AE00D44625 /* pocket.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pocket.png; sourceTree = "<group>"; };
+		3129C80E21343BF900D44625 /* charging.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = charging.png; sourceTree = "<group>"; };
+		3129C81021343CB800D44625 /* stillness.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stillness.png; sourceTree = "<group>"; };
 		312F52F020FF894800628B24 /* alarm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = alarm.mp3; sourceTree = "<group>"; };
 		31429D2F212AEC4200ABD352 /* AudioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioViewController.swift; sourceTree = "<group>"; };
 		314521B52102D35D00232CDC /* alarm-set.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "alarm-set.png"; sourceTree = "<group>"; };
@@ -77,6 +89,10 @@
 		31B98DA32104CF9E00E19BBA /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		31E2F92A210A13F000962EC5 /* LicenseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LicenseViewController.swift; sourceTree = "<group>"; };
 		31EA398A210D4ADC00529065 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		31FE937121340B9500C4AFB6 /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
+		31FE937321340E1700C4AFB6 /* sel-settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sel-settings.png"; sourceTree = "<group>"; };
+		31FE937521340EFC00C4AFB6 /* model-lib.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "model-lib.png"; sourceTree = "<group>"; };
+		31FE937621340EFC00C4AFB6 /* toolbox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = toolbox.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +123,13 @@
 		312F52EF20FF88D600628B24 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3129C81021343CB800D44625 /* stillness.png */,
+				3129C80E21343BF900D44625 /* charging.png */,
+				3129C80C213438AE00D44625 /* pocket.png */,
+				31FE937521340EFC00C4AFB6 /* model-lib.png */,
+				31FE937621340EFC00C4AFB6 /* toolbox.png */,
+				31FE937321340E1700C4AFB6 /* sel-settings.png */,
+				31FE937121340B9500C4AFB6 /* settings.png */,
 				315D9ECB212914AD00F68E54 /* back.png */,
 				31EA398A210D4ADC00529065 /* icon.png */,
 				317EDA2521075130000C739E /* unlock.mp3 */,
@@ -156,6 +179,7 @@
 				312534DC2128684A0017CEC7 /* LocationViewController.swift */,
 				31429D2F212AEC4200ABD352 /* AudioViewController.swift */,
 				318B5C42212C2C510060784A /* AltitudeViewController.swift */,
+				3129C80A21342FA400D44625 /* SecuredViewController.swift */,
 			);
 			path = phoneguard;
 			sourceTree = "<group>";
@@ -294,13 +318,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				312F52F120FF894800628B24 /* alarm.mp3 in Resources */,
+				31FE937721340EFD00C4AFB6 /* model-lib.png in Resources */,
+				3129C80F21343BF900D44625 /* charging.png in Resources */,
+				3129C80D213438AE00D44625 /* pocket.png in Resources */,
 				316A751920FE3215006FEA79 /* LaunchScreen.storyboard in Resources */,
 				31EA398B210D4ADC00529065 /* icon.png in Resources */,
+				31FE937221340B9500C4AFB6 /* settings.png in Resources */,
 				317EDA2621075130000C739E /* unlock.mp3 in Resources */,
 				316A751620FE3215006FEA79 /* Assets.xcassets in Resources */,
+				31FE937821340EFD00C4AFB6 /* toolbox.png in Resources */,
 				317EDA2421074B8D000C739E /* lock.mp3 in Resources */,
 				315D9ECC212914AD00F68E54 /* back.png in Resources */,
+				3129C81121343CB800D44625 /* stillness.png in Resources */,
 				314521B82102D35D00232CDC /* alarm-clear.png in Resources */,
+				31FE937421340E1700C4AFB6 /* sel-settings.png in Resources */,
 				316A751420FE3215006FEA79 /* Main.storyboard in Resources */,
 				314521B72102D35D00232CDC /* alarm-set.png in Resources */,
 			);
@@ -332,6 +363,7 @@
 				312534DB21285E280017CEC7 /* SpeedViewController.swift in Sources */,
 				311CAF59210C92B900DD8212 /* guideViewController.swift in Sources */,
 				318B5C43212C2C510060784A /* AltitudeViewController.swift in Sources */,
+				3129C80B21342FA400D44625 /* SecuredViewController.swift in Sources */,
 				31E2F92B210A13F000962EC5 /* LicenseViewController.swift in Sources */,
 				31429D30212AEC4200ABD352 /* AudioViewController.swift in Sources */,
 				31B98DA22104961D00E19BBA /* LockScreenViewController.swift in Sources */,
