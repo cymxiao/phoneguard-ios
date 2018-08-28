@@ -12,8 +12,8 @@ class SettingsViewController: UIViewController , UITextFieldDelegate {
    
     @IBOutlet weak var alertTimeoutText: UITextField!
     @IBOutlet weak var pwdText: UITextField!
-    
-    @IBOutlet weak var saveSettings: UIButton!
+    //@IBOutlet weak var saveSettings: UIButton!
+    @IBOutlet weak var swhTouchID: UISwitch!
     
     @IBAction func saveSettings(_ sender: Any) {
         UserDefaults.standard.set(alertTimeoutText.text, forKey: "timeout")
@@ -24,11 +24,11 @@ class SettingsViewController: UIViewController , UITextFieldDelegate {
     @IBAction func backToRoot(_ sender: Any) {
          navigationController?.popViewController(animated:true)
     }
+    @IBAction func touchIDSwitchAction(_ sender: UISwitch) {
+        UserDefaults.standard.set(sender.isOn, forKey: "enableTouchID")
+    }
     
-//    @IBAction func navToLicense(_ sender: Any) {
-//         let vc = self.storyboard?.instantiateViewController(withIdentifier:  "License")  as! LicenseViewController
-//        self.navigationController?.show(vc, sender: nil )
-//    }
+ 
     
   
     override func viewDidLoad() {
@@ -43,9 +43,11 @@ class SettingsViewController: UIViewController , UITextFieldDelegate {
         
         let initTimeOut = UserDefaults.standard.value(forKey: "timeout") as? String
         let initPwd  = UserDefaults.standard.value(forKey: "pwd") as? String
+        let enableTouchID  = UserDefaults.standard.bool(forKey: "enableTouchID")
      
         alertTimeoutText.text = initTimeOut
-        pwdText.text = initPwd 
+        pwdText.text = initPwd
+        swhTouchID.setOn(enableTouchID, animated: true)
         
     }
     

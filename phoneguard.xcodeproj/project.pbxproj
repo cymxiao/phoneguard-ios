@@ -31,6 +31,8 @@
 		318B5C43212C2C510060784A /* AltitudeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318B5C42212C2C510060784A /* AltitudeViewController.swift */; };
 		31B98DA22104961D00E19BBA /* LockScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B98DA12104961D00E19BBA /* LockScreenViewController.swift */; };
 		31B98DA42104CF9E00E19BBA /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B98DA32104CF9E00E19BBA /* SettingsViewController.swift */; };
+		31D2B8C62135896A0010FAC5 /* headset.png in Resources */ = {isa = PBXBuildFile; fileRef = 31D2B8C5213589690010FAC5 /* headset.png */; };
+		31D2B8C8213589E90010FAC5 /* OtherScenarioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D2B8C7213589E90010FAC5 /* OtherScenarioViewController.swift */; };
 		31E2F92B210A13F000962EC5 /* LicenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E2F92A210A13F000962EC5 /* LicenseViewController.swift */; };
 		31EA398B210D4ADC00529065 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 31EA398A210D4ADC00529065 /* icon.png */; };
 		31FE937221340B9500C4AFB6 /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 31FE937121340B9500C4AFB6 /* settings.png */; };
@@ -87,6 +89,8 @@
 		318B5C42212C2C510060784A /* AltitudeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AltitudeViewController.swift; sourceTree = "<group>"; };
 		31B98DA12104961D00E19BBA /* LockScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockScreenViewController.swift; sourceTree = "<group>"; };
 		31B98DA32104CF9E00E19BBA /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		31D2B8C5213589690010FAC5 /* headset.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = headset.png; sourceTree = "<group>"; };
+		31D2B8C7213589E90010FAC5 /* OtherScenarioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherScenarioViewController.swift; sourceTree = "<group>"; };
 		31E2F92A210A13F000962EC5 /* LicenseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LicenseViewController.swift; sourceTree = "<group>"; };
 		31EA398A210D4ADC00529065 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		31FE937121340B9500C4AFB6 /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
@@ -123,6 +127,7 @@
 		312F52EF20FF88D600628B24 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				31D2B8C5213589690010FAC5 /* headset.png */,
 				3129C81021343CB800D44625 /* stillness.png */,
 				3129C80E21343BF900D44625 /* charging.png */,
 				3129C80C213438AE00D44625 /* pocket.png */,
@@ -180,6 +185,7 @@
 				31429D2F212AEC4200ABD352 /* AudioViewController.swift */,
 				318B5C42212C2C510060784A /* AltitudeViewController.swift */,
 				3129C80A21342FA400D44625 /* SecuredViewController.swift */,
+				31D2B8C7213589E90010FAC5 /* OtherScenarioViewController.swift */,
 			);
 			path = phoneguard;
 			sourceTree = "<group>";
@@ -319,6 +325,7 @@
 			files = (
 				312F52F120FF894800628B24 /* alarm.mp3 in Resources */,
 				31FE937721340EFD00C4AFB6 /* model-lib.png in Resources */,
+				31D2B8C62135896A0010FAC5 /* headset.png in Resources */,
 				3129C80F21343BF900D44625 /* charging.png in Resources */,
 				3129C80D213438AE00D44625 /* pocket.png in Resources */,
 				316A751920FE3215006FEA79 /* LaunchScreen.storyboard in Resources */,
@@ -361,6 +368,7 @@
 				312534DD2128684A0017CEC7 /* LocationViewController.swift in Sources */,
 				316A751120FE3215006FEA79 /* ViewController.swift in Sources */,
 				312534DB21285E280017CEC7 /* SpeedViewController.swift in Sources */,
+				31D2B8C8213589E90010FAC5 /* OtherScenarioViewController.swift in Sources */,
 				311CAF59210C92B900DD8212 /* guideViewController.swift in Sources */,
 				318B5C43212C2C510060784A /* AltitudeViewController.swift in Sources */,
 				3129C80B21342FA400D44625 /* SecuredViewController.swift in Sources */,

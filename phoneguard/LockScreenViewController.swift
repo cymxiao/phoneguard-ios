@@ -21,7 +21,9 @@ class LockScreenViewController: UIViewController, UITextFieldDelegate {
         pwdInput.isSecureTextEntry = true
         pwdInput.becomeFirstResponder()
         pwdInput.delegate = self
-        readTouchID()
+        if(enableTouchID()){
+            readTouchID()
+        }
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -38,6 +40,11 @@ class LockScreenViewController: UIViewController, UITextFieldDelegate {
             textField.text = "";
         }
         return true
+    }
+    
+    func  enableTouchID() -> Bool {
+       let enableTouchID = UserDefaults.standard.value(forKey: "enableTouchID") as? Bool
+        return enableTouchID!
     }
     
     

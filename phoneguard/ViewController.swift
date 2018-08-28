@@ -161,6 +161,10 @@ class ViewController: UIViewController {
             UserDefaults.standard.set("3", forKey: "timeout")
         }
         
+        if(UserDefaults.standard.value(forKey: "enableTouchID") == nil ){
+             UserDefaults.standard.set(true, forKey: "enableTouchID")
+        }
+        
         if(UserDefaults.standard.value(forKey: "agreeLicense") == nil ){
             let vc = self.storyboard?.instantiateViewController(withIdentifier:  "License")  as! LicenseViewController
             self.navigationController?.show(vc, sender: nil )

@@ -11,5 +11,21 @@ import UIKit
 class SecuredViewController: UIViewController {
     
     @IBOutlet weak var securedText: UITextView!
-    //var rootViewCtrl:ViewController?
+    //UIDevice.current.proximityState = true
+    
+    override func viewDidLoad() {
+        super.viewDidLoad() 
+        _ = setTimeout(delay: 3 , block: { () -> Void in
+            // do this stuff after timeout seconds
+            //UIDevice.current.proximi = true
+            print("haha ")
+        })
+    }
+    
+    
+    // Basic.swift
+    func setTimeout(delay:TimeInterval, block:@escaping ()->Void) -> Timer {
+        return Timer.scheduledTimer(timeInterval: delay, target: BlockOperation(block: block), selector: #selector(Operation.main), userInfo: nil, repeats: false)
+        
+    }
 }
