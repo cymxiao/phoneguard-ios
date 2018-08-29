@@ -12,7 +12,7 @@ import AVFoundation
 
 class OtherScenarioViewController: UIViewController {
     let activityManager = CMMotionActivityManager()
-    //var stationary : Bool = false
+    var stationary : Bool = false
     
   
     @IBAction func stillnessAction(_ sender: UISwitch) {
@@ -51,8 +51,9 @@ class OtherScenarioViewController: UIViewController {
                     if let data = data {
                         print("stationary: \(data.stationary)")
                         //self?.stationary  = data.stationary
-                        if(data.stationary){
+                        if(data.stationary && !stationary){
                             self?.openSecuredScreen()
+                            self?.stationary = true
                         }
                     }
                 })
