@@ -7,13 +7,16 @@
 //
 
 import UIKit
+import AVFoundation
+//import MediaPlayer
 
 class BaseUIViewController: UIViewController {
+    var player: AVAudioPlayer?
     
     func openLockScreen(){
         
         let vc = self.storyboard?.instantiateViewController(withIdentifier:  "LockScreen")  as! LockScreenViewController
-        //vc.rootViewCtrl = self
+        vc.otherViewCtrl = self as! BlackViewController
         self.navigationController?.show(vc, sender: nil )
     }
     
@@ -28,5 +31,80 @@ class BaseUIViewController: UIViewController {
         let bc = self.storyboard?.instantiateViewController(withIdentifier:  "Black")  as! BlackViewController
         self.navigationController?.show(bc, sender: nil )
     }
+    
+    
+    func pwdReceived(data: String)
+    {
+        //print("Data received: \(data)")
+        if(data == UserDefaults.standard.value(forKey: "pwd") as? String){
+            //self.playSound = false
+            alarmClear()
+        }
+    }
+    
+    
+    func alarmClear(){
+       
+        playSound(false)
+        //Amin: todo: I guess the playSound(false) would mute the player, that why if put playSoundwithName("unlock") before it, the unlock.mp3 would not be played.
+        playSoundwithName("unlock")
+       
+    }
+    
+    
+    func playSound(_ bPlay : Bool) {
+        guard let url = Bundle.main.url(forResource: "alarm", withExtension: "mp3") else { return }
+        
+        do {
+            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+            try AVAudioSession.sharedInstance().setActive(true)
+            
+            
+            /* The following line is required for the player to work on iOS 11. Change the file type accordingly*/
+            player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileType.mp3.rawValue)
+            
+            /* iOS 10 and earlier require the following line: */
+            //player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileTypeMPEGLayer3)
+            
+            guard let player = player else { return }
+            
+            //player.volume = 1
+            player.numberOfLoops = 100
+            if(bPlay){
+                player.play()
+            } else {
+                player.stop()
+            }
+            
+        } catch let error {
+            print(error.localizedDescription)
+        }
+    }
+    
+    func playSoundwithName(_ mp3Name : String) {
+        guard let url = Bundle.main.url(forResource: mp3Name, withExtension: "mp3") else { return }
+        
+        do {
+            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+            try AVAudioSession.sharedInstance().setActive(true)
+            
+            /* The following line is required for the player to work on iOS 11. Change the file type accordingly*/
+            player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileType.mp3.rawValue)
+            
+            /* iOS 10 and earlier require the following line: */
+            //player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileTypeMPEGLayer3)
+            
+            guard let player = player else { return }
+            
+            player.play()
+            
+            
+        } catch let error {
+            print(error.localizedDescription)
+        }
+    }
+    
+    
+    
     
 }

@@ -13,6 +13,7 @@ class LockScreenViewController: UIViewController, UITextFieldDelegate {
  
     @IBOutlet weak var pwdInput: UITextField!
     var rootViewCtrl:ViewController?
+    var otherViewCtrl:BlackViewController?
   
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,7 +33,11 @@ class LockScreenViewController: UIViewController, UITextFieldDelegate {
     //Number pad don't have return
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if(textField.text == UserDefaults.standard.value(forKey: "pwd") as? String){
-            rootViewCtrl?.pwdReceived(data:  textField.text!)
+            if((rootViewCtrl) != nil){
+                rootViewCtrl?.pwdReceived(data:  textField.text!)
+            } else if((otherViewCtrl) != nil){
+                otherViewCtrl?.pwdReceived(data:  textField.text!)
+            }
             //收起键盘
             //textField.resignFirstResponder()
             navigationController?.popViewController(animated:true)
