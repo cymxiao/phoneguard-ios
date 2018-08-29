@@ -1897,6 +1897,11 @@ Cg
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="其它场景" id="DCB-Yh-Ev8"/>
+                    <connections>
+                        <outlet property="chargingSwitch" destination="UTQ-tA-LK2" id="QhU-KZ-goP"/>
+                        <outlet property="headSetSwitch" destination="x7f-Br-8Nn" id="n3d-3f-xbt"/>
+                        <outlet property="stillnessSwitch" destination="Ebf-bT-tq2" id="M4f-l5-fBU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Br-eR-rIn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

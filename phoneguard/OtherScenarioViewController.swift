@@ -15,14 +15,18 @@ class OtherScenarioViewController:  BaseUIViewController {
     var isSecurityMode : Bool = false
     var timer: Timer!
     
+    @IBOutlet weak var stillnessSwitch: UISwitch!
+    @IBOutlet weak var chargingSwitch: UISwitch!
+    @IBOutlet weak var headSetSwitch: UISwitch!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
-        self.navigationController?.navigationBar.shadowImage = UIImage()
-        self.navigationController?.navigationBar.isTranslucent = true
-        self.navigationController?.view.backgroundColor = UIColor.clear
-        self.navigationItem.hidesBackButton = true
+       
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        //each time load the screen, reset the switchs.
+        resetSwitch()
     }
   
     @IBAction func stillnessAction(_ sender: UISwitch) {
@@ -98,7 +102,7 @@ class OtherScenarioViewController:  BaseUIViewController {
         for output in  currentRoute.outputs {
             if(output.portType == AVAudioSessionPortHeadphones) {
 //                if(self.isSecurityMode == false){
-//                    self.openSecuredScreen()
+//                    self.openSecuredScreen(prevView: OtherScenarioViewName.Headset)
 //                    self.isSecurityMode = true
 //                    return true
 //                }
@@ -129,7 +133,12 @@ class OtherScenarioViewController:  BaseUIViewController {
         self.isSecurityMode = false
     }
     
-  
+    override func resetSwitch() {
+        super.resetSwitch()
+        stillnessSwitch.setOn(false, animated: true)
+        chargingSwitch.setOn(false, animated: true)
+        headSetSwitch.setOn(false, animated: true)
+    }
     
 }
 

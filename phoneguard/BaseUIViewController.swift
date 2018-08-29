@@ -58,7 +58,7 @@ class BaseUIViewController: UIViewController {
         playSound(false)
         //Amin: todo: I guess the playSound(false) would mute the player, that why if put playSoundwithName("unlock") before it, the unlock.mp3 would not be played.
         playSoundwithName("unlock")
-       
+        resetSwitch()
     }
     
     
@@ -114,7 +114,9 @@ class BaseUIViewController: UIViewController {
         }
     }
     
-    
+    func resetSwitch() {
+        //fatalError("Must Override")
+    }
     
     
 }
