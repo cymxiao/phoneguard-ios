@@ -10,10 +10,20 @@ import UIKit
 import CoreMotion
 import AVFoundation
 
-class OtherScenarioViewController: UIViewController {
+class OtherScenarioViewController:  BaseUIViewController {
     let activityManager = CMMotionActivityManager()
-    var stationary : Bool = false
+    var isSecurityMode : Bool = false
+    var timer: Timer!
     
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.view.backgroundColor = UIColor.clear
+        self.navigationItem.hidesBackButton = true
+    }
   
     @IBAction func stillnessAction(_ sender: UISwitch) {
         if( sender.isOn){
@@ -39,7 +49,9 @@ class OtherScenarioViewController: UIViewController {
     @IBAction func headsetAction(_ sender: UISwitch) {
         
         if(sender.isOn){
-         
+            checkHeadSet()
+        } else {
+            stopCheckHeadSet()
         }
     }
     
@@ -51,9 +63,9 @@ class OtherScenarioViewController: UIViewController {
                     if let data = data {
                         print("stationary: \(data.stationary)")
                         //self?.stationary  = data.stationary
-                        if(data.stationary && !stationary){
+                        if(data.stationary && (self?.isSecurityMode)! == false){
                             self?.openSecuredScreen()
-                            self?.stationary = true
+                            self?.isSecurityMode = true
                         }
                     }
                 })
@@ -80,31 +92,44 @@ class OtherScenarioViewController: UIViewController {
         }
     }
     
-    func hasHeadSet () -> Bool {
+    @objc func hasHeadSet (_ timer: Timer) -> Bool {
         let audioSession: AVAudioSession = AVAudioSession.sharedInstance()
         let currentRoute : AVAudioSessionRouteDescription = audioSession.currentRoute
         for output in  currentRoute.outputs {
             if(output.portType == AVAudioSessionPortHeadphones) {
+//                if(self.isSecurityMode == false){
+//                    self.openSecuredScreen()
+//                    self.isSecurityMode = true
+//                    return true
+//                }
                 return true
             }
         }
+        //Amin: Test Code
+        if(self.isSecurityMode == false){
+            self.openSecuredScreen()
+            self.isSecurityMode = true
+        }
         return false;
+    }
+    
+    func checkHeadSet(){
+        self.timer = Timer.scheduledTimer(timeInterval: 1,
+                                          target: self,
+                                          selector: #selector(self.hasHeadSet(_:)),
+                                          userInfo: nil,
+                                          repeats: true)
+        self.timer?.fire()
         
     }
     
-    
-    func openLockScreen(){
-        
-        let vc = self.storyboard?.instantiateViewController(withIdentifier:  "LockScreen")  as! LockScreenViewController
-        //vc.rootViewCtrl = self
-        self.navigationController?.show(vc, sender: nil )
+    func stopCheckHeadSet(){
+        self.timer.invalidate()
+        self.timer = nil
+        self.isSecurityMode = false
     }
     
-    func openSecuredScreen(){
-
-        let sc = self.storyboard?.instantiateViewController(withIdentifier:  "Secured")  as! SecuredViewController
-        self.navigationController?.show(sc, sender: nil )
-    }
+  
     
 }
 

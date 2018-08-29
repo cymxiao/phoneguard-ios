@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SecuredViewController: UIViewController {
+class SecuredViewController: BaseUIViewController {
     
     @IBOutlet weak var securedText: UITextView!
     //UIDevice.current.proximityState = true
@@ -18,7 +18,8 @@ class SecuredViewController: UIViewController {
         _ = setTimeout(delay: 3 , block: { () -> Void in
             // do this stuff after timeout seconds
             //UIDevice.current.proximi = true
-            print("haha ")
+            //print("haha ")
+            self.openBlackScreen()
         })
     }
     

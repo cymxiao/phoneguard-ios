@@ -34,6 +34,8 @@
 		31D2B8C62135896A0010FAC5 /* headset.png in Resources */ = {isa = PBXBuildFile; fileRef = 31D2B8C5213589690010FAC5 /* headset.png */; };
 		31D2B8C8213589E90010FAC5 /* OtherScenarioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D2B8C7213589E90010FAC5 /* OtherScenarioViewController.swift */; };
 		31E2F92B210A13F000962EC5 /* LicenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E2F92A210A13F000962EC5 /* LicenseViewController.swift */; };
+		31E706E62136AFFA00CDCCF9 /* BaseUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E706E52136AFFA00CDCCF9 /* BaseUIViewController.swift */; };
+		31E706E82136B92B00CDCCF9 /* BlackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E706E72136B92B00CDCCF9 /* BlackViewController.swift */; };
 		31EA398B210D4ADC00529065 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 31EA398A210D4ADC00529065 /* icon.png */; };
 		31FE937221340B9500C4AFB6 /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 31FE937121340B9500C4AFB6 /* settings.png */; };
 		31FE937421340E1700C4AFB6 /* sel-settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 31FE937321340E1700C4AFB6 /* sel-settings.png */; };
@@ -92,6 +94,8 @@
 		31D2B8C5213589690010FAC5 /* headset.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = headset.png; sourceTree = "<group>"; };
 		31D2B8C7213589E90010FAC5 /* OtherScenarioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherScenarioViewController.swift; sourceTree = "<group>"; };
 		31E2F92A210A13F000962EC5 /* LicenseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LicenseViewController.swift; sourceTree = "<group>"; };
+		31E706E52136AFFA00CDCCF9 /* BaseUIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseUIViewController.swift; sourceTree = "<group>"; };
+		31E706E72136B92B00CDCCF9 /* BlackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackViewController.swift; sourceTree = "<group>"; };
 		31EA398A210D4ADC00529065 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		31FE937121340B9500C4AFB6 /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
 		31FE937321340E1700C4AFB6 /* sel-settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sel-settings.png"; sourceTree = "<group>"; };
@@ -171,6 +175,7 @@
 			children = (
 				312F52EF20FF88D600628B24 /* Resources */,
 				316A750E20FE3215006FEA79 /* AppDelegate.swift */,
+				31E706E52136AFFA00CDCCF9 /* BaseUIViewController.swift */,
 				316A751020FE3215006FEA79 /* ViewController.swift */,
 				316A751220FE3215006FEA79 /* Main.storyboard */,
 				316A751520FE3215006FEA79 /* Assets.xcassets */,
@@ -186,6 +191,7 @@
 				318B5C42212C2C510060784A /* AltitudeViewController.swift */,
 				3129C80A21342FA400D44625 /* SecuredViewController.swift */,
 				31D2B8C7213589E90010FAC5 /* OtherScenarioViewController.swift */,
+				31E706E72136B92B00CDCCF9 /* BlackViewController.swift */,
 			);
 			path = phoneguard;
 			sourceTree = "<group>";
@@ -372,8 +378,10 @@
 				311CAF59210C92B900DD8212 /* guideViewController.swift in Sources */,
 				318B5C43212C2C510060784A /* AltitudeViewController.swift in Sources */,
 				3129C80B21342FA400D44625 /* SecuredViewController.swift in Sources */,
+				31E706E62136AFFA00CDCCF9 /* BaseUIViewController.swift in Sources */,
 				31E2F92B210A13F000962EC5 /* LicenseViewController.swift in Sources */,
 				31429D30212AEC4200ABD352 /* AudioViewController.swift in Sources */,
+				31E706E82136B92B00CDCCF9 /* BlackViewController.swift in Sources */,
 				31B98DA22104961D00E19BBA /* LockScreenViewController.swift in Sources */,
 				316A750F20FE3215006FEA79 /* AppDelegate.swift in Sources */,
 				31B98DA42104CF9E00E19BBA /* SettingsViewController.swift in Sources */,
