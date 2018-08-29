@@ -58,7 +58,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "phoneguard/LockScreenViewController.swift"
-            timestampString = "557240784.551892"
+            timestampString = "557248648.9465981"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "26"
@@ -74,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "phoneguard/LockScreenViewController.swift"
-            timestampString = "557240784.551954"
+            timestampString = "557248648.946671"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "83"
-            endingLineNumber = "83"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
             landmarkName = "readTouchID()"
             landmarkType = "7">
          </BreakpointContent>
@@ -90,11 +90,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "phoneguard/LockScreenViewController.swift"
-            timestampString = "557240784.551999"
+            timestampString = "557248648.946722"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "91"
-            endingLineNumber = "91"
+            startingLineNumber = "93"
+            endingLineNumber = "93"
             landmarkName = "readTouchID()"
             landmarkType = "7">
          </BreakpointContent>
@@ -202,7 +202,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "phoneguard/ViewController.swift"
-            timestampString = "557240568.138602"
+            timestampString = "557248648.946838"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "239"
@@ -290,7 +290,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "phoneguard/OtherScenarioViewController.swift"
-            timestampString = "557236199.478855"
+            timestampString = "557248648.9469301"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "63"
@@ -306,7 +306,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "phoneguard/OtherScenarioViewController.swift"
-            timestampString = "557236199.4791991"
+            timestampString = "557248648.9469841"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "62"
@@ -354,7 +354,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "phoneguard/OtherScenarioViewController.swift"
-            timestampString = "557236199.479413"
+            timestampString = "557248648.947032"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "65"
@@ -370,7 +370,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "phoneguard/OtherScenarioViewController.swift"
-            timestampString = "557236199.4796211"
+            timestampString = "557248648.947078"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "77"
@@ -386,7 +386,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "phoneguard/OtherScenarioViewController.swift"
-            timestampString = "557236199.479831"
+            timestampString = "557248648.947121"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "34"
@@ -402,7 +402,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "phoneguard/OtherScenarioViewController.swift"
-            timestampString = "557236199.480038"
+            timestampString = "557248648.947165"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "89"
@@ -418,7 +418,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "phoneguard/OtherScenarioViewController.swift"
-            timestampString = "557236199.480245"
+            timestampString = "557248648.947209"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "51"
@@ -434,7 +434,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "phoneguard/OtherScenarioViewController.swift"
-            timestampString = "557236199.480437"
+            timestampString = "557248648.947252"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "96"
@@ -450,13 +450,247 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "phoneguard/OtherScenarioViewController.swift"
-            timestampString = "557236199.480633"
+            timestampString = "557248648.947294"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "97"
             endingLineNumber = "97"
             landmarkName = "hasHeadSet(_:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "phoneguard/BlackViewController.swift"
+            timestampString = "557248648.9473391"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "BlackViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "phoneguard.BlackViewController.previousView.getter : phoneguard.BaseUIViewController.OtherScenarioViewName"
+                  moduleName = "phoneguard"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cym/Documents/02.swift/phoneguard-ios/phoneguard/BlackViewController.swift"
+                  timestampString = "557247498.175792"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "95">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "phoneguard.BlackViewController.previousView.setter : phoneguard.BaseUIViewController.OtherScenarioViewName"
+                  moduleName = "phoneguard"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cym/Documents/02.swift/phoneguard-ios/phoneguard/BlackViewController.swift"
+                  timestampString = "557247498.17819"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "107">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "phoneguard.BlackViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; phoneguard.BlackViewController"
+                  moduleName = "phoneguard"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cym/Documents/02.swift/phoneguard-ios/phoneguard/BlackViewController.swift"
+                  timestampString = "557247498.180173"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "205">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "phoneguard.BlackViewController.init(coder: __ObjC.NSCoder) -&gt; Swift.Optional&lt;phoneguard.BlackViewController&gt;"
+                  moduleName = "phoneguard"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cym/Documents/02.swift/phoneguard-ios/phoneguard/BlackViewController.swift"
+                  timestampString = "557247498.182379"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "105">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "phoneguard/BlackViewController.swift"
+            timestampString = "557248648.947381"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "BlackViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "phoneguard.BlackViewController.timer.getter : Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.Timer&gt;"
+                  moduleName = "phoneguard"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cym/Documents/02.swift/phoneguard-ios/phoneguard/BlackViewController.swift"
+                  timestampString = "557247548.276632"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "109">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "phoneguard.BlackViewController.timer.setter : Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.Timer&gt;"
+                  moduleName = "phoneguard"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cym/Documents/02.swift/phoneguard-ios/phoneguard/BlackViewController.swift"
+                  timestampString = "557247548.2782331"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "112">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "phoneguard.BlackViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; phoneguard.BlackViewController"
+                  moduleName = "phoneguard"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cym/Documents/02.swift/phoneguard-ios/phoneguard/BlackViewController.swift"
+                  timestampString = "557247548.2795579"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "316">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "phoneguard.BlackViewController.init(coder: __ObjC.NSCoder) -&gt; Swift.Optional&lt;phoneguard.BlackViewController&gt;"
+                  moduleName = "phoneguard"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cym/Documents/02.swift/phoneguard-ios/phoneguard/BlackViewController.swift"
+                  timestampString = "557247548.2807111"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "185">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "phoneguard/BlackViewController.swift"
+            timestampString = "557248648.947419"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "BlackViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "phoneguard.BlackViewController.isLockScreenMode.getter : Swift.Bool"
+                  moduleName = "phoneguard"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cym/Documents/02.swift/phoneguard-ios/phoneguard/BlackViewController.swift"
+                  timestampString = "557247580.935522"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "72">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "phoneguard.BlackViewController.isLockScreenMode.setter : Swift.Bool"
+                  moduleName = "phoneguard"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cym/Documents/02.swift/phoneguard-ios/phoneguard/BlackViewController.swift"
+                  timestampString = "557247580.936915"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "109">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "phoneguard.BlackViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; phoneguard.BlackViewController"
+                  moduleName = "phoneguard"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cym/Documents/02.swift/phoneguard-ios/phoneguard/BlackViewController.swift"
+                  timestampString = "557247580.938437"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "53">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "phoneguard.BlackViewController.init(coder: __ObjC.NSCoder) -&gt; Swift.Optional&lt;phoneguard.BlackViewController&gt;"
+                  moduleName = "phoneguard"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cym/Documents/02.swift/phoneguard-ios/phoneguard/BlackViewController.swift"
+                  timestampString = "557247580.939611"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "36">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

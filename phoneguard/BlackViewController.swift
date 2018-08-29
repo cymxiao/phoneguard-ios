@@ -12,6 +12,7 @@ import AVFoundation
 class BlackViewController: BaseUIViewController {
     
     var isLockScreenMode : Bool = false
+    var previousView : OtherScenarioViewName = OtherScenarioViewName.Stillness
     var timer: Timer!
     
     override func viewDidLoad() {

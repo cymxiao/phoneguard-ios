@@ -35,12 +35,14 @@ class LockScreenViewController: UIViewController, UITextFieldDelegate {
         if(textField.text == UserDefaults.standard.value(forKey: "pwd") as? String){
             if((rootViewCtrl) != nil){
                 rootViewCtrl?.pwdReceived(data:  textField.text!)
+                //收起键盘
+                //textField.resignFirstResponder()
+                navigationController?.popViewController(animated:true)
             } else if((otherViewCtrl) != nil){
                 otherViewCtrl?.pwdReceived(data:  textField.text!)
+                navigationController?.popToRootViewController(animated:true)
             }
-            //收起键盘
-            //textField.resignFirstResponder()
-            navigationController?.popViewController(animated:true)
+           
         } else {
             textField.text = "";
         }
@@ -69,7 +71,7 @@ class LockScreenViewController: UIViewController, UITextFieldDelegate {
             //NSLog("Touch ID is available")
             //这里是采用认证策略 LAPolicy.DeviceOwnerAuthenticationWithBiometrics
             //--> 指纹生物识别方式
-            authentication.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: "这里需要您的指纹来进行识别验证", reply: {
+            authentication.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: "这里需要您的指纹来进行验证解除警戒", reply: {
                 //当调用authentication.evaluatePolicy方法后，系统会弹提示框提示用户授权
                 (success, error) -> Void in
                 if success

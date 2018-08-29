@@ -10,21 +10,23 @@ import UIKit
 
 class SecuredViewController: BaseUIViewController {
     
+    var previousView : OtherScenarioViewName = OtherScenarioViewName.Stillness
     @IBOutlet weak var securedText: UITextView!
-    //UIDevice.current.proximityState = true
+  
     
     override func viewDidLoad() {
-        super.viewDidLoad() 
-        _ = setTimeout(delay: 3 , block: { () -> Void in
-            // do this stuff after timeout seconds
-            //UIDevice.current.proximi = true
-            //print("haha ")
-            self.openBlackScreen()
+        super.viewDidLoad()
+        if(previousView == OtherScenarioViewName.Headset){
+            securedText.text = "警戒模式已开启。                                                                                                  请不要锁屏，将耳机保持连接到手机上，系统会自动关闭屏幕。"
+        } else if(previousView == OtherScenarioViewName.Charging){
+             securedText.text = "警戒模式已开启。                                                                                                  请不要锁屏，将手机保持充电转态，系统会自动关闭屏幕。"
+        }
+        _ = setTimeout(delay: 3 , block: { () -> Void in 
+            self.openBlackScreen(prevView: self.previousView)
         })
     }
     
     
-    // Basic.swift
     func setTimeout(delay:TimeInterval, block:@escaping ()->Void) -> Timer {
         return Timer.scheduledTimer(timeInterval: delay, target: BlockOperation(block: block), selector: #selector(Operation.main), userInfo: nil, repeats: false)
         

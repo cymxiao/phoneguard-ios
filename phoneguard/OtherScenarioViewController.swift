@@ -64,7 +64,7 @@ class OtherScenarioViewController:  BaseUIViewController {
                         print("stationary: \(data.stationary)")
                         //self?.stationary  = data.stationary
                         if(data.stationary && (self?.isSecurityMode)! == false){
-                            self?.openSecuredScreen()
+                            self?.openSecuredScreen(prevView: OtherScenarioViewName.Stillness)
                             self?.isSecurityMode = true
                         }
                     }
@@ -88,7 +88,7 @@ class OtherScenarioViewController:  BaseUIViewController {
         }
         
         if(batteryStateString == "Unplugged"){
-            self.openSecuredScreen()
+            self.openSecuredScreen(prevView: OtherScenarioViewName.Charging)
         }
     }
     
@@ -107,7 +107,7 @@ class OtherScenarioViewController:  BaseUIViewController {
         }
         //Amin: Test Code
         if(self.isSecurityMode == false){
-            self.openSecuredScreen()
+            self.openSecuredScreen(prevView: OtherScenarioViewName.Headset)
             self.isSecurityMode = true
         }
         return false;

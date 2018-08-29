@@ -10,8 +10,16 @@ import UIKit
 import AVFoundation
 //import MediaPlayer
 
+
+
 class BaseUIViewController: UIViewController {
     var player: AVAudioPlayer?
+    
+    enum OtherScenarioViewName {
+        case Stillness
+        case Charging
+        case Headset
+    }
     
     func openLockScreen(){
         
@@ -20,15 +28,17 @@ class BaseUIViewController: UIViewController {
         self.navigationController?.show(vc, sender: nil )
     }
     
-    func openSecuredScreen(){
+    func openSecuredScreen( prevView : OtherScenarioViewName ){
         
         let sc = self.storyboard?.instantiateViewController(withIdentifier:  "Secured")  as! SecuredViewController
+        sc.previousView = prevView
         self.navigationController?.show(sc, sender: nil )
     }
     
-    func openBlackScreen(){
+    func openBlackScreen( prevView : OtherScenarioViewName){
         
         let bc = self.storyboard?.instantiateViewController(withIdentifier:  "Black")  as! BlackViewController
+        bc.previousView = prevView
         self.navigationController?.show(bc, sender: nil )
     }
     
