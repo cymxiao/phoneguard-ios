@@ -14,6 +14,8 @@ import AVFoundation
 
 class BaseUIViewController: UIViewController {
     var player: AVAudioPlayer?
+  
+    
     
     enum OtherScenarioViewName {
         case Stillness
@@ -57,10 +59,14 @@ class BaseUIViewController: UIViewController {
        
         playSound(false)
         //Amin: todo: I guess the playSound(false) would mute the player, that why if put playSoundwithName("unlock") before it, the unlock.mp3 would not be played.
-        playSoundwithName("unlock")
-        resetSwitch()
+        playSoundwithName("unlock")  
     }
     
+    
+    func setTimeout(delay:TimeInterval, block:@escaping ()->Void) -> Timer {
+        return Timer.scheduledTimer(timeInterval: delay, target: BlockOperation(block: block), selector: #selector(Operation.main), userInfo: nil, repeats: false)
+        
+    }
     
     func playSound(_ bPlay : Bool) {
         guard let url = Bundle.main.url(forResource: "alarm", withExtension: "mp3") else { return }
@@ -114,9 +120,24 @@ class BaseUIViewController: UIViewController {
         }
     }
     
-    func resetSwitch() {
-        //fatalError("Must Override")
+//    func resetSwitch() {
+//        //fatalError("Must Override")
+//    }
+    
+    func hasHeadSet () -> Bool {
+        let audioSession: AVAudioSession = AVAudioSession.sharedInstance()
+        let currentRoute : AVAudioSessionRouteDescription = audioSession.currentRoute
+        for output in  currentRoute.outputs {
+            if(output.portType == AVAudioSessionPortHeadphones) {
+                return true
+            }
+        }
+        return false;
+        
     }
+    
+    
+    
     
     
 }

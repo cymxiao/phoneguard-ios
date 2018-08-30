@@ -24,11 +24,5 @@ class SecuredViewController: BaseUIViewController {
         _ = setTimeout(delay: 3 , block: { () -> Void in 
             self.openBlackScreen(prevView: self.previousView)
         })
-    }
-    
-    
-    func setTimeout(delay:TimeInterval, block:@escaping ()->Void) -> Timer {
-        return Timer.scheduledTimer(timeInterval: delay, target: BlockOperation(block: block), selector: #selector(Operation.main), userInfo: nil, repeats: false)
-        
-    }
+    } 
 }

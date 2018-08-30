@@ -33,20 +33,23 @@ class LockScreenViewController: UIViewController, UITextFieldDelegate {
     //Number pad don't have return
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if(textField.text == UserDefaults.standard.value(forKey: "pwd") as? String){
-            if((rootViewCtrl) != nil){
-                rootViewCtrl?.pwdReceived(data:  textField.text!)
-                //收起键盘
-                //textField.resignFirstResponder()
-                navigationController?.popViewController(animated:true)
-            } else if((otherViewCtrl) != nil){
-                otherViewCtrl?.pwdReceived(data:  textField.text!)
-                navigationController?.popToRootViewController(animated:true)
-            }
-           
+            popupViewController(textData: textField.text!)
         } else {
             textField.text = "";
         }
         return true
+    }
+    
+    func popupViewController (textData: String) {
+        if((rootViewCtrl) != nil){
+            rootViewCtrl?.pwdReceived(data:  textData)
+            //收起键盘
+            //textField.resignFirstResponder()
+            navigationController?.popViewController(animated:true)
+        } else if((otherViewCtrl) != nil){
+            otherViewCtrl?.pwdReceived(data:  textData)
+            navigationController?.popToRootViewController(animated:true)
+        }
     }
     
     func  enableTouchID() -> Bool {
@@ -79,8 +82,9 @@ class LockScreenViewController: UIViewController, UITextFieldDelegate {
                     DispatchQueue.main.async { 
                         //Do stuff here
                         let pwd = UserDefaults.standard.value(forKey: "pwd") as? String
-                        self.rootViewCtrl?.pwdReceived(data: pwd!)
-                        self.navigationController?.popViewController(animated:true)
+                        //self.rootViewCtrl?.pwdReceived(data: pwd!)
+                        //self.navigationController?.popViewController(animated:true)
+                        self.popupViewController(textData: pwd!)
                     }
                 }
             })

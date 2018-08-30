@@ -19,16 +19,29 @@ class SettingsViewController: UIViewController , UITextFieldDelegate {
         UserDefaults.standard.set(alertTimeoutText.text, forKey: "timeout")
         UserDefaults.standard.set(pwdText.text, forKey: "pwd")
         UserDefaults.standard.synchronize()
+        
+        // create the alert
+        let alert = UIAlertController(title: "提示", message: "保持成功.", preferredStyle: UIAlertControllerStyle.alert)
+        
+        // add an action (button)
+        alert.addAction(UIAlertAction(title: "确定", style: UIAlertActionStyle.default, handler: nil))
+        
+        // show the alert
+        //self.present(alert, animated: true, completion: nil)
+        //self.resignFirstResponder()
         navigationController?.popViewController(animated:true)
+        openSettingsView()
     }
-    @IBAction func backToRoot(_ sender: Any) {
-         navigationController?.popViewController(animated:true)
-    }
+   
     @IBAction func touchIDSwitchAction(_ sender: UISwitch) {
         UserDefaults.standard.set(sender.isOn, forKey: "enableTouchID")
     }
     
  
+    
+    @IBAction func closeKeyBoard(_ sender: UITextField) {
+        sender.resignFirstResponder()
+    }
     
   
     override func viewDidLoad() {
@@ -72,6 +85,11 @@ class SettingsViewController: UIViewController , UITextFieldDelegate {
         return newString.length <= maxLength
     }
     
+    func openSettingsView(){
+        
+        let sc = self.storyboard?.instantiateViewController(withIdentifier:  "Settings")  as! SettingsViewController
+        self.navigationController?.show(sc, sender: nil )
+    }
     
 }
 

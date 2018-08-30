@@ -7,13 +7,18 @@
 //
 
 import UIKit
+import CoreMotion
 import AVFoundation
+import MediaPlayer
 
 class BlackViewController: BaseUIViewController {
-    
+    let activityManager = CMMotionActivityManager()
     var isLockScreenMode : Bool = false
     var previousView : OtherScenarioViewName = OtherScenarioViewName.Stillness
     var timer: Timer!
+    var volumeValue : Float = 0.9
+    
+    @IBOutlet weak var volumSlider: UISlider!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,13 +28,24 @@ class BlackViewController: BaseUIViewController {
         self.navigationController?.view.backgroundColor = UIColor.clear
         self.navigationItem.hidesBackButton = true
         
-        if(self.previousView === OtherScenarioViewName.Headset){
+        if(self.previousView == OtherScenarioViewName.Headset){
             checkHeadSet()
-        } else if(self.previousView === OtherScenarioViewName.Charging){
+        } else if(self.previousView == OtherScenarioViewName.Charging){
+            UIDevice.current.isBatteryMonitoringEnabled = true
+            //batteryStateDidChange()
             checkCharging()
         } else {
             startUpdatingActivity()
         }
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        //self.activityManager.stopActivityUpdates()
+        UIDevice.current.isBatteryMonitoringEnabled = false
+        NotificationCenter.default.removeObserver(self,
+                                                  name: NSNotification.Name.UIDeviceBatteryStateDidChange,
+                                                  object: nil)
     }
     
      
@@ -44,6 +60,7 @@ class BlackViewController: BaseUIViewController {
         }
         if(self.isLockScreenMode == false){
             self.openLockScreen()
+            self.setAlarm(isSecurityMode: true)
             self.isLockScreenMode = true
         }
         return false;
@@ -89,6 +106,7 @@ class BlackViewController: BaseUIViewController {
         
         if(batteryStateString == "Unplugged"){
             self.openLockScreen()
+            self.setAlarm(isSecurityMode: true)
         }
     }
 
@@ -102,13 +120,76 @@ class BlackViewController: BaseUIViewController {
                         print("stationary: \(data.stationary)")
                         //self?.stationary  = data.stationary
                         if(!data.stationary && (self?.isLockScreenMode)! == false){
-                            self.openLockScreen()
+                            self?.activityManager.stopActivityUpdates()
+                            self?.openLockScreen()
+                            self?.setAlarm(isSecurityMode: true)
                             self?.isLockScreenMode = true
                         }
                     }
                 })
             })
         }
+    }
+    
+    
+    
+    
+    func setVolume(volumne : Float ){
+        //Set max volume
+        let wrapperView = UIView(frame: CGRect(x: -130, y: -20, width: 10, height: 10))
+        //let wrapperView = UIView(frame: CGRect(x: 0, y: 0 , width: 100, height: 10))
+        //self.view.backgroundColor = UIColor.clearColor()
+        self.view.addSubview(wrapperView)
+        
+        let volumeView = MPVolumeView(frame: wrapperView.bounds)
+        wrapperView.addSubview(volumeView)
+        //volumeView.showsRouteButton = true
+        volumeView.showsVolumeSlider = true
+        volumeView.isHidden = false
+        
+        for view in volumeView.subviews {
+            //if (NSStringFromClass(view.classForCoder) == "MPVolumeSlider") {
+            if (view.classForCoder.description() == "MPVolumeSlider") {
+                let slider = view as! UISlider
+                volumSlider = slider
+                //print(" starting set volumn")
+                slider.setValue(volumne, animated: false)
+            }
+        }
+    }
+    
+    @objc func changeVolumSlider(notifi:NSNotification) {
+        if let volum:Float = notifi.userInfo?["AVSystemController_AudioVolumeNotificationParameter"] as! Float?{
+            //volumSlider.value = volum
+            //Do nothing.
+            volumSlider.value = volumeValue
+        }
+    }
+    
+    func addSystemVolumeObserver(){
+        //添加监听
+        NotificationCenter.default.addObserver(self, selector: #selector(self.changeVolumSlider), name: NSNotification.Name(rawValue: "AVSystemController_SystemVolumeDidChangeNotification"), object: nil)
+        UIApplication.shared.beginReceivingRemoteControlEvents()
+    }
+    
+    func setAlarm(isSecurityMode : Bool){
+        //removeProximityObserve()
+        let timeout = UserDefaults.standard.double(forKey: "timeout")
+        if(hasHeadSet()){
+            volumeValue = 0.3
+        } else {
+            volumeValue = 0.9
+        }
+        //let tv = Double(timeout)
+        // Simple usage
+        _ = setTimeout(delay: timeout , block: { () -> Void in
+            // do this stuff after timeout seconds
+            if(isSecurityMode){
+                self.playSound(true);
+                self.setVolume(volumne: self.volumeValue)
+                self.addSystemVolumeObserver()
+            }
+        })
     }
     
 }

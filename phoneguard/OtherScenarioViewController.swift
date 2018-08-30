@@ -28,6 +28,16 @@ class OtherScenarioViewController:  BaseUIViewController {
         //each time load the screen, reset the switchs.
         resetSwitch()
     }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        self.activityManager.stopActivityUpdates()
+        UIDevice.current.isBatteryMonitoringEnabled = false
+        NotificationCenter.default.removeObserver(self,
+                                                  name: NSNotification.Name.UIDeviceBatteryStateDidChange,
+                                                  object: nil)
+    }
+    
   
     @IBAction func stillnessAction(_ sender: UISwitch) {
         if( sender.isOn){
@@ -36,11 +46,13 @@ class OtherScenarioViewController:  BaseUIViewController {
     }
     @IBAction func chargingAction(_ sender: UISwitch) {
         if( sender.isOn){
+            UIDevice.current.isBatteryMonitoringEnabled = true
             // Observe battery state
+            batteryStateDidChange()
             NotificationCenter.default.addObserver(self,
                                                    selector: #selector(self.batteryStateDidChange),
                                                    name: NSNotification.Name.UIDeviceBatteryStateDidChange,
-                                                   object: nil)
+                                                   object: nil) 
         }
         else {
             //remove  battery state observer
@@ -91,7 +103,7 @@ class OtherScenarioViewController:  BaseUIViewController {
             batteryStateString = "Unknown"
         }
         
-        if(batteryStateString == "Charging"){
+        if(batteryStateString == "Charging" || batteryStateString == "Full"){
             self.openSecuredScreen(prevView: OtherScenarioViewName.Charging)
         }
     }
@@ -101,19 +113,19 @@ class OtherScenarioViewController:  BaseUIViewController {
         let currentRoute : AVAudioSessionRouteDescription = audioSession.currentRoute
         for output in  currentRoute.outputs {
             if(output.portType == AVAudioSessionPortHeadphones) {
-//                if(self.isSecurityMode == false){
-//                    self.openSecuredScreen(prevView: OtherScenarioViewName.Headset)
-//                    self.isSecurityMode = true
-//                    return true
-//                }
+                if(self.isSecurityMode == false){
+                    self.openSecuredScreen(prevView: OtherScenarioViewName.Headset)
+                    self.isSecurityMode = true
+                    return true
+                }
                 return true
             }
         }
         //Amin: Test Code
-        if(self.isSecurityMode == false){
-            self.openSecuredScreen(prevView: OtherScenarioViewName.Headset)
-            self.isSecurityMode = true
-        }
+//        if(self.isSecurityMode == false){
+//            self.openSecuredScreen(prevView: OtherScenarioViewName.Headset)
+//            self.isSecurityMode = true
+//        }
         return false;
     }
     
@@ -133,8 +145,9 @@ class OtherScenarioViewController:  BaseUIViewController {
         self.isSecurityMode = false
     }
     
-    override func resetSwitch() {
-        super.resetSwitch()
+    func resetSwitch() {
+        //super.resetSwitch()
+        isSecurityMode = false
         stillnessSwitch.setOn(false, animated: true)
         chargingSwitch.setOn(false, animated: true)
         headSetSwitch.setOn(false, animated: true)

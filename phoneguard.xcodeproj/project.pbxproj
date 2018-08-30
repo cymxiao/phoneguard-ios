@@ -38,7 +38,6 @@
 		31E706E82136B92B00CDCCF9 /* BlackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E706E72136B92B00CDCCF9 /* BlackViewController.swift */; };
 		31EA398B210D4ADC00529065 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 31EA398A210D4ADC00529065 /* icon.png */; };
 		31FE937221340B9500C4AFB6 /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 31FE937121340B9500C4AFB6 /* settings.png */; };
-		31FE937421340E1700C4AFB6 /* sel-settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 31FE937321340E1700C4AFB6 /* sel-settings.png */; };
 		31FE937721340EFD00C4AFB6 /* model-lib.png in Resources */ = {isa = PBXBuildFile; fileRef = 31FE937521340EFC00C4AFB6 /* model-lib.png */; };
 		31FE937821340EFD00C4AFB6 /* toolbox.png in Resources */ = {isa = PBXBuildFile; fileRef = 31FE937621340EFC00C4AFB6 /* toolbox.png */; };
 /* End PBXBuildFile section */
@@ -98,7 +97,6 @@
 		31E706E72136B92B00CDCCF9 /* BlackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackViewController.swift; sourceTree = "<group>"; };
 		31EA398A210D4ADC00529065 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		31FE937121340B9500C4AFB6 /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
-		31FE937321340E1700C4AFB6 /* sel-settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sel-settings.png"; sourceTree = "<group>"; };
 		31FE937521340EFC00C4AFB6 /* model-lib.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "model-lib.png"; sourceTree = "<group>"; };
 		31FE937621340EFC00C4AFB6 /* toolbox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = toolbox.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -137,7 +135,6 @@
 				3129C80C213438AE00D44625 /* pocket.png */,
 				31FE937521340EFC00C4AFB6 /* model-lib.png */,
 				31FE937621340EFC00C4AFB6 /* toolbox.png */,
-				31FE937321340E1700C4AFB6 /* sel-settings.png */,
 				31FE937121340B9500C4AFB6 /* settings.png */,
 				315D9ECB212914AD00F68E54 /* back.png */,
 				31EA398A210D4ADC00529065 /* icon.png */,
@@ -344,7 +341,6 @@
 				315D9ECC212914AD00F68E54 /* back.png in Resources */,
 				3129C81121343CB800D44625 /* stillness.png in Resources */,
 				314521B82102D35D00232CDC /* alarm-clear.png in Resources */,
-				31FE937421340E1700C4AFB6 /* sel-settings.png in Resources */,
 				316A751420FE3215006FEA79 /* Main.storyboard in Resources */,
 				314521B72102D35D00232CDC /* alarm-set.png in Resources */,
 			);
