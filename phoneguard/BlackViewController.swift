@@ -23,8 +23,13 @@ class BlackViewController: BaseUIViewController {
         self.navigationController?.view.backgroundColor = UIColor.clear
         self.navigationItem.hidesBackButton = true
         
-        
-        checkHeadSet()
+        if(self.previousView === OtherScenarioViewName.Headset){
+            checkHeadSet()
+        } else if(self.previousView === OtherScenarioViewName.Charging){
+            checkCharging()
+        } else {
+            startUpdatingActivity()
+        }
     }
     
      
@@ -58,6 +63,52 @@ class BlackViewController: BaseUIViewController {
         self.timer.invalidate()
         self.timer = nil
         self.isLockScreenMode = false
+    }
+
+    func checkCharging(){
+        NotificationCenter.default.addObserver(self,
+                                                   selector: #selector(self.batteryStateDidChange),
+                                                   name: NSNotification.Name.UIDeviceBatteryStateDidChange,
+                                                   object: nil)
+        
+    }
+
+      @objc func batteryStateDidChange() {
+        let batteryStateString: String
+        let status = UIDevice.current.batteryState
+        switch status {
+        case .full:
+            batteryStateString = "Full"
+        case .unplugged:
+            batteryStateString = "Unplugged"
+        case .charging:
+            batteryStateString = "Charging"
+        case .unknown:
+            batteryStateString = "Unknown"
+        }
+        
+        if(batteryStateString == "Unplugged"){
+            self.openLockScreen()
+        }
+    }
+
+
+    func startUpdatingActivity() {
+        if CMMotionActivityManager.isActivityAvailable() {
+            self.activityManager.startActivityUpdates(to: OperationQueue.main, withHandler: {
+                [weak self] (data: CMMotionActivity?) in
+                DispatchQueue.main.async(execute: {
+                    if let data = data {
+                        print("stationary: \(data.stationary)")
+                        //self?.stationary  = data.stationary
+                        if(!data.stationary && (self?.isLockScreenMode)! == false){
+                            self.openLockScreen()
+                            self?.isLockScreenMode = true
+                        }
+                    }
+                })
+            })
+        }
     }
     
 }

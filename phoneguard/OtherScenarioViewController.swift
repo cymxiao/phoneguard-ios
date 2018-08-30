@@ -91,7 +91,7 @@ class OtherScenarioViewController:  BaseUIViewController {
             batteryStateString = "Unknown"
         }
         
-        if(batteryStateString == "Unplugged"){
+        if(batteryStateString == "Charging"){
             self.openSecuredScreen(prevView: OtherScenarioViewName.Charging)
         }
     }
