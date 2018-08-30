@@ -21,7 +21,7 @@ class SecuredViewController: BaseUIViewController {
         } else if(previousView == OtherScenarioViewName.Charging){
              securedText.text = "警戒模式已开启。                                                                                                  请不要锁屏，将手机保持充电转态，系统会自动关闭屏幕。"
         }
-        _ = setTimeout(delay: 3 , block: { () -> Void in 
+        _ = setTimeout(delay: 1 , block: { () -> Void in 
             self.openBlackScreen(prevView: self.previousView)
         })
     } 

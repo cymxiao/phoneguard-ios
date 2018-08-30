@@ -15,6 +15,10 @@ class OtherScenarioViewController:  BaseUIViewController {
     var isSecurityMode : Bool = false
     var timer: Timer!
     
+    @IBOutlet weak var stillnessText: UILabel!
+    @IBOutlet weak var chargingText: UILabel!
+    @IBOutlet weak var headsetText: UILabel!
+    
     @IBOutlet weak var stillnessSwitch: UISwitch!
     @IBOutlet weak var chargingSwitch: UISwitch!
     @IBOutlet weak var headSetSwitch: UISwitch!
@@ -41,11 +45,15 @@ class OtherScenarioViewController:  BaseUIViewController {
   
     @IBAction func stillnessAction(_ sender: UISwitch) {
         if( sender.isOn){
+            stillnessText.text = "请保持手机静止"
             startUpdatingActivity()
+        } else {
+             stillnessText.text = ""
         }
     }
     @IBAction func chargingAction(_ sender: UISwitch) {
         if( sender.isOn){
+            chargingText.text = "请将手机插上电源充电"
             UIDevice.current.isBatteryMonitoringEnabled = true
             // Observe battery state
             batteryStateDidChange()
@@ -55,6 +63,7 @@ class OtherScenarioViewController:  BaseUIViewController {
                                                    object: nil) 
         }
         else {
+            chargingText.text = ""
             //remove  battery state observer
             NotificationCenter.default.removeObserver(self,
                                                       name: NSNotification.Name.UIDeviceBatteryStateDidChange,
@@ -65,8 +74,10 @@ class OtherScenarioViewController:  BaseUIViewController {
     @IBAction func headsetAction(_ sender: UISwitch) {
         
         if(sender.isOn){
+            headsetText.text = "请连接耳机"
             checkHeadSet()
         } else {
+            headsetText.text = ""
             stopCheckHeadSet()
         }
     }
@@ -148,6 +159,9 @@ class OtherScenarioViewController:  BaseUIViewController {
     func resetSwitch() {
         //super.resetSwitch()
         isSecurityMode = false
+        stillnessText.text = ""
+        chargingText.text = ""
+        headsetText.text = ""
         stillnessSwitch.setOn(false, animated: true)
         chargingSwitch.setOn(false, animated: true)
         headSetSwitch.setOn(false, animated: true)
