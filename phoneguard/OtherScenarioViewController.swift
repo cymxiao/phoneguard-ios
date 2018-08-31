@@ -46,6 +46,10 @@ class OtherScenarioViewController:  BaseUIViewController {
     @IBAction func stillnessAction(_ sender: UISwitch) {
         if( sender.isOn){
             stillnessText.text = "请保持手机静止"
+            chargingText.text = ""
+            headsetText.text = ""
+            chargingSwitch.setOn(false, animated: true)
+            headSetSwitch.setOn(false, animated: true)
             startUpdatingActivity()
         } else {
              stillnessText.text = ""
@@ -54,6 +58,10 @@ class OtherScenarioViewController:  BaseUIViewController {
     @IBAction func chargingAction(_ sender: UISwitch) {
         if( sender.isOn){
             chargingText.text = "请将手机插上电源充电"
+            stillnessText.text = ""
+            headsetText.text = ""
+            stillnessSwitch.setOn(false, animated: true)
+            headSetSwitch.setOn(false, animated: true)
             UIDevice.current.isBatteryMonitoringEnabled = true
             // Observe battery state
             batteryStateDidChange()
@@ -75,6 +83,10 @@ class OtherScenarioViewController:  BaseUIViewController {
         
         if(sender.isOn){
             headsetText.text = "请连接耳机"
+            stillnessText.text = ""
+            chargingText.text = "" 
+            stillnessSwitch.setOn(false, animated: true)
+            chargingSwitch.setOn(false, animated: true)
             checkHeadSet()
         } else {
             headsetText.text = ""
