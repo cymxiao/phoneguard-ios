@@ -27,10 +27,12 @@ class SettingsViewController: UIViewController , UITextFieldDelegate {
         alert.addAction(UIAlertAction(title: "确定", style: UIAlertActionStyle.default, handler: nil))
         
         // show the alert
-        //self.present(alert, animated: true, completion: nil)
-        //self.resignFirstResponder()
-        navigationController?.popViewController(animated:true)
-        openSettingsView()
+        //view.resignFirstResponder()
+        view.endEditing(true)
+        self.present(alert, animated: true, completion: nil)
+        
+        //navigationController?.popViewController(animated:true)
+        //openSettingsView()
     }
    
     @IBAction func touchIDSwitchAction(_ sender: UISwitch) {
@@ -68,6 +70,10 @@ class SettingsViewController: UIViewController , UITextFieldDelegate {
         super.didReceiveMemoryWarning()
     }
     
+//    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+//        super.touchesBegan(touches, with: event)
+//        view.endEditing(true)
+//    }
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange,
                    replacementString string: String) -> Bool
     {
