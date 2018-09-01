@@ -29,6 +29,7 @@ class BlackViewController: BaseUIViewController {
         self.navigationController?.view.backgroundColor = UIColor.clear
         self.navigationItem.hidesBackButton = true
         
+        UserDefaults.standard.set(true, forKey: "blackScreen")
         if(self.previousView == OtherScenarioViewName.Headset){
             checkHeadSet()
         } else if(self.previousView == OtherScenarioViewName.Charging){
@@ -45,6 +46,9 @@ class BlackViewController: BaseUIViewController {
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         //self.activityManager.stopActivityUpdates()
+        // blackScreen would be false
+        UserDefaults.standard.removeObject(forKey: "blackScreen")
+        
         UIDevice.current.isBatteryMonitoringEnabled = false
         NotificationCenter.default.removeObserver(self,
                                                   name: NSNotification.Name.UIDeviceBatteryStateDidChange,

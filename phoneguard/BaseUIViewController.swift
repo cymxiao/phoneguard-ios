@@ -14,7 +14,7 @@ import SystemConfiguration
 class BaseUIViewController: UIViewController {
     var player: AVAudioPlayer?
   
-    
+    static var staticPlayer : AVAudioPlayer?
     
     enum OtherScenarioViewName {
         case Stillness
@@ -91,6 +91,36 @@ class BaseUIViewController: UIViewController {
             } else {
                 player.stop()
             }
+            
+        } catch let error {
+            print(error.localizedDescription)
+        }
+    } 
+    
+    static func playSound(_ bPlay : Bool) {
+        guard let url = Bundle.main.url(forResource: "alarm", withExtension: "mp3") else { return }
+        
+        do {
+            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+            try AVAudioSession.sharedInstance().setActive(true)
+            
+            
+            /* The following line is required for the player to work on iOS 11. Change the file type accordingly*/
+            staticPlayer = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileType.mp3.rawValue)
+            
+            /* iOS 10 and earlier require the following line: */
+            //player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileTypeMPEGLayer3)
+            
+            guard let player = staticPlayer else { return }
+            
+            //player.volume = 1
+            player.numberOfLoops = 100
+            if(bPlay){
+                player.play()
+            } else {
+                player.stop()
+            }
+            
             
         } catch let error {
             print(error.localizedDescription)
