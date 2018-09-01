@@ -8,8 +8,7 @@
 
 import UIKit
 import AVFoundation
-//import MediaPlayer
-
+import SystemConfiguration
 
 
 class BaseUIViewController: UIViewController {
@@ -21,6 +20,7 @@ class BaseUIViewController: UIViewController {
         case Stillness
         case Charging
         case Headset
+        case Network
     }
     
     func openLockScreen(){
@@ -134,6 +134,15 @@ class BaseUIViewController: UIViewController {
         }
         return false;
         
+    }
+    
+    func isNetworkReachable(with flags: SCNetworkReachabilityFlags) -> Bool {
+        let isReachable = flags.contains(.reachable)
+        let needsConnection = flags.contains(.connectionRequired)
+        let canConnectAutomatically = flags.contains(.connectionOnDemand) || flags.contains(.connectionOnTraffic)
+        let canConnectWithoutUserInteraction = canConnectAutomatically && !flags.contains(.interventionRequired)
+        
+        return isReachable && (!needsConnection || canConnectWithoutUserInteraction)
     }
     
     

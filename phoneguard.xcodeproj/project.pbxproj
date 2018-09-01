@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		31094AAE213A4F0600CCB270 /* Airplane.png in Resources */ = {isa = PBXBuildFile; fileRef = 31094AAD213A4F0600CCB270 /* Airplane.png */; };
 		311CAF59210C92B900DD8212 /* guideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311CAF58210C92B900DD8212 /* guideViewController.swift */; };
 		312534DB21285E280017CEC7 /* SpeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312534DA21285E280017CEC7 /* SpeedViewController.swift */; };
 		312534DD2128684A0017CEC7 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312534DC2128684A0017CEC7 /* LocationViewController.swift */; };
@@ -60,6 +61,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		31094AAD213A4F0600CCB270 /* Airplane.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Airplane.png; sourceTree = "<group>"; };
 		311CAF58210C92B900DD8212 /* guideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = guideViewController.swift; sourceTree = "<group>"; };
 		312534DA21285E280017CEC7 /* SpeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedViewController.swift; sourceTree = "<group>"; };
 		312534DC2128684A0017CEC7 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 		312F52EF20FF88D600628B24 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				31094AAD213A4F0600CCB270 /* Airplane.png */,
 				31D2B8C5213589690010FAC5 /* headset.png */,
 				3129C81021343CB800D44625 /* stillness.png */,
 				3129C80E21343BF900D44625 /* charging.png */,
@@ -343,6 +346,7 @@
 				314521B82102D35D00232CDC /* alarm-clear.png in Resources */,
 				316A751420FE3215006FEA79 /* Main.storyboard in Resources */,
 				314521B72102D35D00232CDC /* alarm-set.png in Resources */,
+				31094AAE213A4F0600CCB270 /* Airplane.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

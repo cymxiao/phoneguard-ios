@@ -1918,70 +1918,91 @@ Cg
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="静止场景" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4xb-bg-7i9">
-                                <rect key="frame" x="92" y="134" width="125" height="50"/>
+                                <rect key="frame" x="92" y="119" width="125" height="50"/>
                                 <fontDescription key="fontDescription" name="PingFangSC-Semibold" family="PingFang SC" pointSize="22"/>
                                 <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Ebf-bT-tq2">
-                                <rect key="frame" x="298" y="144" width="51" height="31"/>
+                                <rect key="frame" x="298" y="129" width="51" height="31"/>
                                 <connections>
                                     <action selector="stillnessAction:" destination="36i-tY-x6G" eventType="valueChanged" id="WMz-ab-Ddg"/>
                                 </connections>
                             </switch>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="UTQ-tA-LK2">
-                                <rect key="frame" x="298" y="239" width="51" height="31"/>
+                                <rect key="frame" x="298" y="229" width="51" height="31"/>
                                 <connections>
                                     <action selector="chargingAction:" destination="36i-tY-x6G" eventType="valueChanged" id="FCD-2r-svh"/>
                                 </connections>
                             </switch>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="charging.png" translatesAutoresizingMaskIntoConstraints="NO" id="FpC-ys-hwD">
-                                <rect key="frame" x="38" y="238" width="32" height="32"/>
+                                <rect key="frame" x="38" y="229" width="32" height="32"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stillness.png" translatesAutoresizingMaskIntoConstraints="NO" id="1Na-Ub-Wfc">
-                                <rect key="frame" x="38" y="143" width="32" height="32"/>
+                                <rect key="frame" x="38" y="128" width="32" height="32"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="充电场景" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YaA-E3-EHB">
-                                <rect key="frame" x="92" y="229" width="125" height="50"/>
+                                <rect key="frame" x="92" y="219" width="125" height="50"/>
                                 <fontDescription key="fontDescription" name="PingFangSC-Semibold" family="PingFang SC" pointSize="22"/>
                                 <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="x7f-Br-8Nn">
-                                <rect key="frame" x="298" y="330" width="51" height="31"/>
+                                <rect key="frame" x="298" y="329" width="51" height="31"/>
                                 <connections>
                                     <action selector="headsetAction:" destination="36i-tY-x6G" eventType="valueChanged" id="PZc-My-kEz"/>
                                 </connections>
                             </switch>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="headset.png" translatesAutoresizingMaskIntoConstraints="NO" id="bph-Ec-M8I">
-                                <rect key="frame" x="38" y="330" width="32" height="32"/>
+                                <rect key="frame" x="38" y="328" width="32" height="32"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="耳机场景" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4wc-9A-hs6">
-                                <rect key="frame" x="92" y="320" width="125" height="50"/>
+                                <rect key="frame" x="92" y="319" width="125" height="50"/>
                                 <fontDescription key="fontDescription" name="PingFangSC-Semibold" family="PingFang SC" pointSize="22"/>
                                 <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LvD-7f-5MN">
-                                <rect key="frame" x="92" y="278" width="238" height="21"/>
+                                <rect key="frame" x="92" y="268" width="255" height="33"/>
                                 <fontDescription key="fontDescription" name="PingFangSC-Thin" family="PingFang SC" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3DL-Py-Lsb">
-                                <rect key="frame" x="92" y="183" width="238" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3DL-Py-Lsb">
+                                <rect key="frame" x="92" y="168" width="255" height="33"/>
                                 <fontDescription key="fontDescription" name="PingFangSC-Thin" family="PingFang SC" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K6c-PO-Qhd">
-                                <rect key="frame" x="92" y="405" width="238" height="21"/>
+                                <rect key="frame" x="92" y="535" width="238" height="21"/>
+                                <fontDescription key="fontDescription" name="PingFangSC-Thin" family="PingFang SC" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="无网络模式" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EFU-aZ-JcU">
+                                <rect key="frame" x="92" y="419" width="125" height="50"/>
+                                <fontDescription key="fontDescription" name="PingFangSC-Semibold" family="PingFang SC" pointSize="22"/>
+                                <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="uJd-mv-0Mz">
+                                <rect key="frame" x="298" y="429" width="51" height="31"/>
+                                <connections>
+                                    <action selector="airplaneAction:" destination="36i-tY-x6G" eventType="valueChanged" id="A3o-ck-ky8"/>
+                                </connections>
+                            </switch>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Airplane.png" translatesAutoresizingMaskIntoConstraints="NO" id="yz8-fZ-s9y">
+                                <rect key="frame" x="38" y="428" width="32" height="32"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FZe-Wo-xfL">
+                                <rect key="frame" x="92" y="468" width="255" height="33"/>
                                 <fontDescription key="fontDescription" name="PingFangSC-Thin" family="PingFang SC" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u70-tl-Hep">
-                                <rect key="frame" x="92" y="369" width="238" height="21"/>
+                                <rect key="frame" x="92" y="368" width="255" height="33"/>
                                 <fontDescription key="fontDescription" name="PingFangSC-Thin" family="PingFang SC" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -1989,50 +2010,64 @@ Cg
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="4xb-bg-7i9" firstAttribute="leading" secondItem="3DL-Py-Lsb" secondAttribute="leading" id="00X-bs-VbF"/>
-                            <constraint firstItem="3DL-Py-Lsb" firstAttribute="leading" secondItem="YaA-E3-EHB" secondAttribute="leading" id="0wX-O4-AIe"/>
-                            <constraint firstItem="4xb-bg-7i9" firstAttribute="trailing" secondItem="YaA-E3-EHB" secondAttribute="trailing" id="3cw-Vq-naj"/>
-                            <constraint firstItem="u70-tl-Hep" firstAttribute="top" secondItem="x7f-Br-8Nn" secondAttribute="bottom" constant="8" symbolic="YES" id="66c-aM-3W3"/>
-                            <constraint firstItem="YaA-E3-EHB" firstAttribute="top" secondItem="4xb-bg-7i9" secondAttribute="bottom" constant="45" id="68d-Lz-RKn"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="3DL-Py-Lsb" secondAttribute="trailing" constant="29" id="8Nh-6q-Jl0"/>
-                            <constraint firstItem="u70-tl-Hep" firstAttribute="leading" secondItem="K6c-PO-Qhd" secondAttribute="leading" id="8ZY-0u-6QZ"/>
-                            <constraint firstItem="bph-Ec-M8I" firstAttribute="top" secondItem="x7f-Br-8Nn" secondAttribute="top" id="8oA-YJ-1l6"/>
-                            <constraint firstItem="LvD-7f-5MN" firstAttribute="leading" secondItem="4wc-9A-hs6" secondAttribute="leading" id="ALe-Af-fA0"/>
-                            <constraint firstItem="u70-tl-Hep" firstAttribute="trailing" secondItem="K6c-PO-Qhd" secondAttribute="trailing" id="Abn-Pr-6Ih"/>
-                            <constraint firstItem="Ebf-bT-tq2" firstAttribute="leading" secondItem="4xb-bg-7i9" secondAttribute="trailing" constant="81" id="B3b-Sb-IU2"/>
-                            <constraint firstItem="YaA-E3-EHB" firstAttribute="top" secondItem="3DL-Py-Lsb" secondAttribute="bottom" constant="25" id="B4d-mb-Iu0"/>
-                            <constraint firstItem="3DL-Py-Lsb" firstAttribute="trailing" secondItem="LvD-7f-5MN" secondAttribute="trailing" id="BEf-mw-UUS"/>
-                            <constraint firstItem="4wc-9A-hs6" firstAttribute="top" secondItem="LvD-7f-5MN" secondAttribute="bottom" constant="21" id="EkQ-8e-nEs"/>
-                            <constraint firstItem="4wc-9A-hs6" firstAttribute="leading" secondItem="u70-tl-Hep" secondAttribute="leading" id="FQA-4e-2AQ"/>
-                            <constraint firstItem="UTQ-tA-LK2" firstAttribute="leading" secondItem="x7f-Br-8Nn" secondAttribute="leading" id="G8Y-Qc-PPF"/>
-                            <constraint firstItem="K6c-PO-Qhd" firstAttribute="top" secondItem="u70-tl-Hep" secondAttribute="bottom" constant="15" id="GNu-eF-xDc"/>
-                            <constraint firstItem="K6c-PO-Qhd" firstAttribute="top" secondItem="4wc-9A-hs6" secondAttribute="bottom" constant="35" id="Hmf-e1-82F"/>
-                            <constraint firstItem="FpC-ys-hwD" firstAttribute="centerY" secondItem="YaA-E3-EHB" secondAttribute="centerY" id="JJl-rV-bzG"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Ebf-bT-tq2" secondAttribute="trailing" constant="12" id="OWc-jC-agS"/>
-                            <constraint firstItem="LvD-7f-5MN" firstAttribute="trailing" secondItem="u70-tl-Hep" secondAttribute="trailing" id="Piq-NH-XfV"/>
-                            <constraint firstItem="FpC-ys-hwD" firstAttribute="bottom" secondItem="UTQ-tA-LK2" secondAttribute="bottom" id="Qrq-70-o5l"/>
-                            <constraint firstItem="FpC-ys-hwD" firstAttribute="top" secondItem="1Na-Ub-Wfc" secondAttribute="bottom" constant="63" id="Vdh-cA-aTR"/>
-                            <constraint firstItem="FpC-ys-hwD" firstAttribute="leading" secondItem="bph-Ec-M8I" secondAttribute="leading" id="Vfx-oQ-5na"/>
-                            <constraint firstItem="3DL-Py-Lsb" firstAttribute="top" secondItem="Ebf-bT-tq2" secondAttribute="bottom" constant="8" symbolic="YES" id="Vg3-tI-MCW"/>
-                            <constraint firstItem="1Na-Ub-Wfc" firstAttribute="bottom" secondItem="Ebf-bT-tq2" secondAttribute="bottom" id="YKG-se-RmR"/>
-                            <constraint firstItem="4xb-bg-7i9" firstAttribute="leading" secondItem="1Na-Ub-Wfc" secondAttribute="trailing" constant="22" id="YYK-6t-2QW"/>
-                            <constraint firstItem="Ebf-bT-tq2" firstAttribute="leading" secondItem="UTQ-tA-LK2" secondAttribute="leading" id="Z6o-fe-NKv"/>
-                            <constraint firstItem="1UR-6z-Oh0" firstAttribute="top" secondItem="K6c-PO-Qhd" secondAttribute="bottom" constant="192" id="bg4-sh-i7M"/>
-                            <constraint firstItem="UTQ-tA-LK2" firstAttribute="top" secondItem="3DL-Py-Lsb" secondAttribute="bottom" constant="35" id="dD9-42-cxn"/>
-                            <constraint firstItem="4wc-9A-hs6" firstAttribute="top" secondItem="YaA-E3-EHB" secondAttribute="bottom" constant="41" id="gQW-Kb-Qoa"/>
-                            <constraint firstItem="4xb-bg-7i9" firstAttribute="top" secondItem="S1B-rf-qeF" secondAttribute="bottom" constant="70" id="oyX-tV-BNz"/>
-                            <constraint firstItem="1Na-Ub-Wfc" firstAttribute="centerY" secondItem="4xb-bg-7i9" secondAttribute="centerY" id="pvg-zn-5Ov"/>
-                            <constraint firstItem="LvD-7f-5MN" firstAttribute="top" secondItem="UTQ-tA-LK2" secondAttribute="bottom" constant="8" symbolic="YES" id="rhz-zK-drI"/>
-                            <constraint firstItem="4wc-9A-hs6" firstAttribute="centerY" secondItem="x7f-Br-8Nn" secondAttribute="centerY" id="rjh-pu-lH4"/>
-                            <constraint firstItem="1Na-Ub-Wfc" firstAttribute="leading" secondItem="FpC-ys-hwD" secondAttribute="leading" id="rls-Fo-doK"/>
-                            <constraint firstItem="YaA-E3-EHB" firstAttribute="leading" secondItem="LvD-7f-5MN" secondAttribute="leading" id="rmN-Qr-a0N"/>
-                            <constraint firstItem="3DL-Py-Lsb" firstAttribute="leading" secondItem="qna-Nb-ay4" secondAttribute="leadingMargin" constant="76" id="tq9-Kw-XxU"/>
-                            <constraint firstItem="YaA-E3-EHB" firstAttribute="trailing" secondItem="4wc-9A-hs6" secondAttribute="trailing" id="uES-9P-fMS"/>
-                            <constraint firstItem="x7f-Br-8Nn" firstAttribute="top" secondItem="LvD-7f-5MN" secondAttribute="bottom" constant="31" id="uvJ-zJ-ZTZ"/>
+                            <constraint firstItem="Ebf-bT-tq2" firstAttribute="leading" secondItem="UTQ-tA-LK2" secondAttribute="leading" id="0pC-ja-KmJ"/>
+                            <constraint firstItem="EFU-aZ-JcU" firstAttribute="top" secondItem="u70-tl-Hep" secondAttribute="bottom" constant="18" id="2Mk-uZ-D5j"/>
+                            <constraint firstItem="FZe-Wo-xfL" firstAttribute="top" secondItem="uJd-mv-0Mz" secondAttribute="bottom" constant="8" symbolic="YES" id="316-Ab-RId"/>
+                            <constraint firstItem="bph-Ec-M8I" firstAttribute="leading" secondItem="yz8-fZ-s9y" secondAttribute="leading" id="4Nc-nu-6pY"/>
+                            <constraint firstItem="EFU-aZ-JcU" firstAttribute="centerY" secondItem="uJd-mv-0Mz" secondAttribute="centerY" id="4Yd-Ch-OOq"/>
+                            <constraint firstItem="4xb-bg-7i9" firstAttribute="leading" secondItem="3DL-Py-Lsb" secondAttribute="leading" id="4tn-O1-v76"/>
+                            <constraint firstItem="FpC-ys-hwD" firstAttribute="top" secondItem="UTQ-tA-LK2" secondAttribute="top" id="5bW-sO-QBC"/>
+                            <constraint firstItem="YaA-E3-EHB" firstAttribute="top" secondItem="3DL-Py-Lsb" secondAttribute="bottom" constant="18" id="71A-BY-0Mz"/>
+                            <constraint firstItem="K6c-PO-Qhd" firstAttribute="top" secondItem="EFU-aZ-JcU" secondAttribute="bottom" constant="66" id="7SH-9P-A4S"/>
+                            <constraint firstItem="x7f-Br-8Nn" firstAttribute="trailing" secondItem="u70-tl-Hep" secondAttribute="trailing" id="8jR-lR-KvR"/>
+                            <constraint firstItem="UTQ-tA-LK2" firstAttribute="leading" secondItem="x7f-Br-8Nn" secondAttribute="leading" id="Ai8-RG-Djv"/>
+                            <constraint firstItem="4wc-9A-hs6" firstAttribute="top" secondItem="YaA-E3-EHB" secondAttribute="bottom" constant="50" id="Aty-th-wT4"/>
+                            <constraint firstItem="4xb-bg-7i9" firstAttribute="top" secondItem="S1B-rf-qeF" secondAttribute="bottom" constant="55" id="B0P-pe-FA3"/>
+                            <constraint firstItem="YaA-E3-EHB" firstAttribute="leading" secondItem="LvD-7f-5MN" secondAttribute="leading" id="BRX-DH-Ffa"/>
+                            <constraint firstItem="4wc-9A-hs6" firstAttribute="trailing" secondItem="EFU-aZ-JcU" secondAttribute="trailing" id="Dcb-SM-xH3"/>
+                            <constraint firstItem="uJd-mv-0Mz" firstAttribute="trailing" secondItem="FZe-Wo-xfL" secondAttribute="trailing" id="FZN-TI-Cxk"/>
+                            <constraint firstItem="LvD-7f-5MN" firstAttribute="leading" secondItem="4wc-9A-hs6" secondAttribute="leading" id="G8C-at-3yu"/>
+                            <constraint firstItem="3DL-Py-Lsb" firstAttribute="top" secondItem="Ebf-bT-tq2" secondAttribute="bottom" constant="8" symbolic="YES" id="GWa-cg-qEM"/>
+                            <constraint firstItem="1Na-Ub-Wfc" firstAttribute="centerY" secondItem="4xb-bg-7i9" secondAttribute="centerY" id="Igj-bi-8pm"/>
+                            <constraint firstItem="FpC-ys-hwD" firstAttribute="leading" secondItem="bph-Ec-M8I" secondAttribute="leading" id="Jft-93-BJh"/>
+                            <constraint firstItem="YaA-E3-EHB" firstAttribute="top" secondItem="4xb-bg-7i9" secondAttribute="bottom" constant="50" id="JhN-DA-wAE"/>
+                            <constraint firstItem="YaA-E3-EHB" firstAttribute="trailing" secondItem="4wc-9A-hs6" secondAttribute="trailing" id="Jt9-Ed-BhD"/>
+                            <constraint firstItem="4wc-9A-hs6" firstAttribute="centerY" secondItem="x7f-Br-8Nn" secondAttribute="centerY" id="NUk-kK-rzm"/>
+                            <constraint firstItem="x7f-Br-8Nn" firstAttribute="top" secondItem="LvD-7f-5MN" secondAttribute="bottom" constant="28" id="Oqy-gO-JaR"/>
+                            <constraint firstItem="YaA-E3-EHB" firstAttribute="centerY" secondItem="UTQ-tA-LK2" secondAttribute="centerY" id="P9O-l5-nFE"/>
+                            <constraint firstItem="K6c-PO-Qhd" firstAttribute="top" secondItem="FZe-Wo-xfL" secondAttribute="bottom" constant="34" id="S8w-hx-AoH"/>
+                            <constraint firstItem="x7f-Br-8Nn" firstAttribute="leading" secondItem="uJd-mv-0Mz" secondAttribute="leading" id="T4a-C2-8LJ"/>
+                            <constraint firstItem="4xb-bg-7i9" firstAttribute="trailing" secondItem="YaA-E3-EHB" secondAttribute="trailing" id="TjI-so-ftJ"/>
+                            <constraint firstItem="1Na-Ub-Wfc" firstAttribute="bottom" secondItem="Ebf-bT-tq2" secondAttribute="bottom" id="U5l-Yd-x1b"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="K6c-PO-Qhd" secondAttribute="trailing" constant="29" id="Yad-0h-6vg"/>
+                            <constraint firstItem="1UR-6z-Oh0" firstAttribute="top" secondItem="K6c-PO-Qhd" secondAttribute="bottom" constant="62" id="a6J-r0-m5W"/>
+                            <constraint firstItem="4wc-9A-hs6" firstAttribute="top" secondItem="LvD-7f-5MN" secondAttribute="bottom" constant="18" id="aC0-Bi-DbP"/>
+                            <constraint firstItem="UTQ-tA-LK2" firstAttribute="top" secondItem="3DL-Py-Lsb" secondAttribute="bottom" constant="28" id="aui-eg-kZm"/>
+                            <constraint firstItem="FZe-Wo-xfL" firstAttribute="leading" secondItem="K6c-PO-Qhd" secondAttribute="leading" id="brm-Dt-VR2"/>
+                            <constraint firstItem="1Na-Ub-Wfc" firstAttribute="top" secondItem="S1B-rf-qeF" secondAttribute="bottom" constant="64" id="c1m-rE-NJF"/>
+                            <constraint firstItem="uJd-mv-0Mz" firstAttribute="top" secondItem="u70-tl-Hep" secondAttribute="bottom" constant="28" id="d08-Rj-vMj"/>
+                            <constraint firstItem="bph-Ec-M8I" firstAttribute="bottom" secondItem="x7f-Br-8Nn" secondAttribute="bottom" id="eF9-fP-LhV"/>
+                            <constraint firstItem="EFU-aZ-JcU" firstAttribute="top" secondItem="4wc-9A-hs6" secondAttribute="bottom" constant="50" id="fhK-3v-mgJ"/>
+                            <constraint firstItem="Ebf-bT-tq2" firstAttribute="trailing" secondItem="3DL-Py-Lsb" secondAttribute="trailing" id="ka9-ak-8Za"/>
+                            <constraint firstItem="u70-tl-Hep" firstAttribute="leading" secondItem="EFU-aZ-JcU" secondAttribute="leading" id="ldw-ha-GRp"/>
+                            <constraint firstItem="UTQ-tA-LK2" firstAttribute="trailing" secondItem="LvD-7f-5MN" secondAttribute="trailing" id="llQ-KJ-wHH"/>
+                            <constraint firstItem="4wc-9A-hs6" firstAttribute="leading" secondItem="u70-tl-Hep" secondAttribute="leading" id="mjg-pv-bhO"/>
+                            <constraint firstItem="u70-tl-Hep" firstAttribute="top" secondItem="x7f-Br-8Nn" secondAttribute="bottom" constant="8" symbolic="YES" id="pQW-mm-5m8"/>
+                            <constraint firstItem="EFU-aZ-JcU" firstAttribute="leading" secondItem="FZe-Wo-xfL" secondAttribute="leading" id="q3o-3j-ciN"/>
+                            <constraint firstItem="1Na-Ub-Wfc" firstAttribute="leading" secondItem="FpC-ys-hwD" secondAttribute="leading" id="qnb-n4-Bn5"/>
+                            <constraint firstItem="yz8-fZ-s9y" firstAttribute="bottom" secondItem="uJd-mv-0Mz" secondAttribute="bottom" id="roF-h6-pR8"/>
+                            <constraint firstItem="4xb-bg-7i9" firstAttribute="leading" secondItem="1Na-Ub-Wfc" secondAttribute="trailing" constant="22" id="sJ7-ub-h1T"/>
+                            <constraint firstItem="3DL-Py-Lsb" firstAttribute="leading" secondItem="qna-Nb-ay4" secondAttribute="leadingMargin" constant="76" id="sgw-lB-Te7"/>
+                            <constraint firstItem="Ebf-bT-tq2" firstAttribute="leading" secondItem="4xb-bg-7i9" secondAttribute="trailing" constant="81" id="ubq-Af-yzN"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ebf-bT-tq2" secondAttribute="trailing" constant="12" id="vP7-nn-lTF"/>
+                            <constraint firstItem="LvD-7f-5MN" firstAttribute="top" secondItem="UTQ-tA-LK2" secondAttribute="bottom" constant="8" symbolic="YES" id="wV1-rd-Zeg"/>
+                            <constraint firstItem="3DL-Py-Lsb" firstAttribute="leading" secondItem="YaA-E3-EHB" secondAttribute="leading" id="wd3-XA-7xG"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="其它场景" id="DCB-Yh-Ev8"/>
                     <connections>
+                        <outlet property="airplaneSwitch" destination="uJd-mv-0Mz" id="9oS-ai-4bX"/>
+                        <outlet property="airplaneText" destination="FZe-Wo-xfL" id="q5F-s3-baJ"/>
                         <outlet property="chargingSwitch" destination="UTQ-tA-LK2" id="QhU-KZ-goP"/>
                         <outlet property="chargingText" destination="LvD-7f-5MN" id="I0N-ky-zYL"/>
                         <outlet property="headSetSwitch" destination="x7f-Br-8Nn" id="n3d-3f-xbt"/>
@@ -2557,6 +2592,7 @@ Cg
         </scene>
     </scenes>
     <resources>
+        <image name="Airplane.png" width="32" height="32"/>
         <image name="charging.png" width="32" height="32"/>
         <image name="headset.png" width="32" height="32"/>
         <image name="model-lib.png" width="24" height="24"/>
