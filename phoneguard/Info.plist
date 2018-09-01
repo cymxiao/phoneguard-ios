@@ -28,6 +28,8 @@
 	<string>分贝仪需要访问您的麦克风，是否允许？</string>
 	<key>NSMotionUsageDescription</key>
 	<string>为实现手机摇一摇开启警戒，是否允许APP访问手机移动轨迹或运动轨迹？</string>
+	<key>UIRequiresPersistentWiFi</key>
+	<true/>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>audio</string>

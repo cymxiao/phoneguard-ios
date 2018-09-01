@@ -354,7 +354,7 @@
         <!--Secured View Controller-->
         <scene sceneID="EjG-ZT-BHF">
             <objects>
-                <viewController storyboardIdentifier="Secured" id="hPw-3Y-7UF" customClass="SecuredViewController" customModule="phoneguard" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Secured" hidesBottomBarWhenPushed="YES" id="hPw-3Y-7UF" customClass="SecuredViewController" customModule="phoneguard" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="B0U-vT-v57"/>
                         <viewControllerLayoutGuide type="bottom" id="fUe-Ph-SlL"/>
@@ -515,7 +515,7 @@ Cg
                                             <real key="NSStrokeWidth" value="0.0"/>
                                         </attributes>
                                     </fragment>
-                                    <fragment content="口袋场景较为常用，因此单独作为一项。">
+                                    <fragment content="口袋场景较为常用，我们强烈推荐您将此场景作为常用场景，相比其他场景，该场景也是最安全的。因此我们将此场景单独作为一项。">
                                         <attributes>
                                             <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <font key="NSFont" size="14" name="PingFangSC-Semibold"/>
