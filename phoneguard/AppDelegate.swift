@@ -36,7 +36,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if(blackScreen){
             //alarm triggerred.
             //print("blackScreen is true") 
-            BaseUIViewController.playSound(true)
+            BaseUIViewController.playSoundFromBGMode(true)
         }
     }
 
@@ -46,7 +46,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if(blackScreen){
             //alarm triggerred.
             //print("blackScreen is true")
-            BaseUIViewController.playSound(false)
+            BaseUIViewController.playSoundFromBGMode(false)
         }
     }
 

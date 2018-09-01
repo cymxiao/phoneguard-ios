@@ -97,11 +97,11 @@ class BaseUIViewController: UIViewController {
         }
     } 
     
-    static func playSound(_ bPlay : Bool) {
+    static func playSoundFromBGMode(_ bPlay : Bool) {
         guard let url = Bundle.main.url(forResource: "alarm", withExtension: "mp3") else { return }
         
         do {
-            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback, with: AVAudioSessionCategoryOptions.mixWithOthers)
             try AVAudioSession.sharedInstance().setActive(true)
             
             
@@ -119,6 +119,7 @@ class BaseUIViewController: UIViewController {
                 player.play()
             } else {
                 player.stop()
+                try AVAudioSession.sharedInstance().setActive(false)
             }
             
             
