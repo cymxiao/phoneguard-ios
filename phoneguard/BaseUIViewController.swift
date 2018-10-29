@@ -23,10 +23,15 @@ class BaseUIViewController: UIViewController {
         case Network
     }
     
+    
+//    let dayTheme = MyTheme(foreColor: .black, backgroundColor: .green , alarmedImage: UIImage(named: "day")!)
+//    let nightTheme = MyTheme(foreColor: .white, backgroundColor: .black, alarmedImage: UIImage(named: "night")!)
+  
+    
     func openLockScreen(){
         
         let vc = self.storyboard?.instantiateViewController(withIdentifier:  "LockScreen")  as! LockScreenViewController
-        vc.otherViewCtrl = self as! BlackViewController
+        vc.otherViewCtrl = (self as! BlackViewController)
         self.navigationController?.show(vc, sender: nil )
     }
     

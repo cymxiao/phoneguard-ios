@@ -1,23 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vuC-vj-aDs">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vuC-vj-aDs">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="PingFang.ttc">
-            <string>PingFangSC-Medium</string>
-            <string>PingFangSC-Regular</string>
-            <string>PingFangSC-Semibold</string>
-            <string>PingFangSC-Thin</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--口袋场景-->
         <scene sceneID="w7A-wU-hX4">
@@ -52,7 +42,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="317"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenHighlighted="NO" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="orf-UL-mMx">
-                                        <rect key="frame" x="97" y="87" width="180" height="180"/>
+                                        <rect key="frame" x="97.5" y="87" width="180" height="180"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="180" id="g2j-6V-Gt8"/>
                                             <constraint firstAttribute="width" secondItem="orf-UL-mMx" secondAttribute="height" multiplier="1:1" id="n3g-ss-JnU"/>
@@ -66,14 +56,14 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.20392156862745098" green="0.68627450980392157" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.20392156859999999" green="0.68627450980000004" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="orf-UL-mMx" firstAttribute="centerX" secondItem="fjP-v6-NYa" secondAttribute="centerX" id="EL4-Aj-xg4"/>
                                     <constraint firstAttribute="bottom" secondItem="orf-UL-mMx" secondAttribute="bottom" constant="50" id="K75-YY-93n"/>
                                     <constraint firstItem="orf-UL-mMx" firstAttribute="top" secondItem="fjP-v6-NYa" secondAttribute="top" constant="87" id="YGE-jK-2hq"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="简要说明(初始解锁密码:1367)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iIk-mO-D8g">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="使用步骤" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iIk-mO-D8g">
                                 <rect key="frame" x="16" y="340" width="220" height="23"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="220" id="2Ik-hJ-aMS"/>
@@ -88,12 +78,12 @@
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" link="YES"/>
                                 </accessibility>
-                                <string key="text">设置警戒模式后，请不要锁屏，将手机放置于包或口袋内，系统会自动关闭屏幕。   当从口袋或者包中取出手机时，若设定延时时间（默认3秒）内未解锁（可用Touch ID 或输入初始解锁密码：1367 解锁），则会发出警报；如成功解锁，则不会发出警报。                             </string>
+                                <string key="text">1.   点击上方按钮或者摇一摇开启警戒；  2.  请不要锁屏，将手机放置于口袋或包中；       3.  取出手机时，会发出警报，此时用TouchID 或输入初始密码 1367  可以关闭警报声音。                                  </string>
                                 <fontDescription key="fontDescription" name="PingFangSC-Thin" family="PingFang SC" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KQQ-PM-p0a">
-                                <rect key="frame" x="71" y="547" width="232" height="32"/>
+                                <rect key="frame" x="71" y="547" width="233" height="32"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" link="YES"/>
                                 </accessibility>
@@ -132,6 +122,7 @@
                     <connections>
                         <outlet property="btnAlarm" destination="orf-UL-mMx" id="1sy-yw-MHP"/>
                         <outlet property="mainUIView" destination="fjP-v6-NYa" id="jzs-mA-krO"/>
+                        <outlet property="topPanel" destination="fjP-v6-NYa" id="blA-yD-MNK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -254,26 +245,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="延时报警时间(秒）" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="STx-d8-buj">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="延时报警时间(秒）" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="STx-d8-buj">
                                 <rect key="frame" x="16" y="91" width="162" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="PingFangSC-Thin" family="PingFang SC" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="解锁密码设置" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SHT-C0-c67">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="解锁密码设置" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SHT-C0-c67">
                                 <rect key="frame" x="16" y="154" width="124" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="124" id="59B-Se-tpf"/>
-                                </constraints>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="PingFangSC-Thin" family="PingFang SC" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="3" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RbF-XE-U3G">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" layoutMarginsFollowReadableWidth="YES" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="3" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RbF-XE-U3G">
                                 <rect key="frame" x="262" y="91" width="97" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="97" id="MlE-RO-zrl"/>
-                                </constraints>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="8" bottom="8" trailing="8"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -282,33 +270,31 @@
                                     <action selector="closeKeyBoard:" destination="Vnn-xC-YUk" eventType="touchUpInside" id="HwB-yj-TTF"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1367" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iZl-Dw-d5H">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1367" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iZl-Dw-d5H">
                                 <rect key="frame" x="262" y="154" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" secureTextEntry="YES"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="允许使用Touch ID解除警戒" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RRe-fX-Xhd">
-                                <rect key="frame" x="16" y="220" width="189" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="189" id="MyX-Xs-ILu"/>
-                                </constraints>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="允许使用Touch ID解除警戒" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RRe-fX-Xhd">
+                                <rect key="frame" x="16" y="219" width="189" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="PingFangSC-Thin" family="PingFang SC" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eEp-vm-FGw">
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eEp-vm-FGw">
                                 <rect key="frame" x="310" y="219" width="51" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <action selector="touchIDSwitchAction:" destination="Vnn-xC-YUk" eventType="valueChanged" id="MTs-GS-zzB"/>
                                 </connections>
                             </switch>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="61k-SS-R4q">
-                                <rect key="frame" x="97" y="357" width="180" height="32"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="61k-SS-R4q">
+                                <rect key="frame" x="97" y="486" width="181" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.2029996812" green="0.68646222349999997" blue="0.59982043500000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="32" id="GYE-bV-ByF"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" name="PingFangSC-Medium" family="PingFang SC" pointSize="17"/>
                                 <state key="normal" title="保存"/>
                                 <connections>
@@ -317,28 +303,6 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="RbF-XE-U3G" firstAttribute="leading" secondItem="iZl-Dw-d5H" secondAttribute="leading" id="306-dS-bnR"/>
-                            <constraint firstItem="SHT-C0-c67" firstAttribute="leading" secondItem="RRe-fX-Xhd" secondAttribute="leading" id="4nW-Tx-UQM"/>
-                            <constraint firstItem="STx-d8-buj" firstAttribute="bottom" secondItem="RbF-XE-U3G" secondAttribute="bottom" id="5Ol-m0-Jfv"/>
-                            <constraint firstItem="STx-d8-buj" firstAttribute="top" secondItem="RbF-XE-U3G" secondAttribute="top" id="97u-h1-ndl"/>
-                            <constraint firstItem="RbF-XE-U3G" firstAttribute="trailing" secondItem="O5b-jM-EH0" secondAttribute="trailingMargin" id="Gz3-eM-cJI"/>
-                            <constraint firstItem="RbF-XE-U3G" firstAttribute="leading" secondItem="STx-d8-buj" secondAttribute="trailing" constant="84" id="L26-RG-mcF"/>
-                            <constraint firstItem="STx-d8-buj" firstAttribute="leading" secondItem="SHT-C0-c67" secondAttribute="leading" id="NgZ-wv-Ltg"/>
-                            <constraint firstItem="STx-d8-buj" firstAttribute="leading" secondItem="O5b-jM-EH0" secondAttribute="leadingMargin" id="Rcb-bb-q6J"/>
-                            <constraint firstItem="STx-d8-buj" firstAttribute="top" secondItem="8Lg-me-gaY" secondAttribute="bottom" constant="27" id="T9u-H8-dxr"/>
-                            <constraint firstItem="SHT-C0-c67" firstAttribute="top" secondItem="STx-d8-buj" secondAttribute="bottom" constant="33" id="TJd-Al-NkZ"/>
-                            <constraint firstItem="eEp-vm-FGw" firstAttribute="top" secondItem="iZl-Dw-d5H" secondAttribute="bottom" constant="35" id="Vhd-HF-xr0"/>
-                            <constraint firstItem="SHT-C0-c67" firstAttribute="bottom" secondItem="iZl-Dw-d5H" secondAttribute="bottom" id="c3s-tD-L6f"/>
-                            <constraint firstItem="61k-SS-R4q" firstAttribute="centerX" secondItem="O5b-jM-EH0" secondAttribute="centerX" id="dKO-yK-moe"/>
-                            <constraint firstItem="SHT-C0-c67" firstAttribute="top" secondItem="iZl-Dw-d5H" secondAttribute="top" id="eJ6-W8-EyT"/>
-                            <constraint firstItem="RRe-fX-Xhd" firstAttribute="centerY" secondItem="eEp-vm-FGw" secondAttribute="centerY" id="f5g-fQ-Ff0"/>
-                            <constraint firstItem="61k-SS-R4q" firstAttribute="leading" secondItem="O5b-jM-EH0" secondAttribute="leadingMargin" constant="81" id="nCT-gz-GhR"/>
-                            <constraint firstItem="RRe-fX-Xhd" firstAttribute="bottom" secondItem="eEp-vm-FGw" secondAttribute="bottom" id="nrM-Z9-Qsr"/>
-                            <constraint firstItem="RbF-XE-U3G" firstAttribute="trailing" secondItem="iZl-Dw-d5H" secondAttribute="trailing" id="pYj-VX-LSr"/>
-                            <constraint firstItem="gGH-d4-mc3" firstAttribute="top" secondItem="61k-SS-R4q" secondAttribute="bottom" constant="229" id="u93-JZ-tFo"/>
-                            <constraint firstItem="iZl-Dw-d5H" firstAttribute="trailing" secondItem="eEp-vm-FGw" secondAttribute="trailing" id="zXu-6u-CVn"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="参数设置" id="afc-jQ-KQ5"/>
                     <connections>
@@ -366,7 +330,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6vY-cu-OuH">
                                 <rect key="frame" x="54" y="113" width="267" height="128"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <string key="text">警戒模式已开启。                                                                                                  请不要锁屏，将手机放置于任意方保持静止，系统会自动关闭屏幕。</string>
+                                <string key="text">警戒模式已开启。                                                                                                  请不要锁屏，手机放置于任意位置保持静止，系统会自动关闭屏幕。</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -447,7 +411,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bxd-G0-Pdd">
-                                <rect key="frame" x="7" y="0.0" width="362" height="635"/>
+                                <rect key="frame" x="7" y="0.0" width="361" height="635"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <attributedString key="attributedText">
                                     <fragment content="详细使用说明">
@@ -1942,28 +1906,28 @@ Cg
                                 <rect key="frame" x="38" y="128" width="32" height="32"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="充电场景" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YaA-E3-EHB">
-                                <rect key="frame" x="92" y="219" width="125" height="50"/>
+                                <rect key="frame" x="92" y="219" width="125" height="51"/>
                                 <fontDescription key="fontDescription" name="PingFangSC-Semibold" family="PingFang SC" pointSize="22"/>
                                 <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="x7f-Br-8Nn">
-                                <rect key="frame" x="298" y="329" width="51" height="31"/>
+                                <rect key="frame" x="298" y="330" width="51" height="31"/>
                                 <connections>
                                     <action selector="headsetAction:" destination="36i-tY-x6G" eventType="valueChanged" id="PZc-My-kEz"/>
                                 </connections>
                             </switch>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="headset.png" translatesAutoresizingMaskIntoConstraints="NO" id="bph-Ec-M8I">
-                                <rect key="frame" x="38" y="328" width="32" height="32"/>
+                                <rect key="frame" x="38" y="329" width="32" height="32"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="耳机场景" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4wc-9A-hs6">
-                                <rect key="frame" x="92" y="319" width="125" height="50"/>
+                                <rect key="frame" x="92" y="320" width="125" height="51"/>
                                 <fontDescription key="fontDescription" name="PingFangSC-Semibold" family="PingFang SC" pointSize="22"/>
                                 <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LvD-7f-5MN">
-                                <rect key="frame" x="92" y="268" width="255" height="49"/>
+                                <rect key="frame" x="92" y="268" width="255" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="255" id="trB-LU-3hv"/>
                                 </constraints>
@@ -1978,28 +1942,28 @@ Cg
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K6c-PO-Qhd">
-                                <rect key="frame" x="92" y="535" width="238" height="21"/>
+                                <rect key="frame" x="92" y="538" width="238" height="18"/>
                                 <fontDescription key="fontDescription" name="PingFangSC-Thin" family="PingFang SC" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="无网络模式" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EFU-aZ-JcU">
-                                <rect key="frame" x="92" y="419" width="125" height="50"/>
+                                <rect key="frame" x="92" y="421" width="125" height="51"/>
                                 <fontDescription key="fontDescription" name="PingFangSC-Semibold" family="PingFang SC" pointSize="22"/>
                                 <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="uJd-mv-0Mz">
-                                <rect key="frame" x="298" y="429" width="51" height="31"/>
+                                <rect key="frame" x="298" y="431" width="51" height="31"/>
                                 <connections>
                                     <action selector="airplaneAction:" destination="36i-tY-x6G" eventType="valueChanged" id="A3o-ck-ky8"/>
                                 </connections>
                             </switch>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Airplane.png" translatesAutoresizingMaskIntoConstraints="NO" id="yz8-fZ-s9y">
-                                <rect key="frame" x="38" y="428" width="32" height="32"/>
+                                <rect key="frame" x="38" y="430" width="32" height="32"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FZe-Wo-xfL">
-                                <rect key="frame" x="92" y="468" width="255" height="43"/>
+                                <rect key="frame" x="92" y="470" width="255" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="255" id="tRm-W2-yfM"/>
                                 </constraints>
@@ -2008,7 +1972,7 @@ Cg
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u70-tl-Hep">
-                                <rect key="frame" x="92" y="368" width="255" height="43"/>
+                                <rect key="frame" x="92" y="369" width="255" height="44"/>
                                 <fontDescription key="fontDescription" name="PingFangSC-Thin" family="PingFang SC" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -2098,7 +2062,7 @@ Cg
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LPg-8g-KAs">
-                                <rect key="frame" x="7" y="0.0" width="362" height="613"/>
+                                <rect key="frame" x="7" y="0.0" width="361" height="613"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <attributedString key="attributedText">
                                     <fragment content="                   ">
@@ -2400,7 +2364,7 @@ Cg
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ONk-2h-RkY">
-                                <rect key="frame" x="92" y="621" width="190" height="32"/>
+                                <rect key="frame" x="92" y="621" width="191" height="32"/>
                                 <color key="backgroundColor" red="0.2029996812" green="0.68646222349999997" blue="0.59982043500000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="32" id="Tgl-cT-Dyu"/>
@@ -2443,13 +2407,13 @@ Cg
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nSC-s3-cK2">
+                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nSC-s3-cK2">
                                 <rect key="frame" x="201" y="55" width="150" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="峰值" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AgA-Kq-7M9">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="峰值" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AgA-Kq-7M9">
                                 <rect key="frame" x="16" y="60" width="130" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="130" id="GNU-hF-1WD"/>
@@ -2459,13 +2423,13 @@ Cg
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mJM-Ix-Wpn">
+                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mJM-Ix-Wpn">
                                 <rect key="frame" x="201" y="152" width="150" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="平均值" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5gO-PN-M2k">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="平均值" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5gO-PN-M2k">
                                 <rect key="frame" x="16" y="156" width="130" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="qAu-s2-KW1"/>
@@ -2475,7 +2439,7 @@ Cg
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TOO LOUD!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m61-u5-45X">
-                                <rect key="frame" x="103" y="255" width="168" height="74"/>
+                                <rect key="frame" x="103" y="253" width="169" height="76"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                 <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>

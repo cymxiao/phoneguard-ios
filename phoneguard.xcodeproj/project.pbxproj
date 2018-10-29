@@ -19,6 +19,7 @@
 		31429D30212AEC4200ABD352 /* AudioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31429D2F212AEC4200ABD352 /* AudioViewController.swift */; };
 		314521B72102D35D00232CDC /* alarm-set.png in Resources */ = {isa = PBXBuildFile; fileRef = 314521B52102D35D00232CDC /* alarm-set.png */; };
 		314521B82102D35D00232CDC /* alarm-clear.png in Resources */ = {isa = PBXBuildFile; fileRef = 314521B62102D35D00232CDC /* alarm-clear.png */; };
+		315AA0B32161E23500C3DB2E /* theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315AA0B22161E23500C3DB2E /* theme.swift */; };
 		315D9ECC212914AD00F68E54 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 315D9ECB212914AD00F68E54 /* back.png */; };
 		316A750F20FE3215006FEA79 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316A750E20FE3215006FEA79 /* AppDelegate.swift */; };
 		316A751120FE3215006FEA79 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316A751020FE3215006FEA79 /* ViewController.swift */; };
@@ -32,6 +33,7 @@
 		318B5C43212C2C510060784A /* AltitudeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318B5C42212C2C510060784A /* AltitudeViewController.swift */; };
 		31B98DA22104961D00E19BBA /* LockScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B98DA12104961D00E19BBA /* LockScreenViewController.swift */; };
 		31B98DA42104CF9E00E19BBA /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B98DA32104CF9E00E19BBA /* SettingsViewController.swift */; };
+		31CFCD2B2156141C0009E5C2 /* en-US.strings in Resources */ = {isa = PBXBuildFile; fileRef = 31CFCD2D2156141C0009E5C2 /* en-US.strings */; };
 		31D2B8C62135896A0010FAC5 /* headset.png in Resources */ = {isa = PBXBuildFile; fileRef = 31D2B8C5213589690010FAC5 /* headset.png */; };
 		31D2B8C8213589E90010FAC5 /* OtherScenarioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D2B8C7213589E90010FAC5 /* OtherScenarioViewController.swift */; };
 		31E2F92B210A13F000962EC5 /* LicenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E2F92A210A13F000962EC5 /* LicenseViewController.swift */; };
@@ -73,6 +75,7 @@
 		31429D2F212AEC4200ABD352 /* AudioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioViewController.swift; sourceTree = "<group>"; };
 		314521B52102D35D00232CDC /* alarm-set.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "alarm-set.png"; sourceTree = "<group>"; };
 		314521B62102D35D00232CDC /* alarm-clear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "alarm-clear.png"; sourceTree = "<group>"; };
+		315AA0B22161E23500C3DB2E /* theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = theme.swift; sourceTree = "<group>"; };
 		315D9ECB212914AD00F68E54 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
 		316A750B20FE3215006FEA79 /* phoneguard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = phoneguard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		316A750E20FE3215006FEA79 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -92,6 +95,7 @@
 		318B5C42212C2C510060784A /* AltitudeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AltitudeViewController.swift; sourceTree = "<group>"; };
 		31B98DA12104961D00E19BBA /* LockScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockScreenViewController.swift; sourceTree = "<group>"; };
 		31B98DA32104CF9E00E19BBA /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		31CFCD2C2156141C0009E5C2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = "en.lproj/en-US.strings"; sourceTree = "<group>"; };
 		31D2B8C5213589690010FAC5 /* headset.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = headset.png; sourceTree = "<group>"; };
 		31D2B8C7213589E90010FAC5 /* OtherScenarioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherScenarioViewController.swift; sourceTree = "<group>"; };
 		31E2F92A210A13F000962EC5 /* LicenseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LicenseViewController.swift; sourceTree = "<group>"; };
@@ -146,6 +150,7 @@
 				314521B62102D35D00232CDC /* alarm-clear.png */,
 				314521B52102D35D00232CDC /* alarm-set.png */,
 				312F52F020FF894800628B24 /* alarm.mp3 */,
+				31CFCD2D2156141C0009E5C2 /* en-US.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -192,6 +197,7 @@
 				3129C80A21342FA400D44625 /* SecuredViewController.swift */,
 				31D2B8C7213589E90010FAC5 /* OtherScenarioViewController.swift */,
 				31E706E72136B92B00CDCCF9 /* BlackViewController.swift */,
+				315AA0B22161E23500C3DB2E /* theme.swift */,
 			);
 			path = phoneguard;
 			sourceTree = "<group>";
@@ -345,6 +351,7 @@
 				3129C81121343CB800D44625 /* stillness.png in Resources */,
 				314521B82102D35D00232CDC /* alarm-clear.png in Resources */,
 				316A751420FE3215006FEA79 /* Main.storyboard in Resources */,
+				31CFCD2B2156141C0009E5C2 /* en-US.strings in Resources */,
 				314521B72102D35D00232CDC /* alarm-set.png in Resources */,
 				31094AAE213A4F0600CCB270 /* Airplane.png in Resources */,
 			);
@@ -378,6 +385,7 @@
 				311CAF59210C92B900DD8212 /* guideViewController.swift in Sources */,
 				318B5C43212C2C510060784A /* AltitudeViewController.swift in Sources */,
 				3129C80B21342FA400D44625 /* SecuredViewController.swift in Sources */,
+				315AA0B32161E23500C3DB2E /* theme.swift in Sources */,
 				31E706E62136AFFA00CDCCF9 /* BaseUIViewController.swift in Sources */,
 				31E2F92B210A13F000962EC5 /* LicenseViewController.swift in Sources */,
 				31429D30212AEC4200ABD352 /* AudioViewController.swift in Sources */,
@@ -434,6 +442,14 @@
 				316A751820FE3215006FEA79 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		31CFCD2D2156141C0009E5C2 /* en-US.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				31CFCD2C2156141C0009E5C2 /* en */,
+			);
+			name = "en-US.strings";
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

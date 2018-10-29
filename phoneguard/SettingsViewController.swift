@@ -8,12 +8,45 @@
 
 import UIKit
 
-class SettingsViewController: UIViewController , UITextFieldDelegate {
+class SettingsViewController: UIViewController, UITextFieldDelegate, UIPickerViewDelegate {
+//, UIPickerViewDataSource {
+    
+    // The number of columns of data
+//    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+//        return 1
+//    }
+//
+//    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+//       return pickerData.count
+//    }
+//
+//
+//    // The data to return for the row and component (column) that's being passed in
+//    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+//        //return pickerData[row]
+//        let pickerLabel = UILabel(frame: CGRect(x: 0, y: 0, width: pickerView.frame.size.width, height: 30))
+//        pickerLabel.backgroundColor = UIColor.red
+//        pickerLabel.text = pickerData[row]
+//        //pickerLabel.textColor = UIColor.red
+//        return pickerLabel.text
+//
+//    }
+    
+    // Catpure the picker view selection
+//    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+//        // This method is triggered whenever the user makes a change to the picker selection.
+//        // The parameter named row and component represents what was selected.
+//        print("Data selected: \(pickerData[row])")
+//        //print(pickerData[row]);
+//    }
    
     @IBOutlet weak var alertTimeoutText: UITextField!
     @IBOutlet weak var pwdText: UITextField!
     //@IBOutlet weak var saveSettings: UIButton!
     @IBOutlet weak var swhTouchID: UISwitch!
+  //  @IBOutlet weak var picker: UIPickerView!
+    
+  //  var pickerData: [String] = [String]()
     
     @IBAction func saveSettings(_ sender: Any) {
         UserDefaults.standard.set(alertTimeoutText.text, forKey: "timeout")
@@ -34,7 +67,8 @@ class SettingsViewController: UIViewController , UITextFieldDelegate {
         //navigationController?.popViewController(animated:true)
         //openSettingsView()
     }
-   
+    
+    
     @IBAction func touchIDSwitchAction(_ sender: UISwitch) {
         UserDefaults.standard.set(sender.isOn, forKey: "enableTouchID")
     }
@@ -55,6 +89,10 @@ class SettingsViewController: UIViewController , UITextFieldDelegate {
         //self.navigationItem.leftBarButtonItem = leftBarBtn
         
         //self.navigationController?.setNavigationBarHidden(false,animated: true)
+        // Connect data:
+//        self.picker.delegate = self
+//        self.picker.dataSource = self
+//        pickerData = ["蓝色", "红色", "黄色", "黑色（夜晚）"]
         
         let initTimeOut = UserDefaults.standard.value(forKey: "timeout") as? String
         let initPwd  = UserDefaults.standard.value(forKey: "pwd") as? String

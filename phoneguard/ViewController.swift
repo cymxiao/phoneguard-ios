@@ -11,8 +11,8 @@ import AVFoundation
 import MediaPlayer
 
 
-class ViewController: UIViewController {
-    var player: AVAudioPlayer?
+class ViewController: BaseUIViewController {
+  
     var isSecurityMode : Bool? = false
     var volumeValue : Float = 0.9
     //var playSound : Bool = true
@@ -20,62 +20,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var mainUIView: UIView!
     @IBOutlet weak var volumSlider: UISlider!
     
-
-    
-    func playSound(_ bPlay : Bool) {
-        guard let url = Bundle.main.url(forResource: "alarm", withExtension: "mp3") else { return }
-        
-        do {
-            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
-            try AVAudioSession.sharedInstance().setActive(true)
-            
-            
-            /* The following line is required for the player to work on iOS 11. Change the file type accordingly*/
-            player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileType.mp3.rawValue)
-            
-            /* iOS 10 and earlier require the following line: */
-            //player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileTypeMPEGLayer3)
-            
-            guard let player = player else { return }
-            
-            //player.volume = 1
-            player.numberOfLoops = 100
-            if(bPlay){
-            player.play()
-            } else {
-                player.stop()
-            }
-            
-        } catch let error {
-            print(error.localizedDescription)
-        }
-    }
+    @IBOutlet weak var topPanel: UIView!
     
     
-    
-    func playSoundwithName(_ mp3Name : String) {
-        guard let url = Bundle.main.url(forResource: mp3Name, withExtension: "mp3") else { return }
-        
-        do {
-            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
-            try AVAudioSession.sharedInstance().setActive(true)
-            
-            /* The following line is required for the player to work on iOS 11. Change the file type accordingly*/
-            player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileType.mp3.rawValue)
-            
-            /* iOS 10 and earlier require the following line: */
-            //player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileTypeMPEGLayer3)
-            
-            guard let player = player else { return }
-           
-            player.play()
-           
-            
-        } catch let error {
-            print(error.localizedDescription)
-        }
-    }
-    
+     
     @IBAction func navGuide(_ sender: Any) {
         let vc = self.storyboard?.instantiateViewController(withIdentifier:  "guide")  as! GuideViewController
         self.navigationController?.show(vc, sender: nil )
@@ -95,7 +43,7 @@ class ViewController: UIViewController {
     }
     
   
-    func alarmClear(){
+    override func alarmClear(){
         isSecurityMode = false
         
         btnAlarm.setBackgroundImage(UIImage(named: "alarm-clear.png"), for: UIControlState.normal)
@@ -131,6 +79,8 @@ class ViewController: UIViewController {
   
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //topPanel.backgroundColor = dayTheme.backgroundColor
         // Do any additional setup after loading the view, typically from a nib.
         
         // Do any additional setup after loading the view.
@@ -169,7 +119,6 @@ class ViewController: UIViewController {
             let vc = self.storyboard?.instantiateViewController(withIdentifier:  "License")  as! LicenseViewController
             self.navigationController?.show(vc, sender: nil )
         }
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -184,15 +133,15 @@ class ViewController: UIViewController {
     
     func setVolume(volumne : Float ){
         //Set max volume
-        let wrapperView = UIView(frame: CGRect(x: -130, y: -20, width: 10, height: 10))
-        //let wrapperView = UIView(frame: CGRect(x: 0, y: 0 , width: 100, height: 10))
+        //let wrapperView = UIView(frame: CGRect(x: 130, y: 20, width: 100, height: 10))
+        let wrapperView = UIView(frame: CGRect(x: 20, y: 50 , width: 100, height: 10))
         //self.view.backgroundColor = UIColor.clearColor()
         self.view.addSubview(wrapperView)
         
         let volumeView = MPVolumeView(frame: wrapperView.bounds)
         wrapperView.addSubview(volumeView)
         //volumeView.showsRouteButton = true
-        volumeView.showsVolumeSlider = true
+        volumeView.showsVolumeSlider = false
         volumeView.isHidden = false
         
         for view in volumeView.subviews {
@@ -201,18 +150,23 @@ class ViewController: UIViewController {
                 let slider = view as! UISlider
                 volumSlider = slider
                 //print(" starting set volumn")
+                //slider.addTarget(self, action: #selector(sliderAction(slider:)), for: .valueChanged)
+              
                 slider.setValue(volumne, animated: false)
             }
         }
     }
     
-    // Basic.swift
-    func setTimeout(delay:TimeInterval, block:@escaping ()->Void) -> Timer {
-        return Timer.scheduledTimer(timeInterval: delay, target: BlockOperation(block: block), selector: #selector(Operation.main), userInfo: nil, repeats: false)
-        
+    func setVolumnInIOS12 (volumne : Float) {
+        let strV = String(describing: volumne )
+        let mpc = MPMusicPlayerController.applicationMusicPlayer
+        mpc.setValue(strV, forKey: "volume" )
     }
     
-    
+    @objc func sliderAction(slider:UISlider) {
+        print(slider.value)
+    }
+     
     // MARK: - Internal method
     @objc func proximitySensorStateDidChange() {
         //print("proximityState : \(UIDevice.current.proximityState)")
@@ -230,15 +184,16 @@ class ViewController: UIViewController {
                 if(hasHeadSet()){
                     volumeValue = 0.3
                 } else {
-                     volumeValue = 0.9
+                    volumeValue = 0.9
                 }
                 //let tv = Double(timeout)
                 // Simple usage
                 _ = setTimeout(delay: timeout , block: { () -> Void in
                     // do this stuff after timeout seconds
                     if(self.isSecurityMode!){
-                        self.playSound(true);
+                        self.playSound(true)
                         self.setVolume(volumne: self.volumeValue)
+                        self.setVolumnInIOS12(volumne: self.volumeValue)
                         self.addSystemVolumeObserver()
                     } 
                 })
@@ -247,28 +202,12 @@ class ViewController: UIViewController {
         }
     }
     
-    func openLockScreen(){
+   override func openLockScreen(){
 
         let vc = self.storyboard?.instantiateViewController(withIdentifier:  "LockScreen")  as! LockScreenViewController
         vc.rootViewCtrl = self
         self.navigationController?.show(vc, sender: nil )
-    }
-
-//    func openSecuredScreen(){
-//        
-//        let sc = self.storyboard?.instantiateViewController(withIdentifier:  "Secured")  as! SecuredViewController
-//        //sc.rootViewCtrl = self
-//        self.navigationController?.show(sc, sender: nil )
-//    }
-    
-    func pwdReceived(data: String)
-    {
-        //print("Data received: \(data)")
-        if(data == UserDefaults.standard.value(forKey: "pwd") as? String){
-            //self.playSound = false
-            alarmClear()
-        }
-    }
+    } 
     
     func addSystemVolumeObserver(){
         //添加监听
@@ -277,7 +216,7 @@ class ViewController: UIViewController {
     }
     
     @objc func changeVolumSlider(notifi:NSNotification) {
-        if let volum:Float = notifi.userInfo?["AVSystemController_AudioVolumeNotificationParameter"] as! Float?{
+        if let _:Float = notifi.userInfo?["AVSystemController_AudioVolumeNotificationParameter"] as! Float?{
             //volumSlider.value = volum
             //Do nothing.
             volumSlider.value = volumeValue
@@ -289,17 +228,6 @@ class ViewController: UIViewController {
         UIApplication.shared.endReceivingRemoteControlEvents()
     }
     
-    func hasHeadSet () -> Bool {
-        let audioSession: AVAudioSession = AVAudioSession.sharedInstance()
-        let currentRoute : AVAudioSessionRouteDescription = audioSession.currentRoute
-        for output in  currentRoute.outputs {
-            if(output.portType == AVAudioSessionPortHeadphones) {
-                return true
-            }
-        }
-        return false;
-        
-    }
     
     override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
         if event?.type == UIEventType.motion && event?.subtype == UIEventSubtype.motionShake {

@@ -198,6 +198,13 @@ class BlackViewController: BaseUIViewController {
         }
     }
     
+    
+    func setVolumnInIOS12 (volumne : Float) {
+        let strV = String(describing: volumne )
+        let mpc = MPMusicPlayerController.applicationMusicPlayer
+        mpc.setValue(strV, forKey: "volume" )
+    }
+    
     @objc func changeVolumSlider(notifi:NSNotification) {
         if let volum:Float = notifi.userInfo?["AVSystemController_AudioVolumeNotificationParameter"] as! Float?{
             //volumSlider.value = volum
@@ -227,6 +234,7 @@ class BlackViewController: BaseUIViewController {
             if(isSecurityMode){
                 self.playSound(true);
                 self.setVolume(volumne: self.volumeValue)
+                self.setVolumnInIOS12(volumne: self.volumeValue)
                 self.addSystemVolumeObserver()
             }
         })
