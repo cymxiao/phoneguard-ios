@@ -36,6 +36,9 @@
 		31CFCD2B2156141C0009E5C2 /* en-US.strings in Resources */ = {isa = PBXBuildFile; fileRef = 31CFCD2D2156141C0009E5C2 /* en-US.strings */; };
 		31D2B8C62135896A0010FAC5 /* headset.png in Resources */ = {isa = PBXBuildFile; fileRef = 31D2B8C5213589690010FAC5 /* headset.png */; };
 		31D2B8C8213589E90010FAC5 /* OtherScenarioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D2B8C7213589E90010FAC5 /* OtherScenarioViewController.swift */; };
+		31DBF473218EB61E00583411 /* alarm_didi.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 31DBF470218EB61E00583411 /* alarm_didi.mp3 */; };
+		31DBF474218EB61E00583411 /* alarm_dudu.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 31DBF471218EB61E00583411 /* alarm_dudu.mp3 */; };
+		31DBF475218EB61E00583411 /* alarm_police_car.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 31DBF472218EB61E00583411 /* alarm_police_car.mp3 */; };
 		31E2F92B210A13F000962EC5 /* LicenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E2F92A210A13F000962EC5 /* LicenseViewController.swift */; };
 		31E706E62136AFFA00CDCCF9 /* BaseUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E706E52136AFFA00CDCCF9 /* BaseUIViewController.swift */; };
 		31E706E82136B92B00CDCCF9 /* BlackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E706E72136B92B00CDCCF9 /* BlackViewController.swift */; };
@@ -98,6 +101,9 @@
 		31CFCD2C2156141C0009E5C2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = "en.lproj/en-US.strings"; sourceTree = "<group>"; };
 		31D2B8C5213589690010FAC5 /* headset.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = headset.png; sourceTree = "<group>"; };
 		31D2B8C7213589E90010FAC5 /* OtherScenarioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherScenarioViewController.swift; sourceTree = "<group>"; };
+		31DBF470218EB61E00583411 /* alarm_didi.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = alarm_didi.mp3; sourceTree = "<group>"; };
+		31DBF471218EB61E00583411 /* alarm_dudu.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = alarm_dudu.mp3; sourceTree = "<group>"; };
+		31DBF472218EB61E00583411 /* alarm_police_car.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = alarm_police_car.mp3; sourceTree = "<group>"; };
 		31E2F92A210A13F000962EC5 /* LicenseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LicenseViewController.swift; sourceTree = "<group>"; };
 		31E706E52136AFFA00CDCCF9 /* BaseUIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseUIViewController.swift; sourceTree = "<group>"; };
 		31E706E72136B92B00CDCCF9 /* BlackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackViewController.swift; sourceTree = "<group>"; };
@@ -135,6 +141,9 @@
 		312F52EF20FF88D600628B24 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				31DBF470218EB61E00583411 /* alarm_didi.mp3 */,
+				31DBF471218EB61E00583411 /* alarm_dudu.mp3 */,
+				31DBF472218EB61E00583411 /* alarm_police_car.mp3 */,
 				31094AAD213A4F0600CCB270 /* Airplane.png */,
 				31D2B8C5213589690010FAC5 /* headset.png */,
 				3129C81021343CB800D44625 /* stillness.png */,
@@ -341,10 +350,12 @@
 				3129C80F21343BF900D44625 /* charging.png in Resources */,
 				3129C80D213438AE00D44625 /* pocket.png in Resources */,
 				316A751920FE3215006FEA79 /* LaunchScreen.storyboard in Resources */,
+				31DBF473218EB61E00583411 /* alarm_didi.mp3 in Resources */,
 				31EA398B210D4ADC00529065 /* icon.png in Resources */,
 				31FE937221340B9500C4AFB6 /* settings.png in Resources */,
 				317EDA2621075130000C739E /* unlock.mp3 in Resources */,
 				316A751620FE3215006FEA79 /* Assets.xcassets in Resources */,
+				31DBF475218EB61E00583411 /* alarm_police_car.mp3 in Resources */,
 				31FE937821340EFD00C4AFB6 /* toolbox.png in Resources */,
 				317EDA2421074B8D000C739E /* lock.mp3 in Resources */,
 				315D9ECC212914AD00F68E54 /* back.png in Resources */,
@@ -354,6 +365,7 @@
 				31CFCD2B2156141C0009E5C2 /* en-US.strings in Resources */,
 				314521B72102D35D00232CDC /* alarm-set.png in Resources */,
 				31094AAE213A4F0600CCB270 /* Airplane.png in Resources */,
+				31DBF474218EB61E00583411 /* alarm_dudu.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

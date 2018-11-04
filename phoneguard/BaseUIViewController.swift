@@ -74,7 +74,9 @@ class BaseUIViewController: UIViewController {
     }
     
     func playSound(_ bPlay : Bool) {
-        guard let url = Bundle.main.url(forResource: "alarm", withExtension: "mp3") else { return }
+        let mp3Name = UserDefaults.standard.value(forKey: "alarmFileName") as! String
+        
+        guard let url = Bundle.main.url(forResource: mp3Name, withExtension: "mp3") else { return }
         
         do {
             try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
@@ -103,7 +105,8 @@ class BaseUIViewController: UIViewController {
     } 
     
     static func playSoundFromBGMode(_ bPlay : Bool) {
-        guard let url = Bundle.main.url(forResource: "alarm", withExtension: "mp3") else { return }
+        let mp3Name = UserDefaults.standard.value(forKey: "alarmFileName") as! String
+        guard let url = Bundle.main.url(forResource: mp3Name, withExtension: "mp3") else { return }
         
         do {
             try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback, with: AVAudioSessionCategoryOptions.mixWithOthers)

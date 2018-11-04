@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SettingsViewController: UIViewController, UITextFieldDelegate, UIPickerViewDelegate {
+class SettingsViewController: BaseUIViewController, UITextFieldDelegate, UIPickerViewDelegate {
 //, UIPickerViewDataSource {
     
     // The number of columns of data
@@ -127,6 +127,28 @@ class SettingsViewController: UIViewController, UITextFieldDelegate, UIPickerVie
         let newString: NSString =
             currentString.replacingCharacters(in: range, with: string) as NSString
         return newString.length <= maxLength
+    }
+    
+    @IBAction func alarmChanged(_ sender: UISegmentedControl) {
+        print(sender.selectedSegmentIndex);
+        switch sender.selectedSegmentIndex {
+        case 0:
+            UserDefaults.standard.set("alarm_dudu" , forKey: "alarmFileName")
+            break
+        case 1:
+            UserDefaults.standard.set("alarm_police_car" , forKey: "alarmFileName")
+            break
+        case 2:
+            UserDefaults.standard.set("alarm_didi" , forKey: "alarmFileName")
+            break
+        default:
+            UserDefaults.standard.set("alarm_dudu" , forKey: "alarmFileName")
+            break
+        }
+        UserDefaults.standard.synchronize() 
+        let mp3Name = UserDefaults.standard.value(forKey: "alarmFileName") as! String
+        self.playSoundwithName(mp3Name);
+        
     }
     
     func openSettingsView(){
